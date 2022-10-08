@@ -10,7 +10,7 @@ samples['pong'] = {
 function update() {
     var select = document.getElementById('select1');
     var option = select.options[select.selectedIndex];
-    if(option.value == 'none') 
+    if (option.value == 'none')
         return;
     var sample = samples[option.value];
     window.open(sample.page + '?' + sample.script, '_blank');

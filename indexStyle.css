@@ -4,9 +4,11 @@ body {
 h1 {
     font-size: xx-large;
 }
-table, th, td {
+table,
+th,
+td {
     /* border:1px solid black; */
-    width:100%;
+    width: 100%;
     text-align: center;
 }
 p {
