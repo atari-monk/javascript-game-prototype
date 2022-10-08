@@ -1,5 +1,5 @@
 export class Timer {
-    timer() {
+    constructor() {
         this.deltaTime = 0;
         this.lastTime = 0;
     }

@@ -1,4 +1,5 @@
-import {Timer} from './Timer.js';
+import {Timer} from '../Framework/Timer.js';
+import {InputHandler} from '../Framework/InputHandler.js';
 
 const canvas = document.getElementById('canvas1');
 canvas.width = 600;
@@ -11,14 +12,19 @@ class Game {
         this.width = width;
         this.height = height;
         this.timer = new Timer();
-        this.player = new Player(this, new Vector2(10, this.height/2 - 50), new Vector2(10, 100));
+        this.input = new InputHandler();
+        this.player = new Player(
+            this
+            , new Vector2(10, this.height/2 - 50)
+            , new Vector2(10, 100)
+            , new Vector2(0, 0));
         this.ball = new Ball(this, new Vector2(width-10, this.height/2), new Vector2(10, 0));
     }
     update(timestamp){
         this.timer.set(timestamp);
         //this.timer.log();
-        this.player.update(this.timer.deltaTime);
-        this.ball.update(this.timer.deltaTime);
+        this.player.update(this.timer, this.input);
+        this.ball.update(this.timer);
     }
     draw(){
         this.ctx.clearRect(0, 0, this.width, this.height);
@@ -35,22 +41,26 @@ class Vector2 {
 }
 
 class GameObject {
-    constructor(game, position, size){
+    constructor(game, position, size, speed){
         this.game = game;
         this.position = position;
         this.size = size;
-    }
-    update(deltaTime){
-    }
-    draw(ctx){
+        this.speed = speed;
     }
 }
 
 class Player extends GameObject {
-    constructor(game, position, size){
-        super(game, position, size);
+    constructor(game, position, size, speed){
+        super(game, position, size, speed);
     }
-    update(deltaTime){
+    update(timer, input){
+        if (input.keys.indexOf('ArrowUp') > -1) {
+            this.speed.y = 1;
+        } else if (input.keys.indexOf('ArrowDown') > -1) {
+            this.speed.y = -1;
+        }
+        else this.speed.y = 0;
+        this.position.y -= timer.deltaTime * this.speed.y;
     }
     draw(ctx){
         ctx.fillRect(this.position.x, this.position.y, this.size.x, this.size.y);
@@ -61,7 +71,7 @@ class Ball extends GameObject {
     constructor(game, position, size){
         super(game, position, size);
     }
-    update(deltaTime){
+    update(timer){
     }
     draw(ctx){
         const circle = new Path2D();
