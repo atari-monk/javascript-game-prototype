@@ -8,7 +8,6 @@ export class Game {
     constructor(ctx, size) {
         this.ctx = ctx;
         this.size = size;
-        console.log(this.size.x + " " + this.size.y);
         this.timer = new Timer();
         this.input = new InputHandler();
         this.player = new Player(
@@ -21,7 +20,7 @@ export class Game {
             this,
             new Vector2(this.size.x - 15, 
                 this.size.y / 2),
-            new Vector2(10, 0),
+            10,
             new Vector2(0, 0)
         );
     }

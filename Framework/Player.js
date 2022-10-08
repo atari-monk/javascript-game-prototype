@@ -1,6 +1,6 @@
-import { GameObject } from "./GameObject.js";
+import { RectangleObject } from "./RectangleObject.js";
 
-export class Player extends GameObject {
+export class Player extends RectangleObject {
     constructor(game, position, size, speed) {
         super(game, position, size, speed);
     }
