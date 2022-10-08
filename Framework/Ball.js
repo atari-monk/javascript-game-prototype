@@ -12,19 +12,26 @@ export class Ball extends GameObject {
     #handleInput(input) {
         if (input.keys.indexOf("ArrowLeft") > -1) {
             this.speed.x = .1;
-        } else this.speed.x = 0;
+        }
+        else if (input.keys.indexOf("ArrowRight") > -1) {
+            this.speed.x = -.1;
+        } 
+        //else this.speed.x = 0;
     }
     #setPosition(timer) {
         this.position.x -= timer.deltaTime * this.speed.x;
     }
     #setConstraints() {
-        if (this.position.y <= 0)
+        this.#setWallConstraints();
+    }
+    #setWallConstraints() {
+        if (this.position.x >= this.game.size.x - this.size.x)
         {
-            this.position.y = 0;
+            this.position.x = this.game.size.x - this.size.x;
         }
-        if (this.position.y >= this.game.height - this.size.y)
+        if (this.position.x <= this.size.x)
         {
-            this.position.y = this.game.height - this.size.y;
+            this.position.x = this.size.x;
         }
     }
     draw(ctx) {

@@ -24,9 +24,9 @@ export class Player extends GameObject {
         {
             this.position.y = 0;
         }
-        if (this.position.y >= this.game.height - this.size.y)
+        if (this.position.y >= this.game.size.y - this.size.y)
         {
-            this.position.y = this.game.height - this.size.y;
+            this.position.y = this.game.size.y - this.size.y;
         }
     }
     draw(ctx) {
