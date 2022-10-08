@@ -13,6 +13,7 @@
         var queryString = location.search.substring(1);
         let script = document.createElement("script");
             script.setAttribute("src", queryString);
+            script.setAttribute('type', 'module');
             document.body.appendChild(script);
     </script>
 </body>
