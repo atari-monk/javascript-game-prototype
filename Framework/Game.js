@@ -3,6 +3,7 @@ import { InputHandler } from "./InputHandler.js";
 import { Vector2 } from "./Vector2.js";
 import { Player } from "./Player.js";
 import { Ball } from "./Ball.js";
+import { BallPrinter } from "./BallPrinter.js";
 
 export class Game {
     constructor(ctx, size) {
@@ -23,6 +24,7 @@ export class Game {
             10,
             new Vector2(0, 0)
         );
+        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
     }
     update(timestamp) {
         this.timer.set(timestamp);
@@ -35,5 +37,6 @@ export class Game {
             this.size.x, this.size.y);
         this.player.draw(this.ctx);
         this.ball.draw(this.ctx);
+        this.ballPrinter.printBall();
     }
 }
