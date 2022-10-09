@@ -74,6 +74,7 @@ export class Ball extends SphericalObject {
         return this.position.x <= this.game.player.position.x + this.radius * 2;
     }
     draw(ctx) {
+        ctx.fillStyle = 'white';
         const circle = new Path2D();
         circle.arc(
             this.position.x,

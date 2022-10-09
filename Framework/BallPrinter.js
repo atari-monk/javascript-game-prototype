@@ -8,6 +8,9 @@ export class BallPrinter extends Printer {
 
     printBall()
     {
-        this.print('test', 10, 10);
+        this.print('ball ', 10, 20);
+        this.print('radius:' + this.ball.radius.toFixed(1), 50, 20);
+        this.print('x:' + this.ball.position.x.toFixed(1), 155, 20);
+        this.print('y:' + this.ball.position.y.toFixed(1), 225, 20);
     }
 }
