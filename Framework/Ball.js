@@ -22,7 +22,10 @@ export class Ball extends SphericalObject {
         else if (input.keys.indexOf("ArrowDown") > -1) {
             this.speed.y = -.1;
         }
-        //else this.speed.x = 0;
+        else {
+            this.speed.x = 0;
+            this.speed.y = 0;
+        }
     }
     #setPosition(timer) {
         this.position.x -= timer.deltaTime * this.speed.x;
@@ -30,6 +33,7 @@ export class Ball extends SphericalObject {
     }
     #setConstraints() {
         this.#setWallConstraints();
+        this.#setPlayerCollision();
     }
     #setWallConstraints() {
         if (this.position.x >= this.game.size.x - this.radius) {
@@ -54,6 +58,20 @@ export class Ball extends SphericalObject {
     }
     #reverseYSpeed() {
         this.speed.y *= -1;
+    }
+    #setPlayerCollision() {
+        if (this.isBallPlayerXCollision() && this.isBallPlayerYCollision()) {
+            console.log('x1,y1: ' + this.position.x + ',' + this.position.y);
+            console.log('x2,y2: ' + this.game.player.position.x + ',' + this.game.player.position.y);
+            //this.#reverseXSpeed();
+        }
+    }
+    isBallPlayerYCollision() {
+        return (this.position.y + this.radius >= this.game.player.position.y - this.game.player.size.y / 2)
+            && (this.position.y - this.radius <= this.game.player.position.y + this.game.player.size.y / 2);
+    }
+    isBallPlayerXCollision() {
+        return this.position.x <= this.game.player.position.x + this.radius * 2;
     }
     draw(ctx) {
         const circle = new Path2D();
