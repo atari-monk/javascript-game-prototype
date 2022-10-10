@@ -32,8 +32,8 @@ export class Player extends RectangleObject {
     draw(ctx) {
         ctx.fillStyle = 'white';
         ctx.fillRect(
-            this.position.x,
-            this.position.y,
+            this.position.x - this.size.x/2,
+            this.position.y - this.size.y/2,
             this.size.x,
             this.size.y
         );
