@@ -5,7 +5,7 @@ export class Player extends RectangleObject {
         super(game, position, size, speed);
     }
     update(timer, input) {
-        this.#handleInput(input);
+        //this.#handleInput(input);
         this.#setPosition(timer);
         this.#setConstraints();   
     }

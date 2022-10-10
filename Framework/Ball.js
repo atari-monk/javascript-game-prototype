@@ -7,7 +7,7 @@ export class Ball extends SphericalObject {
     }
 
     update(timer, input) {
-        //this.#handleInput(input);
+        this.#handleInput(input);
         this.#setPosition(timer);
         this.#setConstraints();
     }
@@ -25,10 +25,10 @@ export class Ball extends SphericalObject {
         else if (input.keys.indexOf("ArrowDown") > -1) {
             this.speed.y = -.1;
         }
-        // else {
-        //     this.speed.x = 0;
-        //     this.speed.y = 0;
-        // }
+        else {
+            this.speed.x = 0;
+            this.speed.y = 0;
+        }
     }
     
     #setPosition(timer) {

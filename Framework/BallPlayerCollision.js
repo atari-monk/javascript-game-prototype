@@ -20,13 +20,12 @@ export class BallPlayerCollision {
         if (this.xyCollision)
         {
             this.game.ball.reverseXSpeed();
-            //this.game.ball.reverseYSpeed();
         }
     }
 
     #isBallPlayerXCollision() {
-        this.ballX = this.game.ball.position.x - this.game.ball.radius;
-        this.playerX = this.game.player.position.x; 
+        this.ballX = this.game.ball.position.x - this.game.ball.radius/2;
+        this.playerX = this.game.player.position.x + 5; 
         this.xCollision = this.ballX <= this.playerX;
     }
 
