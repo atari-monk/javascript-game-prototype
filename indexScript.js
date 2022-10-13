@@ -2,9 +2,13 @@ const pongPage = 'Pong/pongPage.html';
 const script = 'Script';
 const js = '.js'
 const samples = [];
-samples['pong'] = {
+samples['pong-1'] = {
     page: pongPage,
     script: 'pong' + script + '1' + js
+};
+samples['pong-2'] = {
+    page: pongPage,
+    script: 'pong' + script + '2' + js
 };
 
 function update() {
