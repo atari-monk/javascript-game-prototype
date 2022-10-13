@@ -1,20 +1,17 @@
 import { RectangleObject } from "./RectangleObject.js";
 
 export class Player extends RectangleObject {
-    constructor(game, position, size, speed) {
+    constructor(game, position, size, speed, inputHandler) {
         super(game, position, size, speed);
+        this.inputHandler = inputHandler;
     }
     update(timer, input) {
-        //this.#handleInput(input);
+        this.#handleInput(input);
         this.#setPosition(timer);
         this.#setConstraints();   
     }
     #handleInput(input) {
-        if (input.keys.indexOf("ArrowUp") > -1) {
-            this.speed.y = 1;
-        } else if (input.keys.indexOf("ArrowDown") > -1) {
-            this.speed.y = -1;
-        } else this.speed.y = 0;
+        this.inputHandler.handleInput(this);
     }
     #setPosition(timer) {
         this.position.y -= timer.deltaTime * this.speed.y;

@@ -7,6 +7,7 @@ import { BallPrinter } from "./BallPrinter.js";
 import { PlayerPrinter } from "./PlayerPrinter.js";
 import { BallPlayerCollision } from "./BallPlayerCollision.js";
 import { BallPlayerCollisionPrinter } from "./BallPlayerCollisionPrinter.js";
+import { EmptyInputHandler } from "./EmptyInputHandler.js";
 
 export class GameFactory {
     constructor(ctx, size) {
@@ -19,6 +20,7 @@ export class GameFactory {
             new Vector2(10, this.size.y / 2),
             new Vector2(10, 100),
             new Vector2(0, 0)
+            , new EmptyInputHandler()
         );
         this.ball = new Ball(
             this,
