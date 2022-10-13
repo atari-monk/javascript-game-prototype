@@ -3,6 +3,8 @@ import { Vector2 } from "./Vector2.js";
 import { Player } from "./Player.js";
 import { Ball } from "./Ball.js";
 import { PlayerInputHandler } from "./PlayerInputHandler.js";
+import { BallInputHandler2 } from "./BallInputHandler2.js";
+import { EmptyInputHandler } from "./EmptyInputHandler.js";
 
 export class GameFactory2 extends GameFactory {
     constructor(ctx, size) {
@@ -18,7 +20,8 @@ export class GameFactory2 extends GameFactory {
             this,
             new Vector2(this.size.x - 45, this.size.y / 2),
             10,
-            new Vector2(0, 0)
+            new Vector2(.3, .3),
+            new EmptyInputHandler()
         );
     }
 }

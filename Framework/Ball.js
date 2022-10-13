@@ -2,8 +2,9 @@ import { SphericalObject } from "./SphericalObject.js";
 
 export class Ball extends SphericalObject {
     
-    constructor(game, position, radius, speed) {
+    constructor(game, position, radius, speed, inputHandler) {
         super(game, position, radius, speed);
+        this.inputHandler = inputHandler;
     }
 
     update(timer, input) {
@@ -13,22 +14,7 @@ export class Ball extends SphericalObject {
     }
 
     #handleInput(input) {
-        if (input.keys.indexOf("ArrowLeft") > -1) {
-            this.speed.x = .1;
-        }
-        else if (input.keys.indexOf("ArrowRight") > -1) {
-            this.speed.x = -.1;
-        }
-        else if (input.keys.indexOf("ArrowUp") > -1) {
-            this.speed.y = .1;
-        }
-        else if (input.keys.indexOf("ArrowDown") > -1) {
-            this.speed.y = -.1;
-        }
-        else {
-            this.speed.x = 0;
-            this.speed.y = 0;
-        }
+        this.inputHandler.handleInput(this);
     }
     
     #setPosition(timer) {
