@@ -1,14 +1,14 @@
-const pongPage = 'Pong/pongPage.html';
-const script = 'Script';
-const js = '.js'
+const pongPage = "Pong/pongPage.html";
+const script = "Script";
+const js = ".js";
 const samples = [];
-samples['pong-1'] = {
+samples["pong-1"] = {
     page: pongPage,
-    script: 'pong' + script + '1' + js
+    script: "pong" + script + "1" + js,
 };
-samples['pong-2'] = {
+samples["pong-2"] = {
     page: pongPage,
-    script: 'pong' + script + '2' + js
+    script: "pong" + script + "2" + js,
 };
 
 function update() {
@@ -17,7 +17,21 @@ function update() {
     if (option.value == 'none')
         return;
     var sample = samples[option.value];
-    window.open(sample.page + '?' + sample.script, '_blank');
+
+    const encodeGetParams = (p) =>
+        Object.entries(p)
+            .map((kv) => kv.map(encodeURIComponent).join("="))
+            .join("&");
+
+    const params = {
+        none: '',
+        script: sample.script,
+        title: option.text
+    };
+
+    const url = sample.page + '?' + encodeGetParams(params);
+
+    window.open(url, '_blank');
 }
 
 update();

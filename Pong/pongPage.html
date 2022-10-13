@@ -10,9 +10,16 @@
     <body>
         <canvas id="canvas1"></canvas>
         <script>
-            var queryString = location.search.substring(1);
+            var url = location.search;
+            
+            const urlParams = new URLSearchParams(url);
+            const scriptParm = urlParams.get('script')
+            const title = urlParams.get('title')
+
+            document.title = title;
+
             let script = document.createElement("script");
-            script.setAttribute("src", queryString);
+            script.setAttribute("src", scriptParm);
             script.setAttribute("type", "module");
             document.body.appendChild(script);
         </script>
