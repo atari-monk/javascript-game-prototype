@@ -27,7 +27,7 @@ export class GameFactory3 {
         this.ball = new Ball(
             this,
             new Vector2(45, this.size.y / 2),
-            10,
+            new Vector2(10, 10),
             new Vector2(0, 0),
             new BallInputHandler(this.input)
             , new WallCollision()

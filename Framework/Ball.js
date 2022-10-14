@@ -1,10 +1,12 @@
-import { SphericalObject } from "./SphericalObject.js";
 
-export class Ball extends SphericalObject {
+export class Ball {
     
-    constructor(game, position, radius, speed, inputHandler
+    constructor(game, position, size, speed, inputHandler
         , wallCollision) {
-        super(game, position, radius, speed);
+        this.game = game;
+        this.position = position;
+        this.size = size;
+        this.speed = speed;
         this.inputHandler = inputHandler;
         this.wallCollision = wallCollision;
     }
@@ -43,10 +45,10 @@ export class Ball extends SphericalObject {
     draw(ctx) {
         ctx.fillStyle = 'white';
         ctx.fillRect(
-            this.position.x - this.radius/2,
-            this.position.y - this.radius/2,
-            this.radius,
-            this.radius
+            this.position.x - this.size.x/2,
+            this.position.y - this.size.y/2,
+            this.size.x,
+            this.size.y
         );
         // const circle = new Path2D();
         // circle.arc(

@@ -1,8 +1,10 @@
-import { RectangleObject } from "./RectangleObject.js";
 
-export class Player extends RectangleObject {
+export class Player {
     constructor(game, position, size, speed, inputHandler) {
-        super(game, position, size, speed);
+        this.game = game;
+        this.position = position;
+        this.size = size;
+        this.speed = speed;
         this.inputHandler = inputHandler;
     }
     update(timer, input) {
