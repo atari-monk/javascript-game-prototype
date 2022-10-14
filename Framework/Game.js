@@ -8,6 +8,7 @@ export class Game {
         this.player = this.gameFactory.player;
         this.ball = this.gameFactory.ball;
         this.ballPrinter = this.gameFactory.ballPrinter;
+        this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
         this.playerPrinter = this.gameFactory.playerPrinter;
         this.ballPlayerCollision = this.gameFactory.ballPlayerCollision;
         this.ballPlayerCollisionPrinter = this.gameFactory.ballPlayerCollisionPrinter;
@@ -30,9 +31,11 @@ export class Game {
         this.ball.draw(this.ctx);
         if(this.ballPrinter != null)
             this.ballPrinter.printInfo();
+        if(this.wallCollisionPrinter != null)
+            this.wallCollisionPrinter.printInfo();    
         if(this.playerPrinter != null)
             this.playerPrinter.printInfo();
         if(this.ballPlayerCollisionPrinter != null)
-            this.ballPlayerCollisionPrinter.printInfo();    
+            this.ballPlayerCollisionPrinter.printInfo();
     }
 }

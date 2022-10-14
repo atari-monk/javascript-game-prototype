@@ -1,25 +1,35 @@
 
 export class WallCollision {
 
+    constructor() {
+        this.debugCondition = false;
+    }
+
     calculateCollision(ball) {
         if(ball.size.x != ball.size.y)
             throw 'This collider works only for rectangles!';
         var rectSize = ball.size.x;
-        if (ball.position.x >= ball.game.size.x - rectSize/2) {
-            ball.position.x = ball.game.size.x - rectSize/2;
+        if (ball.position.x <= rectSize/2) {
+            ball.position.x = rectSize/2;
+            //this.debugCondition = true;
             ball.reverseXSpeed();
         }
-        if (ball.position.x <= rectSize) {
-            ball.position.x = rectSize;
-            ball.reverseXSpeed();
-        }
-        if (ball.position.y >= ball.game.size.y - rectSize) {
-            ball.position.y = ball.game.size.y - rectSize;
+        if (ball.position.y >= ball.game.size.y - rectSize/2) {
+            ball.position.y = ball.game.size.y - rectSize/2;
+            //this.debugCondition = true;
             ball.reverseYSpeed();
         }
-        if (ball.position.y <= rectSize) {
-            ball.position.y = rectSize;
-            ball.reverseYSpeed();
-        }
+        // if (ball.position.x <= rectSize) {
+        //     ball.position.x = rectSize;
+        //     ball.reverseXSpeed();
+        // }
+        // if (ball.position.y >= ball.game.size.y - rectSize) {
+        //     ball.position.y = ball.game.size.y - rectSize;
+        //     ball.reverseYSpeed();
+        // }
+        // if (ball.position.y <= rectSize) {
+        //     ball.position.y = rectSize;
+        //     ball.reverseYSpeed();
+        // }
     }
 }

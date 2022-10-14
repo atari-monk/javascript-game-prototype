@@ -13,8 +13,8 @@ export class BallPrinter extends Printer {
 
     #getInfo()
     {
-        var info = 'ball->radius:'
-            + this.ball.radius.toFixed(1)
+        var info = 'ball->rectSize:'
+            + this.ball.size.x.toFixed(1)
             + ' x: ' + this.ball.position.x.toFixed(1)
             + ' y: ' + this.ball.position.y.toFixed(1)
             + ' vx: ' + this.ball.speed.x.toFixed(1)
