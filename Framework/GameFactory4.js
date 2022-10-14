@@ -5,6 +5,7 @@ import { Ball } from "./Ball.js";
 import { PlayerInputHandler } from "./PlayerInputHandler.js";
 import { EmptyInputHandler } from "./EmptyInputHandler.js";
 import { WallCollision } from "./WallCollision.js";
+import { BallRender } from "./BallRender.js";
 
 export class GameFactory4 extends GameFactory3 {
     constructor(ctx, size) {
@@ -23,6 +24,7 @@ export class GameFactory4 extends GameFactory3 {
             new Vector2(.3, .3),
             new EmptyInputHandler()
             , new WallCollision()
+            , new BallRender()
         );
     }
 }

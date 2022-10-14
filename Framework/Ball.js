@@ -2,13 +2,15 @@
 export class Ball {
     
     constructor(game, position, size, speed, inputHandler
-        , wallCollision) {
+        , wallCollision
+        , ballRender) {
         this.game = game;
         this.position = position;
         this.size = size;
         this.speed = speed;
         this.inputHandler = inputHandler;
         this.wallCollision = wallCollision;
+        this.ballRender = ballRender;
     }
 
     update(timer, input) {
@@ -43,21 +45,6 @@ export class Ball {
     }
     
     draw(ctx) {
-        ctx.fillStyle = 'white';
-        ctx.fillRect(
-            this.position.x - this.size.x/2,
-            this.position.y - this.size.y/2,
-            this.size.x,
-            this.size.y
-        );
-        // const circle = new Path2D();
-        // circle.arc(
-        //     this.position.x,
-        //     this.position.y,
-        //     this.radius,
-        //     0,
-        //     2 * Math.PI
-        // );
-        // ctx.fill(circle);
+        this.ballRender.draw(ctx, this);
     }
 }

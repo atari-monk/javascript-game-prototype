@@ -4,6 +4,7 @@ import { WallCollision } from "./WallCollision.js";
 import { Timer } from "./Timer.js";
 import { InputHandler } from "./InputHandler.js";
 import { BallInputHandler2 } from "./BallInputHandler2.js";
+import { BallRender } from "./BallRender.js";
 
 export class GameFactory2 {
     constructor(ctx, size) {
@@ -18,6 +19,7 @@ export class GameFactory2 {
             new Vector2(.3, .3),
             new BallInputHandler2(this.input)
             , new WallCollision()
+            , new BallRender()
         );
     }
 }
