@@ -14,23 +14,39 @@ export class GameFactory1 {
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
-        var testX = false;
-        var testY = true;
-        var positionForX = new Vector2(60, this.size.y - 60);
-        var velocityForX = new Vector2(0.01, 0.0);
-        var positionForY = new Vector2(60, this.size.y - 60);
-        var velocityForY = new Vector2(0, -0.01);
+        var testMinX = false;
+        var testMaxX = false;
+        var testMinY = false;
+        var testMaxY = false;
+        var positionForMinX = new Vector2(60, this.size.y - 60);
+        var velocityForMinX = new Vector2(0.01, 0.0);
+        var positionForMaxX = new Vector2(this.size.x - 60, 60);
+        var velocityForMaxX = new Vector2(-0.01, 0);
+        var positionForMinY = new Vector2(this.size.x - 60, 60);
+        var velocityForMinY = new Vector2(0, 0.01);
+        var positionForMaxY = new Vector2(60, this.size.y - 60);
+        var velocityForMaxY = new Vector2(0, -0.01);
         var position = new Vector2(this.size.x / 2, this.size.y / 2);
         var velocity = new Vector2(0, 0);
-        if(testX)
+        if(testMinX)
         {
-            position = positionForX;
-            velocity = velocityForX;
+            position = positionForMinX;
+            velocity = velocityForMinX;
         }
-        if(testY)
+        if(testMaxX)
         {
-            position = positionForY;
-            velocity = velocityForY;
+            position = positionForMaxX;
+            velocity = velocityForMaxX;
+        }
+        if(testMinY)
+        {
+            position = positionForMinY;
+            velocity = velocityForMinY;
+        }
+        if(testMaxY)
+        {
+            position = positionForMaxY;
+            velocity = velocityForMaxY;
         }
         this.ball = new Ball(
             this,
