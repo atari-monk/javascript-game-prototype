@@ -2,9 +2,11 @@ import { SphericalObject } from "./SphericalObject.js";
 
 export class Ball extends SphericalObject {
     
-    constructor(game, position, radius, speed, inputHandler) {
+    constructor(game, position, radius, speed, inputHandler
+        , wallCollision) {
         super(game, position, radius, speed);
         this.inputHandler = inputHandler;
+        this.wallCollision = wallCollision;
     }
 
     update(timer, input) {
@@ -27,22 +29,7 @@ export class Ball extends SphericalObject {
     }
 
     #setWallConstraints() {
-        if (this.position.x >= this.game.size.x - this.radius) {
-            this.position.x = this.game.size.x - this.radius;
-            this.reverseXSpeed();
-        }
-        // if (this.position.x <= this.radius) {
-        //     this.position.x = this.radius;
-        //     this.reverseXSpeed();
-        // }
-        if (this.position.y >= this.game.size.y - this.radius) {
-            this.position.y = this.game.size.y - this.radius;
-            this.reverseYSpeed();
-        }
-        if (this.position.y <= this.radius) {
-            this.position.y = this.radius;
-            this.reverseYSpeed();
-        }
+        this.wallCollision.calculateCollision(this);
     }
 
     reverseXSpeed() {
