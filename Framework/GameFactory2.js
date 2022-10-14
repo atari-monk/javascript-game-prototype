@@ -1,29 +1,40 @@
-import { GameFactory } from './GameFactory.js';
+import { Timer } from "./Timer.js";
+import { InputHandler } from "./InputHandler.js";
 import { Vector2 } from "./Vector2.js";
 import { Player } from "./Player.js";
 import { Ball } from "./Ball.js";
-import { PlayerInputHandler } from "./PlayerInputHandler.js";
-import { BallInputHandler2 } from "./BallInputHandler2.js";
+import { BallPrinter } from "./BallPrinter.js";
+import { PlayerPrinter } from "./PlayerPrinter.js";
+import { BallPlayerCollision } from "./BallPlayerCollision.js";
+import { BallPlayerCollisionPrinter } from "./BallPlayerCollisionPrinter.js";
 import { EmptyInputHandler } from "./EmptyInputHandler.js";
+import { BallInputHandler } from "./BallInputHandler.js";
 import { WallCollision } from "./WallCollision.js";
 
-export class GameFactory2 extends GameFactory {
+export class GameFactory2 {
     constructor(ctx, size) {
-        super(ctx, size);
+        this.ctx = ctx;
+        this.size = size;
+        this.timer = new Timer();
+        this.input = new InputHandler();
         this.player = new Player(
             this,
             new Vector2(10, this.size.y / 2),
             new Vector2(10, 100),
             new Vector2(0, 0)
-            , new PlayerInputHandler(this.input)
+            , new EmptyInputHandler()
         );
         this.ball = new Ball(
             this,
-            new Vector2(this.size.x - 45, this.size.y / 2),
+            new Vector2(45, this.size.y / 2),
             10,
-            new Vector2(.3, .3),
-            new EmptyInputHandler()
+            new Vector2(0, 0),
+            new BallInputHandler(this.input)
             , new WallCollision()
         );
+        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
+        this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
+        this.ballPlayerCollision = new BallPlayerCollision(this);
+        this.ballPlayerCollisionPrinter = new BallPlayerCollisionPrinter(this.ctx, this.ballPlayerCollision);
     }
 }

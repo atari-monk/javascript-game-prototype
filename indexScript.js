@@ -10,6 +10,10 @@ samples["pong-2"] = {
     page: pongPage,
     script: "pong" + script + "2" + js,
 };
+samples["pong-3"] = {
+    page: pongPage,
+    script: "pong" + script + "3" + js,
+};
 
 function update() {
     var select = document.getElementById('select1');

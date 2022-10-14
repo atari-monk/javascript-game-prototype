@@ -14,18 +14,25 @@ export class Game {
     }
     update(timestamp) {
         this.timer.set(timestamp);
-        //this.timer.log();
-        this.player.update(this.timer, this.input);
+        if(false)
+            this.timer.log();
+        if(this.player != null)
+            this.player.update(this.timer, this.input);
         this.ball.update(this.timer, this.input);
-        this.ballPlayerCollision.calculateCollision();
+        if(this.ballPlayerCollision != null)
+            this.ballPlayerCollision.calculateCollision();
     }
     draw() {
         this.ctx.clearRect(0, 0, 
             this.size.x, this.size.y);
-        this.player.draw(this.ctx);
+        if(this.player != null)
+            this.player.draw(this.ctx);
         this.ball.draw(this.ctx);
-        this.ballPrinter.printInfo();
-        this.playerPrinter.printInfo();
-        this.ballPlayerCollisionPrinter.printInfo();    
+        if(this.ballPrinter != null)
+            this.ballPrinter.printInfo();
+        if(this.playerPrinter != null)
+            this.playerPrinter.printInfo();
+        if(this.ballPlayerCollisionPrinter != null)
+            this.ballPlayerCollisionPrinter.printInfo();    
     }
 }
