@@ -14,7 +14,7 @@ export class GameFactory1 {
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
-        var testMinX = false;
+        var testMinX = true;
         var testMaxX = false;
         var testMinY = false;
         var testMaxY = false;

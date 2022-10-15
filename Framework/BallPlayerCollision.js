@@ -24,14 +24,14 @@ export class BallPlayerCollision {
     }
 
     #isBallPlayerXCollision() {
-        this.ballX = this.game.ball.position.x - this.game.ball.radius/2;
+        this.ballX = this.game.ball.position.x - this.game.ball.size.x/2;
         this.playerX = this.game.player.position.x + 5; 
         this.xCollision = this.ballX <= this.playerX;
     }
 
     #isBallPlayerYCollision() {
-        this.ballY1 = this.game.ball.position.y - this.game.ball.radius/2;
-        this.ballY2 = this.game.ball.position.y + this.game.ball.radius/2;
+        this.ballY1 = this.game.ball.position.y - this.game.ball.size.x/2;
+        this.ballY2 = this.game.ball.position.y + this.game.ball.size.x/2;
         this.playerY1 = this.game.player.position.y - (this.game.player.size.y / 2);
         this.playerY2 = this.game.player.position.y + (this.game.player.size.y / 2);
         this.yCollision = ((this.playerY1 <= this.ballY1) || (this.playerY1 <= this.ballY2)) 
