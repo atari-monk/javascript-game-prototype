@@ -5,12 +5,12 @@ import { Player } from "./Player.js";
 import { Ball } from "./Ball.js";
 import { BallPrinter } from "./BallPrinter.js";
 import { PlayerPrinter } from "./PlayerPrinter.js";
-import { BallPlayerCollision } from "./BallPlayerCollision.js";
-import { BallPlayerCollisionPrinter } from "./BallPlayerCollisionPrinter.js";
+import { PongCollision } from "./PongCollision.js";
+import { PongCollisionPrinter } from "./PongCollisionPrinter.js";
 import { EmptyInputHandler } from "./EmptyInputHandler.js";
 import { BallInputHandler } from "./BallInputHandler.js";
 import { WallCollision } from "./WallCollision.js";
-import { BallRender } from "./BallRender.js";
+import { BallRender2 } from "./BallRender2.js";
 
 export class GameFactory3 {
     constructor(ctx, size) {
@@ -20,23 +20,24 @@ export class GameFactory3 {
         this.input = new InputHandler();
         this.player = new Player(
             this,
-            new Vector2(10, this.size.y / 2),
-            new Vector2(10, 100),
+            new Vector2(this.size.x / 2, this.size.y / 2),
+            new Vector2(40, 200),
             new Vector2(0, 0)
             , new EmptyInputHandler()
         );
         this.ball = new Ball(
             this,
-            new Vector2(45, this.size.y / 2),
-            new Vector2(10, 10),
+            new Vector2(this.size.x / 2 + 45, this.size.y / 2),
+            new Vector2(40, 40),
             new Vector2(0, 0),
             new BallInputHandler(this.input)
             , new WallCollision()
-            , new BallRender()
+            , new BallRender2()
         );
         this.ballPrinter = new BallPrinter(this.ctx, this.ball);
         this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
-        this.ballPlayerCollision = new BallPlayerCollision(this);
-        this.ballPlayerCollisionPrinter = new BallPlayerCollisionPrinter(this.ctx, this.ballPlayerCollision);
+        this.pongCollision1 = new PongCollision();
+        this.pongCollisionPrinter1 = new PongCollisionPrinter(this.ctx, this.pongCollision1);
+        this.pongCollision2 = new PongCollision();
     }
 }

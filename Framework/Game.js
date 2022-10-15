@@ -11,8 +11,8 @@ export class Game {
         this.ballPrinter = this.gameFactory.ballPrinter;
         this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
         this.playerPrinter = this.gameFactory.playerPrinter;
-        this.ballPlayerCollision = this.gameFactory.ballPlayerCollision;
-        this.ballPlayerCollisionPrinter = this.gameFactory.ballPlayerCollisionPrinter;
+        this.pongCollision1 = this.gameFactory.pongCollision1;
+        this.pongCollisionPrinter1 = this.gameFactory.pongCollisionPrinter1;
     }
     update(timestamp) {
         this.timer.set(timestamp);
@@ -23,9 +23,11 @@ export class Game {
         if(this.player2 != null)
             this.player2.update(this.timer, this.input);
         this.ball.update(this.timer, this.input);
-        if(this.ballPlayerCollision != null){
-            this.ballPlayerCollision.calculateCollision(this.player);
-            this.ballPlayerCollision.calculateCollision(this.player2);
+        if(this.pongCollision1 != null){
+            if(this.player != null)
+                this.pongCollision1.calculateCollision(this.player, this.ball);
+            if(this.player2 != null)
+                this.pongCollision1.calculateCollision(this.player2, this.ball);
         }
     }
     draw() {
@@ -42,7 +44,7 @@ export class Game {
             this.wallCollisionPrinter.printInfo();    
         if(this.playerPrinter != null)
             this.playerPrinter.printInfo();
-        if(this.ballPlayerCollisionPrinter != null)
-            this.ballPlayerCollisionPrinter.printInfo();
+        if(this.pongCollisionPrinter1 != null)
+            this.pongCollisionPrinter1.printInfo(this);
     }
 }

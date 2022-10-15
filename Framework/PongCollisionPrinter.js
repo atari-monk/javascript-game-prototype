@@ -1,9 +1,9 @@
 import { Printer } from "./Printer.js";
 
-export class BallPlayerCollisionPrinter extends Printer {
-    constructor(ctx, ballPlayerCollision) {
+export class PongCollisionPrinter extends Printer {
+    constructor(ctx, pongCollision) {
         super(ctx);
-        this.collision = ballPlayerCollision;
+        this.collision = pongCollision;
     }
 
     printInfo() {
