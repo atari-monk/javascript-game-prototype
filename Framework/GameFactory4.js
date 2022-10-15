@@ -12,7 +12,7 @@ export class GameFactory4 extends GameFactory3 {
         super(ctx, size);
         this.player = new Player(
             this,
-            new Vector2(10, this.size.y / 2),
+            new Vector2(this.size.x / 2 - 100, this.size.y / 2),
             new Vector2(10, 100),
             new Vector2(0, 0)
             , new PlayerInputHandler(this.input)

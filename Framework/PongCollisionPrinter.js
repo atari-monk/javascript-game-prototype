@@ -11,6 +11,7 @@ export class PongCollisionPrinter extends Printer {
         this.print(this.#getInfo2(), 10, 110);
         this.print(this.#getInfo3(), 10, 140);
         this.print(this.#getInfo4(), 10, 170);
+        this.print(this.#getInfo5(), 10, 200);
     }
 
     #getInfo1() {
@@ -39,6 +40,14 @@ export class PongCollisionPrinter extends Printer {
         info += 'x=' + this.collision.xCollision;
         info += ' y=' + this.collision.yCollision;
         info += ' xy=' + this.collision.xyCollision;
+        return info;
+    }
+
+    #getInfo5() {
+        var info = 'collision->';
+        info += 'regionX=' + this.collision.regionX;
+        info += ' regionY=' + this.collision.regionY;
+        info += ' region=' + this.collision.region;
         return info;
     }
 }

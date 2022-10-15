@@ -13,6 +13,7 @@ export class Game {
         this.playerPrinter = this.gameFactory.playerPrinter;
         this.pongCollision1 = this.gameFactory.pongCollision1;
         this.pongCollisionPrinter1 = this.gameFactory.pongCollisionPrinter1;
+        this.pongCollisionRender1 = this.gameFactory.pongCollisionRender1;
     }
     update(timestamp) {
         this.timer.set(timestamp);
@@ -46,5 +47,7 @@ export class Game {
             this.playerPrinter.printInfo();
         if(this.pongCollisionPrinter1 != null)
             this.pongCollisionPrinter1.printInfo(this);
+        if(this.pongCollisionRender1 != null)
+            this.pongCollisionRender1.draw();
     }
 }
