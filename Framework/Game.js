@@ -6,6 +6,7 @@ export class Game {
         this.timer = this.gameFactory.timer;
         this.input = this.gameFactory.input;
         this.player = this.gameFactory.player;
+        this.player2 = this.gameFactory.player2;
         this.ball = this.gameFactory.ball;
         this.ballPrinter = this.gameFactory.ballPrinter;
         this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
@@ -19,15 +20,21 @@ export class Game {
             this.timer.log();
         if(this.player != null)
             this.player.update(this.timer, this.input);
+        if(this.player2 != null)
+            this.player2.update(this.timer, this.input);
         this.ball.update(this.timer, this.input);
-        if(this.ballPlayerCollision != null)
-            this.ballPlayerCollision.calculateCollision();
+        if(this.ballPlayerCollision != null){
+            this.ballPlayerCollision.calculateCollision(this.player);
+            this.ballPlayerCollision.calculateCollision(this.player2);
+        }
     }
     draw() {
         this.ctx.clearRect(0, 0, 
             this.size.x, this.size.y);
         if(this.player != null)
             this.player.draw(this.ctx);
+        if(this.player2 != null)
+            this.player2.draw(this.ctx);
         this.ball.draw(this.ctx);
         if(this.ballPrinter != null)
             this.ballPrinter.printInfo();
