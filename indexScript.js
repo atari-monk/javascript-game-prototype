@@ -1,26 +1,24 @@
 const pongPage = "Pong/pongPage.html";
-const script = "Script";
-const js = ".js";
 const samples = [];
 samples["wall-collision-test"] = {
     page: pongPage,
-    script: "WallCollisionTest/WallCollisionTest" + js,
+    script: "WallCollisionTest/WallCollisionTest.js",
 };
 samples["wall-collision"] = {
     page: pongPage,
-    script: "WallCollision/WallCollision" + js,
+    script: "WallCollision/WallCollision.js",
 };
 samples["collision-test"] = {
     page: pongPage,
-    script: "CollisionTest/CollisionTest" + js,
+    script: "CollisionTest/CollisionTest.js",
 };
 samples["collision"] = {
     page: pongPage,
-    script: "Collision/Collision" + js,
+    script: "Collision/Collision.js",
 };
-samples["pong-5"] = {
+samples["second-player"] = {
     page: pongPage,
-    script: "pong" + script + "5" + js,
+    script: "SecondPlayer/SecondPlayer.js",
 };
 
 function update() {
