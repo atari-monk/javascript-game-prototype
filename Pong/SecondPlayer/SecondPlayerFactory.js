@@ -1,10 +1,10 @@
 import { Vector2 } from "../../Framework/Vector2.js";
-import { Player } from "../../Framework/Player.js";
-import { Ball } from "../../Framework/Ball.js";
-import { PlayerInputHandler } from "../../Framework/PlayerInputHandler.js";
 import { EmptyInputHandler } from "../../Framework/EmptyInputHandler.js";
-import { WallCollision } from "../../Framework/WallCollision.js";
-import { BallRender } from "../../Framework/BallRender.js";
+import { Ball } from "../../Framework/Ball/Ball.js";
+import { BallRender } from "../../Framework/Ball/BallRender.js";
+import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
+import { Player } from "../../Framework/Player/Player.js";
+import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { CollisionTestFactory } from '../CollisionTest/CollisionTestFactory.js';
 
 export class SecondPlayerFactory extends CollisionTestFactory {

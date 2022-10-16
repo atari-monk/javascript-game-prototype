@@ -1,4 +1,4 @@
-import { Printer } from "./Printer.js";
+import { Printer } from "../Printer.js";
 
 export class PongCollisionPrinter extends Printer {
     constructor(ctx, pongCollision) {

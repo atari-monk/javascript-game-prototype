@@ -1,18 +1,18 @@
 import { Timer } from "../../Framework/Timer.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
 import { Vector2 } from "../../Framework/Vector2.js";
-import { Player } from "../../Framework/Player.js";
-import { Ball } from "../../Framework/Ball.js";
-import { BallPrinter } from "../../Framework/BallPrinter.js";
-import { PlayerPrinter } from "../../Framework/PlayerPrinter.js";
-import { PongCollision } from "../../Framework/PongCollision.js";
-import { PongCollisionPrinter } from "../../Framework/PongCollisionPrinter.js";
 import { EmptyInputHandler } from "../../Framework/EmptyInputHandler.js";
-import { BallInputHandler } from "../../Framework/BallInputHandler.js";
-import { BallInputHandler2 } from "../../Framework/BallInputHandler2.js";
-import { WallCollision } from "../../Framework/WallCollision.js";
-import { BallRender2 } from "../../Framework/BallRender2.js";
-import { PongCollisionRender } from "../../Framework/PongCollisionRender.js";
+import { InputHandler } from "../../Framework/InputHandler.js";
+import { Ball } from "../../Framework/Ball/Ball.js";
+import { BallPrinter } from "../../Framework/Ball/BallPrinter.js";
+import { BallInputHandler } from "../../Framework/Ball/BallInputHandler.js";
+import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
+import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
+import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
+import { Player } from "../../Framework/Player/Player.js";
+import { PlayerPrinter } from "../../Framework/Player/PlayerPrinter.js";
+import { PongCollision } from "../../Framework/Collision/PongCollision.js";
+import { PongCollisionPrinter } from "../../Framework/Collision/PongCollisionPrinter.js";
+import { PongCollisionRender } from "../../Framework/Collision/PongCollisionRender.js";
 
 export class CollisionTestFactory {
     constructor(ctx, size) {

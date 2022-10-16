@@ -1,10 +1,10 @@
-import { Vector2 } from "../../Framework/Vector2.js";
-import { Ball } from "../../Framework/Ball.js";
-import { WallCollision } from "../../Framework/WallCollision.js";
 import { Timer } from "../../Framework/Timer.js";
+import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
-import { BallInputHandler2 } from "../../Framework/BallInputHandler2.js";
-import { BallRender } from "../../Framework/BallRender.js";
+import { Ball } from "../../Framework/Ball/Ball.js";
+import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
+import { BallRender } from "../../Framework/Ball/BallRender.js";
+import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 
 export class WallCollisionFactory {
     constructor(ctx, size) {

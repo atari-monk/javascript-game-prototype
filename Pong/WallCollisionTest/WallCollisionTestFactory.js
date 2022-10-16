@@ -1,12 +1,12 @@
-import { Vector2 } from "../../Framework/Vector2.js";
-import { Ball } from "../../Framework/Ball.js";
-import { WallCollision } from "../../Framework/WallCollision.js";
 import { Timer } from "../../Framework/Timer.js";
+import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
-import { BallInputHandler2 } from "../../Framework/BallInputHandler2.js";
-import { BallRender2 } from "../../Framework/BallRender2.js";
-import { BallPrinter } from "../../Framework/BallPrinter.js";
-import { WallCollisionPrinter } from "../../Framework/WallCollisionPrinter.js";
+import { Ball } from "../../Framework/Ball/Ball.js";
+import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
+import { BallPrinter } from "../../Framework/Ball/BallPrinter.js";
+import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
+import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
+import { WallCollisionPrinter } from "../../Framework/WallCollision/WallCollisionPrinter.js";
 
 export class WallCollisionTestFactory {
     constructor(ctx, size) {

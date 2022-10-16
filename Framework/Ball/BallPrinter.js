@@ -1,4 +1,4 @@
-import { Printer } from "./Printer.js";
+import { Printer } from "../Printer.js";
 
 export class BallPrinter extends Printer {
     constructor(ctx, ball) {
