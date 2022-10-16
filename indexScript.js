@@ -12,9 +12,13 @@ samples["player-test"] = {
     page: pongPage,
     script: "PlayerTest/PlayerTest.js",
 };
-samples["collision-test"] = {
+samples["collision-left-test"] = {
     page: pongPage,
-    script: "CollisionTest/CollisionTest.js",
+    script: "CollisionLeftTest/CollisionLeftTest.js",
+};
+samples["collision-right-test"] = {
+    page: pongPage,
+    script: "CollisionRightTest/CollisionRightTest.js",
 };
 samples["collision"] = {
     page: pongPage,

@@ -14,7 +14,7 @@ import { BallCollision } from "../../Framework/BallCollision/BallCollision.js";
 import { BallCollisionPrinter } from "../../Framework/BallCollision/BallCollisionPrinter.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 
-export class CollisionTestFactory {
+export class CollisionLeftTestFactory {
     constructor(ctx, size) {
         this.ctx = ctx;
         this.size = size;

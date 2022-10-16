@@ -28,6 +28,8 @@ export class Game {
         if(this.pongCollision1 != null){
             if(this.player != null)
                 this.pongCollision1.calculateCollision(this.player, this.ball);
+        }
+        if(this.pongCollision2 != null){
             if(this.player2 != null)
                 this.pongCollision1.calculateCollision(this.player2, this.ball);
         }

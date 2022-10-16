@@ -5,9 +5,9 @@ import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
-import { CollisionTestFactory } from '../CollisionTest/CollisionTestFactory.js';
+import { CollisionLeftTestFactory } from '../CollisionLeftTest/CollisionLeftTestFactory.js';
 
-export class SecondPlayerFactory extends CollisionTestFactory {
+export class SecondPlayerFactory extends CollisionLeftTestFactory {
     constructor(ctx, size) {
         super(ctx, size);
         this.player = new Player(
