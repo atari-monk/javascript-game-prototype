@@ -1,13 +1,13 @@
-import { Game } from '../Framework/Game.js';
-import { Vector2 } from '../Framework/Vector2.js';
-import { GameFactory2 } from '../Framework/GameFactory2.js';
+import { Game } from '../../Framework/Game.js';
+import { Vector2 } from '../../Framework/Vector2.js';
+import { WallCollisionFactory } from './WallCollisionFactory.js';
 
 const canvas = document.getElementById('canvas1');
 canvas.width = 680;
 canvas.height = 680;
 const ctx = canvas.getContext('2d');
 
-var gameFactory = new GameFactory2(ctx, new Vector2(canvas.width, canvas.height));
+var gameFactory = new WallCollisionFactory(ctx, new Vector2(canvas.width, canvas.height));
 var game = new Game(ctx, new Vector2(canvas.width, canvas.height), gameFactory);
 
 function animate(timestamp) {
