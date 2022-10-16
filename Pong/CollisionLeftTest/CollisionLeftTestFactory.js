@@ -20,13 +20,7 @@ export class CollisionLeftTestFactory {
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
-        this.player = new Player(
-            this,
-            new Vector2(this.size.x / 2, this.size.y / 2),
-            new Vector2(40, 200),
-            new Vector2(0, 0)
-            , new InputHandlerEmpty()
-        );
+
         this.ball = new Ball(
             this,
             new Vector2(this.size.x / 2 + 70, this.size.y / 2),
@@ -37,12 +31,20 @@ export class CollisionLeftTestFactory {
             , new BallRender2()
         );
         this.ballPrinter = new BallPrinter(this.ctx, this.ball);
+
+        this.player = new Player(
+            this,
+            new Vector2(this.size.x / 2, this.size.y / 2),
+            new Vector2(40, 200),
+            new Vector2(0, 0)
+            , new InputHandlerEmpty()
+        );
         this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
+
         this.pongCollision1 = new BallCollision();
         this.pongCollisionPrinter1 = new BallCollisionPrinter(this.ctx
             , this.pongCollision1);
         this.pongCollisionRender1 = new BallCollisionRender(this.ctx
             , this.pongCollision1);
-        this.pongCollision2 = new BallCollision();
     }
 }

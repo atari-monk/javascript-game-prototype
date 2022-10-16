@@ -1,0 +1,7 @@
+Goal: make game work
+
+Done:
+1. Refactor for better project stucture.
+
+ToDo:
+2. Add collision for player on right side.

@@ -1,5 +1,0 @@
-Goal: make game work
-
-1. Refactor for better project stucture.
-2. Add collision for second player.
-3. Add second canvas, so text is separete from game canvas.
