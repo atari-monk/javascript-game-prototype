@@ -1,5 +1,5 @@
 import { Vector2 } from "../../Framework/Vector2.js";
-import { EmptyInputHandler } from "../../Framework/EmptyInputHandler.js";
+import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
@@ -29,7 +29,7 @@ export class SecondPlayerFactory extends CollisionTestFactory {
             new Vector2(this.size.x - 45, this.size.y / 2),
             new Vector2(10, 10),
             new Vector2(.05, .05),
-            new EmptyInputHandler()
+            new InputHandlerEmpty()
             , new WallCollision()
             , new BallRender()
         );

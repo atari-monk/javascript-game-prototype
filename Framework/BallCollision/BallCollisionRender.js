@@ -1,5 +1,5 @@
 
-export class PongCollisionRender {
+export class BallCollisionRender {
 
     constructor(ctx, pongCollision) {
         this.ctx = ctx;
