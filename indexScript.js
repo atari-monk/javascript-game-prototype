@@ -14,9 +14,9 @@ samples["collision-test"] = {
     page: pongPage,
     script: "CollisionTest/CollisionTest" + js,
 };
-samples["pong-4"] = {
+samples["collision"] = {
     page: pongPage,
-    script: "pong" + script + "4" + js,
+    script: "Collision/Collision" + js,
 };
 samples["pong-5"] = {
     page: pongPage,

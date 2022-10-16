@@ -1,13 +1,13 @@
-import { GameFactory3 } from './GameFactory3.js';
-import { Vector2 } from "./Vector2.js";
-import { Player } from "./Player.js";
-import { Ball } from "./Ball.js";
-import { PlayerInputHandler } from "./PlayerInputHandler.js";
-import { EmptyInputHandler } from "./EmptyInputHandler.js";
-import { WallCollision } from "./WallCollision.js";
-import { BallRender } from "./BallRender.js";
+import { CollisionTestFactory } from '../CollisionTest/CollisionTestFactory.js';
+import { Vector2 } from "../../Framework/Vector2.js";
+import { Player } from "../../Framework/Player.js";
+import { Ball } from "../../Framework/Ball.js";
+import { PlayerInputHandler } from "../../Framework/PlayerInputHandler.js";
+import { EmptyInputHandler } from "../../Framework/EmptyInputHandler.js";
+import { WallCollision } from "../../Framework/WallCollision.js";
+import { BallRender } from "../../Framework/BallRender.js";
 
-export class GameFactory4 extends GameFactory3 {
+export class CollisionFactory extends CollisionTestFactory {
     constructor(ctx, size) {
         super(ctx, size);
         this.player = new Player(
