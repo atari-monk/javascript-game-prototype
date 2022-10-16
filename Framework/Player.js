@@ -29,7 +29,7 @@ export class Player {
         }
     }
     draw(ctx) {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'green';
         ctx.fillRect(
             this.position.x - this.size.x/2,
             this.position.y - this.size.y/2,

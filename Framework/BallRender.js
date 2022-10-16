@@ -1,7 +1,7 @@
 export class BallRender {
 
     draw(ctx, ball) {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'green';
         ctx.fillRect(
             ball.position.x - ball.size.x / 2,
             ball.position.y - ball.size.y / 2,

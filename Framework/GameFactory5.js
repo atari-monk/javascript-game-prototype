@@ -28,7 +28,7 @@ export class GameFactory5 extends GameFactory3 {
             this,
             new Vector2(this.size.x - 45, this.size.y / 2),
             new Vector2(10, 10),
-            new Vector2(.3, .3),
+            new Vector2(.05, .05),
             new EmptyInputHandler()
             , new WallCollision()
             , new BallRender()

@@ -5,19 +5,18 @@ export class BallInputHandler2 {
     }
 
     handleInput(ball) {
-        var speed = .3;
-        var negSpeed = -.3;
+        var speed = .05;
         if (this.input.keys.indexOf("ArrowLeft") > -1) {
             ball.speed.x = speed;
         }
         else if (this.input.keys.indexOf("ArrowRight") > -1) {
-            ball.speed.x = negSpeed;
+            ball.speed.x = -speed;
         }
         else if (this.input.keys.indexOf("ArrowUp") > -1) {
             ball.speed.y = speed;
         }
         else if (this.input.keys.indexOf("ArrowDown") > -1) {
-            ball.speed.y = negSpeed;
+            ball.speed.y = -speed;
         }
     }
 }

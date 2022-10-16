@@ -1,25 +1,32 @@
 body {
-    background: #2d9ab2;
+    background: black;
 }
 h1 {
+    color: green;
     font-size: xx-large;
 }
 table,
 th,
 td {
-    /* border:1px solid black; */
+    /* border:1px solid white; */
     width: 100%;
     text-align: center;
 }
 p {
+    color: green;
     margin: 10px;
     font-size: 20px;
+}
+a {
+    color: green;
 }
 select {
     margin-top: 50px;
     font-size: 20px;
+    color: green;
+    background: black;
 }
-.bestSample {
+.markOption {
     color: darkgoldenrod;
     font-size: 24px;
     font-weight: bold;

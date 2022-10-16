@@ -2,9 +2,9 @@ const pongPage = "Pong/pongPage.html";
 const script = "Script";
 const js = ".js";
 const samples = [];
-samples["pong-1"] = {
+samples["wall-collision-test"] = {
     page: pongPage,
-    script: "pong" + script + "1" + js,
+    script: "WallCollisionTest/WallCollisionTest" + js,
 };
 samples["pong-2"] = {
     page: pongPage,

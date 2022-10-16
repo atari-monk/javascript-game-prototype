@@ -5,7 +5,7 @@ export class BallInputHandler {
     }
 
     handleInput(ball) {
-        var speed = .05;
+        var speed = .1;
         if (this.input.keys.indexOf("ArrowLeft") > -1) {
             ball.speed.x = speed;
         }

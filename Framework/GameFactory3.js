@@ -9,6 +9,7 @@ import { PongCollision } from "./PongCollision.js";
 import { PongCollisionPrinter } from "./PongCollisionPrinter.js";
 import { EmptyInputHandler } from "./EmptyInputHandler.js";
 import { BallInputHandler } from "./BallInputHandler.js";
+import { BallInputHandler2 } from "./BallInputHandler2.js";
 import { WallCollision } from "./WallCollision.js";
 import { BallRender2 } from "./BallRender2.js";
 import { PongCollisionRender } from "./PongCollisionRender.js";
@@ -31,7 +32,7 @@ export class GameFactory3 {
             new Vector2(this.size.x / 2 + 70, this.size.y / 2),
             new Vector2(40, 40),
             new Vector2(0, 0),
-            new BallInputHandler(this.input)
+            new BallInputHandler2(this.input)
             , new WallCollision()
             , new BallRender2()
         );

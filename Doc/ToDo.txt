@@ -1,0 +1,2 @@
+1. Refactor for better project stucture.
+2. Add second canvas, so text is separete from game canvas.

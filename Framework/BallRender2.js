@@ -8,7 +8,7 @@ export class BallRender2 {
 
     #drawBall(ctx, ball) {
         var rectSize = ball.size.x;
-        ctx.fillStyle = "white";
+        ctx.fillStyle = "green";
         ctx.fillRect(
             ball.position.x - rectSize / 2,
             ball.position.y - rectSize / 2,

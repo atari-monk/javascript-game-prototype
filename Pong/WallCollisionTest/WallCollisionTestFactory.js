@@ -1,14 +1,14 @@
-import { Vector2 } from "./Vector2.js";
-import { Ball } from "./Ball.js";
-import { WallCollision } from "./WallCollision.js";
-import { Timer } from "./Timer.js";
-import { InputHandler } from "./InputHandler.js";
-import { BallInputHandler2 } from "./BallInputHandler2.js";
-import { BallRender2 } from "./BallRender2.js";
-import { BallPrinter } from "./BallPrinter.js";
-import { WallCollisionPrinter } from "./WallCollisionPrinter.js";
+import { Vector2 } from "../../Framework/Vector2.js";
+import { Ball } from "../../Framework/Ball.js";
+import { WallCollision } from "../../Framework/WallCollision.js";
+import { Timer } from "../../Framework/Timer.js";
+import { InputHandler } from "../../Framework/InputHandler.js";
+import { BallInputHandler2 } from "../../Framework/BallInputHandler2.js";
+import { BallRender2 } from "../../Framework/BallRender2.js";
+import { BallPrinter } from "../../Framework/BallPrinter.js";
+import { WallCollisionPrinter } from "../../Framework/WallCollisionPrinter.js";
 
-export class GameFactory1 {
+export class WallCollisionTestFactory {
     constructor(ctx, size) {
         this.ctx = ctx;
         this.size = size;
