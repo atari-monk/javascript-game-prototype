@@ -8,6 +8,10 @@ samples["wall-collision"] = {
     page: pongPage,
     script: "WallCollision/WallCollision.js",
 };
+samples["player-test"] = {
+    page: pongPage,
+    script: "PlayerTest/PlayerTest.js",
+};
 samples["collision-test"] = {
     page: pongPage,
     script: "CollisionTest/CollisionTest.js",

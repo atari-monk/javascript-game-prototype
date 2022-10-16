@@ -19,13 +19,13 @@ export class Player {
         this.position.y -= timer.deltaTime * this.speed.y;
     }
     #setConstraints() {
-        if (this.position.y <= 0)
+        if (this.position.y <= this.size.y/2)
         {
-            this.position.y = 0;
+            this.position.y = this.size.y/2;
         }
-        if (this.position.y >= this.game.size.y - this.size.y)
+        if (this.position.y >= this.game.size.y - this.size.y/2)
         {
-            this.position.y = this.game.size.y - this.size.y;
+            this.position.y = this.game.size.y - this.size.y/2;
         }
     }
     draw(ctx) {

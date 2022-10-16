@@ -7,8 +7,11 @@ canvas.width = 680;
 canvas.height = 680;
 const ctx = canvas.getContext('2d');
 
-var gameFactory = new WallCollisionTestFactory(ctx, new Vector2(canvas.width, canvas.height));
-var game = new Game(ctx, new Vector2(canvas.width, canvas.height), gameFactory);
+var gameFactory = new WallCollisionTestFactory(ctx
+    , new Vector2(canvas.width, canvas.height));
+var game = new Game(ctx
+    , new Vector2(canvas.width, canvas.height)
+    , gameFactory);
 
 function animate(timestamp) {
     game.update(timestamp);

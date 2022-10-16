@@ -58,6 +58,7 @@ export class WallCollisionTestFactory {
             , new BallRender2()
         );
         this.ballPrinter = new BallPrinter(this.ctx, this.ball);
-        this.wallCollisionPrinter = new WallCollisionPrinter(this.ctx, this.ball);
+        this.wallCollisionPrinter = new WallCollisionPrinter(this.ctx
+            , this.ball);
     }
 }

@@ -39,8 +39,10 @@ export class CollisionTestFactory {
         this.ballPrinter = new BallPrinter(this.ctx, this.ball);
         this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
         this.pongCollision1 = new BallCollision();
-        this.pongCollisionPrinter1 = new BallCollisionPrinter(this.ctx, this.pongCollision1);
-        this.pongCollisionRender1 = new BallCollisionRender(this.ctx, this.pongCollision1);
+        this.pongCollisionPrinter1 = new BallCollisionPrinter(this.ctx
+            , this.pongCollision1);
+        this.pongCollisionRender1 = new BallCollisionRender(this.ctx
+            , this.pongCollision1);
         this.pongCollision2 = new BallCollision();
     }
 }

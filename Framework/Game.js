@@ -23,7 +23,8 @@ export class Game {
             this.player.update(this.timer, this.input);
         if(this.player2 != null)
             this.player2.update(this.timer, this.input);
-        this.ball.update(this.timer, this.input);
+        if(this.ball != null)
+            this.ball.update(this.timer, this.input);
         if(this.pongCollision1 != null){
             if(this.player != null)
                 this.pongCollision1.calculateCollision(this.player, this.ball);
@@ -38,7 +39,8 @@ export class Game {
             this.player.draw(this.ctx);
         if(this.player2 != null)
             this.player2.draw(this.ctx);
-        this.ball.draw(this.ctx);
+        if(this.ball != null)
+            this.ball.draw(this.ctx);
         if(this.ballPrinter != null)
             this.ballPrinter.printInfo();
         if(this.wallCollisionPrinter != null)
