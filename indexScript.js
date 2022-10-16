@@ -10,9 +10,9 @@ samples["wall-collision"] = {
     page: pongPage,
     script: "WallCollision/WallCollision" + js,
 };
-samples["pong-3"] = {
+samples["collision-test"] = {
     page: pongPage,
-    script: "pong" + script + "3" + js,
+    script: "CollisionTest/CollisionTest" + js,
 };
 samples["pong-4"] = {
     page: pongPage,
