@@ -30,8 +30,8 @@ export class BallCollisionRight {
     }
 
     #prepareParams(player, ball) {
-        this.ballX = ball.position.x - ball.size.x / 2;
-        this.playerX = player.position.x + player.size.x / 2;
+        this.ballX = ball.position.x + ball.size.x / 2;
+        this.playerX = player.position.x - player.size.x / 2;
         this.ballY1 = ball.position.y - ball.size.x / 2;
         this.ballY2 = ball.position.y + ball.size.x / 2;
         this.playerY1 = player.position.y - (player.size.y / 2);
@@ -39,8 +39,8 @@ export class BallCollisionRight {
     }
 
     #isCollisionRegion(ball) {
-        this.regionX = this.ballX >= this.playerX - ball.size.x / 2
-            && this.ballX <= this.playerX + 4 * ball.size.x;
+        this.regionX = this.ballX <= this.playerX + ball.size.x / 2
+            && this.ballX >= this.playerX - 2 * ball.size.x;
         this.regionY = (this.ballY1 >= this.playerY1 - ball.size.x
             && this.ballY1 <= this.playerY2 + ball.size.x)
             && (this.ballY2 >= this.playerY1 - ball.size.x
@@ -49,7 +49,7 @@ export class BallCollisionRight {
     }
 
     #isBallPlayerXCollision(player, ball) {
-        this.xCollision = this.ballX <= this.playerX;
+        this.xCollision = this.ballX >= this.playerX;
     }
 
     #isBallPlayerYCollision(player, ball) {

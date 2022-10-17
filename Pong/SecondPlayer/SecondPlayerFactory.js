@@ -19,9 +19,9 @@ export class SecondPlayerFactory {
         this.input = new InputHandler();
         this.ball = new Ball(
             this,
-            new Vector2(this.size.x - 45, this.size.y / 2),
+            new Vector2(this.size.x/2, this.size.y/2),
             new Vector2(10, 10),
-            new Vector2(.05, .05),
+            new Vector2(.2, .1),
             new InputHandlerEmpty()
             , new WallCollision()
             , new BallRender()

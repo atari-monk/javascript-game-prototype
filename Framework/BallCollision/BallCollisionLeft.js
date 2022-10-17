@@ -40,7 +40,7 @@ export class BallCollisionLeft {
 
     #isCollisionRegion(ball) {
         this.regionX = this.ballX >= this.playerX - ball.size.x / 2
-            && this.ballX <= this.playerX + 4 * ball.size.x;
+            && this.ballX <= this.playerX + 2 * ball.size.x;
         this.regionY = (this.ballY1 >= this.playerY1 - ball.size.x
             && this.ballY1 <= this.playerY2 + ball.size.x)
             && (this.ballY2 >= this.playerY1 - ball.size.x

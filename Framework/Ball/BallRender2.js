@@ -18,7 +18,7 @@ export class BallRender2 {
     }
 
     #drawPossition(ctx, ball) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "yellow";
         ctx.fillRect(ball.position.x - 5 / 2, ball.position.y - 5 / 2, 5, 5);
     }
 }

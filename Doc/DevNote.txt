@@ -2,10 +2,10 @@ Goal: Make game work.
 
 Done:
 1. Refactor for better project stucture.
+2. Add collision for player on right side.
 
 ToDo:
-2. Add collision for player on right side.
-3. Half screen region.
-4. Ball speed control.
-5. Point count.
-6. Colider with no left and right wall.
+3. Colider with no left and right wall.
+4. Point count.
+5. Half screen region.
+6. Ball speed control.
