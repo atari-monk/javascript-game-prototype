@@ -11,13 +11,13 @@ export class PlayerTestFactory {
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
-        this.player = new Player(
+        this.player1 = new Player(
             this,
             new Vector2(this.size.x / 2, this.size.y / 2),
             new Vector2(40, 200),
             new Vector2(0, 0)
             , new PlayerInputHandler(this.input)
         );
-        this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
+        this.player1Printer = new PlayerPrinter(this.ctx, this.player1);
     }
 }

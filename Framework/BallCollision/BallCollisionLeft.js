@@ -1,5 +1,5 @@
 
-export class BallCollision {
+export class BallCollisionLeft {
 
     constructor() {
         this.ballY1 = 0;

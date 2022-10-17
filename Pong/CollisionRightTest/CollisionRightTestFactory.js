@@ -10,7 +10,7 @@ import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerPrinter } from "../../Framework/Player/PlayerPrinter.js";
-import { BallCollision } from "../../Framework/BallCollision/BallCollision.js";
+import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionPrinter } from "../../Framework/BallCollision/BallCollisionPrinter.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 
@@ -30,7 +30,6 @@ export class CollisionRightTestFactory {
             , new WallCollision()
             , new BallRender2()
         );
-        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
 
         this.player2 = new Player(
             this,
@@ -39,12 +38,13 @@ export class CollisionRightTestFactory {
             new Vector2(0, 0)
             , new InputHandlerEmpty()
         );
-        this.playerPrinter2 = new PlayerPrinter(this.ctx, this.player2);
 
-        this.pongCollision2 = new BallCollision();
-        this.pongCollisionPrinter2 = new BallCollisionPrinter(this.ctx
-            , this.pongCollision2);
-        this.pongCollisionRender2 = new BallCollisionRender(this.ctx
-            , this.pongCollision2);
+        this.player2Printer = new PlayerPrinter(this.ctx, this.player2);
+        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
+        this.collisionRight = new BallCollisionRight();
+        this.collisionRightPrinter = new BallCollisionPrinter(this.ctx
+            , this.collisionRight);
+        this.collisionRightRender = new BallCollisionRender(this.ctx
+            , this.collisionRight);
     }
 }

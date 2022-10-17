@@ -10,7 +10,7 @@ import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerPrinter } from "../../Framework/Player/PlayerPrinter.js";
-import { BallCollision } from "../../Framework/BallCollision/BallCollision.js";
+import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
 import { BallCollisionPrinter } from "../../Framework/BallCollision/BallCollisionPrinter.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 
@@ -20,7 +20,6 @@ export class CollisionLeftTestFactory {
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
-
         this.ball = new Ball(
             this,
             new Vector2(this.size.x / 2 + 70, this.size.y / 2),
@@ -30,21 +29,25 @@ export class CollisionLeftTestFactory {
             , new WallCollision()
             , new BallRender2()
         );
-        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
-
-        this.player = new Player(
+        this.player1 = new Player(
             this,
             new Vector2(this.size.x / 2, this.size.y / 2),
             new Vector2(40, 200),
             new Vector2(0, 0)
             , new InputHandlerEmpty()
         );
-        this.playerPrinter = new PlayerPrinter(this.ctx, this.player);
+        this.collisionLeft = new BallCollisionLeft();
 
-        this.pongCollision1 = new BallCollision();
-        this.pongCollisionPrinter1 = new BallCollisionPrinter(this.ctx
-            , this.pongCollision1);
-        this.pongCollisionRender1 = new BallCollisionRender(this.ctx
-            , this.pongCollision1);
+        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
+        this.player1Printer = new PlayerPrinter(this.ctx
+            , this.player1);
+        this.collisionLeftPrinter = 
+            new BallCollisionPrinter(
+                this.ctx
+                , this.collisionLeft);
+        this.collisionLeftRender = 
+            new BallCollisionRender(
+                this.ctx
+                , this.collisionLeft);
     }
 }
