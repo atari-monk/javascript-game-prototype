@@ -10,6 +10,7 @@ import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js
 import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
 import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
+import { PointCount } from "../../Framework/Ball/PointCount.js";
 
 export class SecondPlayerFactory {
     constructor(ctx, size) {
@@ -50,5 +51,6 @@ export class SecondPlayerFactory {
             new BallCollisionRender(
                 this.ctx
                 , this.collisionRight);
+        this.pointCount = new PointCount(this.ctx, this.size, this.ball);
     }
 }
