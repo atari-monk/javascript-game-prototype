@@ -4,7 +4,7 @@ import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
-import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
+import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
@@ -23,7 +23,7 @@ export class SecondPlayerFactory {
             new Vector2(10, 10),
             new Vector2(.2, .1),
             new InputHandlerEmpty()
-            , new WallCollision()
+            , new FloorCollision()
             , new BallRender()
         );
         this.player1 = new Player(
