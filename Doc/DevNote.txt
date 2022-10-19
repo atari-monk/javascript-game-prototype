@@ -7,6 +7,5 @@ Done:
 4. Point count.
 
 ToDo:
-5. Half screen region.
-6. Ball speed control.
-7. 3 Rounds, round won after 3 points ahead.
+5. Slider.
+6. Random speed.

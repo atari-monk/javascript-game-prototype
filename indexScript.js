@@ -1,5 +1,9 @@
 const pongPage = "Pong/pongPage.html";
 const samples = [];
+samples["slider"] = {
+    page: "Pong/Slider/slider.html",
+    script: "Slider.js",
+};
 samples["wall-collision-test"] = {
     page: pongPage,
     script: "WallCollisionTest/WallCollisionTest.js",

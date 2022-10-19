@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pong prototype</title>
+        <link rel="stylesheet" href="slider.css" />
+    </head>
+    <body>
+        <canvas id="canvas1"></canvas>
+        <p>Value1: <span id="value1"></span></p>
+        <input type="range" min="0" max="100" value="10" class="slider" id="slider1">
+        <p>Value2: <span id="value2"></span></p>
+        <input type="range" min="0" max="100" value="10" class="slider" id="slider2">
+        <script>
+            var url = location.search;
+            
+            const urlParams = new URLSearchParams(url);
+            const scriptParm = urlParams.get('script')
+            const title = urlParams.get('title')
+
+            document.title = title;
+
+            let script = document.createElement("script");
+            script.setAttribute("src", scriptParm);
+            script.setAttribute("type", "module");
+            document.body.appendChild(script);
+        </script>
+    </body>
+</html>
