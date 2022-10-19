@@ -21,10 +21,17 @@ window.addEventListener('load', function () {
     })
 })
 
-var slider = new Slider(35, document.getElementById('slider2'), document.getElementById('value2'));
-
+const slider2 = document.getElementById('slider2');
+const label2 = document.getElementById('value2');
+var range2 = new Slider(35, slider2, label2);
 window.addEventListener('load', function () {
-    slider.onLoad();
+    range2.onLoad();
+    slider2.addEventListener('change', function (e) {
+        range2.value = e.target.value;
+        slider2.value = e.target.value;
+        label2.innerHTML = slider2.value;
+        console.log(range2.value);
+    })
 })
 
 var gameFactory = new SliderFactory(ctx
