@@ -1,3 +1,4 @@
+import { Vector2 } from "../Vector2.js";
 
 export class Player {
     constructor(game, position, size, speed
@@ -8,10 +9,14 @@ export class Player {
         this.speed = speed;
         this.inputHandler = inputHandler;
         this.playerRender = playerRender;
+        this.angle = 0;
+        this.direction = new Vector2(
+            this.position.x
+            , this.position.y + 100);
     }
     update(timer, input) {
         this.#handleInput(input);
-        this.#setPosition(timer);
+        //this.#setPosition(timer);
         this.#setConstraints();   
     }
     #handleInput(input) {
