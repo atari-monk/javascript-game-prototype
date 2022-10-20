@@ -13,6 +13,7 @@ import { PlayerPrinter } from "../../Framework/Player/PlayerPrinter.js";
 import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionPrinter } from "../../Framework/BallCollision/BallCollisionPrinter.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
+import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 
 export class CollisionRightTestFactory {
     constructor(ctx, size) {
@@ -37,6 +38,7 @@ export class CollisionRightTestFactory {
             new Vector2(40, 200),
             new Vector2(0, 0)
             , new InputHandlerEmpty()
+            , new PlayerRender()
         );
 
         this.player2Printer = new PlayerPrinter(this.ctx, this.player2);

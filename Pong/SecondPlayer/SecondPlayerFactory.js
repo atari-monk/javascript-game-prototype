@@ -11,6 +11,7 @@ import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLe
 import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 import { PointCount } from "../../Framework/Ball/PointCount.js";
+import { PlayerRender } from "../../Framework/Ball/PlayerRender.js";
 
 export class SecondPlayerFactory {
     constructor(ctx, size) {
@@ -33,6 +34,7 @@ export class SecondPlayerFactory {
             new Vector2(10, 100),
             new Vector2(0, 0)
             , new PlayerInputHandler(this.input)
+            , new PlayerRender()
         );
         this.player2 = new Player(
             this,

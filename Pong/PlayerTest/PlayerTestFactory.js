@@ -4,6 +4,7 @@ import { InputHandler } from "../../Framework/InputHandler.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { PlayerPrinter } from "../../Framework/Player/PlayerPrinter.js";
+import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 
 export class PlayerTestFactory {
     constructor(ctx, size) {
@@ -17,6 +18,7 @@ export class PlayerTestFactory {
             new Vector2(40, 200),
             new Vector2(0, 0)
             , new PlayerInputHandler(this.input)
+            , new PlayerRender()
         );
         this.player1Printer = new PlayerPrinter(this.ctx, this.player1);
     }

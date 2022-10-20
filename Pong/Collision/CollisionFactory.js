@@ -9,6 +9,7 @@ import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
+import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 
 export class CollisionFactory {
     constructor(ctx, size) {
@@ -31,6 +32,7 @@ export class CollisionFactory {
             new Vector2(10, 100),
             new Vector2(0, 0)
             , new PlayerInputHandler(this.input)
+            , new PlayerRender()
         );
         this.collisionLeft = new BallCollisionLeft();
         this.collisionLeftRender = 

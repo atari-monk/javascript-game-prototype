@@ -1,11 +1,13 @@
 
 export class Player {
-    constructor(game, position, size, speed, inputHandler) {
+    constructor(game, position, size, speed
+        , inputHandler, playerRender) {
         this.game = game;
         this.position = position;
         this.size = size;
         this.speed = speed;
         this.inputHandler = inputHandler;
+        this.playerRender = playerRender;
     }
     update(timer, input) {
         this.#handleInput(input);
@@ -29,12 +31,6 @@ export class Player {
         }
     }
     draw(ctx) {
-        ctx.fillStyle = 'green';
-        ctx.fillRect(
-            this.position.x - this.size.x/2,
-            this.position.y - this.size.y/2,
-            this.size.x,
-            this.size.y
-        );
+        this.playerRender.draw(ctx, this);
     }
 }
