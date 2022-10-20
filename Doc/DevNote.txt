@@ -5,7 +5,8 @@ Done:
 2. Add collision for player on right side.
 3. Colider with no left and right wall.
 4. Point count.
+5. Slider.
 
 ToDo:
-5. Slider.
-6. Random speed.
+6. Direction.
+7. Random speed.

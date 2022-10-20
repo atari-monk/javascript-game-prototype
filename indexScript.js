@@ -1,5 +1,9 @@
 const pongPage = "Pong/pongPage.html";
 const samples = [];
+samples["direction"] = {
+    page: "Pong/Direction/direction.html",
+    script: "Direction.js",
+};
 samples["slider"] = {
     page: "Pong/Slider/slider.html",
     script: "Slider.js",
