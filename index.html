@@ -11,33 +11,53 @@
         <table>
             <tr>
                 <th>
-                    <h1>Pong game prototypes</h1>
+                    <h1>Pong</h1>
                 </th>
             </tr>
             <tr>
                 <td>
                     <p>
                         author
-                        <a href="https://github.com/krzm">AtariMonk84</a>
+                        <a href="https://github.com/atari-monk">atari-monk</a>
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <select id="select1" onChange="update()">
+                    <p>test
+                    <select id="select-test" onChange="selectTest()">
+                        <option value="none" selected disabled hidden>
+                            no selection
+                        </option>
+                        <option value="wall-collision-test">Wall Collision Test</option>
+                        <option value="player-test">Player Test</option>
+                        <option value="collision-left-test">Collision Left Test</option>
+                        <option value="collision-right-test">Collision Right Test</option>
+                    </select>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>prototype
+                    <select id="select-prototype" onChange="selectPrototype()">
                         <option value="none" selected disabled hidden>
                             no selection
                         </option>
                         <option value="slider">Slider</option>
                         <option value="direction">Direction</option>
-                        <option value="wall-collision-test">Wall Collision Test</option>
                         <option value="wall-collision">Wall Collision</option>
-                        <option value="player-test">Player Test</option>
-                        <option value="collision-left-test">Collision Left Test</option>
-                        <option value="collision-right-test">Collision Right Test</option>
                         <option value="collision">Collision</option>
-                        <option value="second-player">Second Player</option>
                     </select>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="./Pong/pongPage.html?none=&script=SecondPlayer%2FSecondPlayer.js&title=Second%20Player" target="_blank" rel="noopener noreferrer">Game</a>
                 </td>
             </tr>
         </table>
