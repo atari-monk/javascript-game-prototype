@@ -16,7 +16,7 @@ export class Player {
     }
     update(timer, input) {
         this.#handleInput(input);
-        //this.#setPosition(timer);
+        this.#setPosition(timer);
         this.#setConstraints();   
     }
     #handleInput(input) {
