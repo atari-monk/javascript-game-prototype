@@ -16,6 +16,10 @@ tests["collision-right-test"] = {
     page: pongPage,
     script: "CollisionRightTest/CollisionRightTest.js",
 };
+tests["rect-collision-test"] = {
+    page: pongPage,
+    script: "RectCollisionTest/RectCollisionTest.js",
+};
 
 const prototypes = [];
 prototypes["direction"] = {
