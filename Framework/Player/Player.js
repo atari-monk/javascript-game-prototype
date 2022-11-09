@@ -13,6 +13,7 @@ export class Player {
         this.direction = new Vector2(
             this.position.x
             , this.position.y + 100);
+        this.color = 'green';
     }
     update(timer, input) {
         this.#handleInput(input);
