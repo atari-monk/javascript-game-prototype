@@ -1,13 +1,13 @@
 import { Vector2 } from '../Vector2.js';
 
-
-export class RectCollision {
+export class RectCollisionTest3 {
 
     constructor() {
         this.playerLeftTop = new Vector2(0, 0);
         this.ballLeftTop = new Vector2(0, 0);
     }
 
+    //efficient version of rect collision math
     calculateCollision(player, ball) {
         this.playerLeftTop = new Vector2(
             player.position.x - player.size.x / 2,
@@ -23,7 +23,6 @@ export class RectCollision {
             player.color = 'yellow';
         } else {
             player.color = 'red';
-            ball.reverseXSpeed();
         }
     }
 }

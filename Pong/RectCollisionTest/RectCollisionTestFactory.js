@@ -4,7 +4,7 @@ import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallPrinter } from "../../Framework/Ball/BallPrinter.js";
-import { BallInputHandler } from "../../Framework/Ball/BallInputHandler.js";
+import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
 import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
@@ -24,7 +24,7 @@ export class RectCollisionTestFactory {
             new Vector2(this.size.x / 2 + 70, this.size.y / 2),
             new Vector2(40, 40),
             new Vector2(0, 0),
-            new BallInputHandler(this.input)
+            new BallInputHandler2(this.input)
             , new WallCollision()
             , new BallRender2()
         );

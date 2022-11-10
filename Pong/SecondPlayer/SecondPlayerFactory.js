@@ -7,8 +7,8 @@ import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
-import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
-import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
+import { RectCollision } from "../../Framework/BallCollision/RectCollision.js";
+// import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 import { PointCount } from "../../Framework/Ball/PointCount.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
@@ -45,16 +45,16 @@ export class SecondPlayerFactory {
             , new PlayerInputHandler(this.input)
             , new Player2Render()
         );
-        this.collisionLeft = new BallCollisionLeft();
-        this.collisionRight = new BallCollisionRight();
-        this.collisionLeftRender = 
-            new BallCollisionRender(
-                this.ctx
-                , this.collisionLeft);
-        this.collisionRightRender = 
-            new BallCollisionRender(
-                this.ctx
-                , this.collisionRight);
+        this.collisionLeft = new RectCollision();
+        this.collisionRight = new RectCollision();
+        // this.collisionLeftRender = 
+        //     new BallCollisionRender(
+        //         this.ctx
+        //         , this.collisionLeft);
+        // this.collisionRightRender = 
+        //     new BallCollisionRender(
+        //         this.ctx
+        //         , this.collisionRight);
         this.pointCount = new PointCount(this.ctx, this.size, this.ball);
     }
 }
