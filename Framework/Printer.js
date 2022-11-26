@@ -2,7 +2,7 @@ export class Printer {
     constructor(ctx) {
         this.ctx = ctx;
         this.ctx.textAlign = 'left';
-        this.ctx.font = '20px Arial';
+        this.ctx.font = '16px Arial';
     }
 
     setPrint(align, font) {
@@ -11,9 +11,9 @@ export class Printer {
     }
 
     print(text, x, y) {
-        this.ctx.fillStyle = 'black';
+        this.ctx.fillStyle = 'green';
         this.ctx.fillText(text, x, y);
-        this.ctx.fillStyle = 'white';
+        this.ctx.fillStyle = 'yellow';
         this.ctx.fillText(text, x, y + 2);
     }
 }

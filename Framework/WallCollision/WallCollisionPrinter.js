@@ -7,11 +7,11 @@ export class WallCollisionPrinter extends Printer {
     }
 
     printInfo() {
-        this.print(this.#getInfo(), 10, 50);
+        this.print(this.#getInfo(), 5, 80);
     }
 
     #getInfo() {
-        var info = 'wallCollision->debugCondition:'
+        var info = 'WallCollision->debugCondition:'
             + this.ball.wallCollision.debugCondition;
         return info;
     }

@@ -8,17 +8,25 @@ export class BallPrinter extends Printer {
 
     printInfo()
     {
-        this.print(this.#getInfo(), 10, 20);
+        this.print(this.#getLabel(), 5, 20);
+        this.print(this.#getPosition(), 40, 20);
+        this.print(this.#getSpeed(), 40, 50);
     }
 
-    #getInfo()
+    #getLabel()
     {
-        var info = 'ball->rectSize:'
-            + this.ball.size.x.toFixed(1)
-            + ' x: ' + this.ball.position.x.toFixed(1)
-            + ' y: ' + this.ball.position.y.toFixed(1)
-            + ' vx: ' + this.ball.speed.x.toFixed(1)
-            + ' vy: ' + this.ball.speed.y.toFixed(1);
-        return info;
+        return 'Ball:';
+    }
+
+    #getPosition()
+    {
+        return ' x: ' + this.ball.position.x.toFixed(1)
+             + '  y: ' + this.ball.position.y.toFixed(1);
+    }
+
+    #getSpeed()
+    {
+        return ' vx: ' + this.ball.speed.x.toFixed(2)
+             + '  vy: ' + this.ball.speed.y.toFixed(2);
     }
 }
