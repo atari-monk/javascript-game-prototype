@@ -9,8 +9,9 @@ import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { WallCollisionPrinter } from "../../Framework/WallCollision/WallCollisionPrinter.js";
 
 export class WallCollisionTestFactory {
-    constructor(ctx, size) {
-        this.ctx = ctx;
+    constructor(infoCtx, gameCtx, size) {
+        this.infoCtx = infoCtx;
+        this.gameCtx = gameCtx;
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
@@ -57,8 +58,8 @@ export class WallCollisionTestFactory {
             , new WallCollision()
             , new BallRender2()
         );
-        this.ballPrinter = new BallPrinter(this.ctx, this.ball);
-        this.wallCollisionPrinter = new WallCollisionPrinter(this.ctx
+        this.ballPrinter = new BallPrinter(this.infoCtx, this.ball);
+        this.wallCollisionPrinter = new WallCollisionPrinter(this.infoCtx
             , this.ball);
     }
 }

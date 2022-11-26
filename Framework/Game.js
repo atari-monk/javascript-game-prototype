@@ -11,20 +11,20 @@ export class Game {
         this.ball = this.gameFactory.ball;
         this.ballPrinter = this.gameFactory.ballPrinter;
 
-        this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
+        // this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
 
         this.player1 = this.gameFactory.player1;
-        this.player1Printer = this.gameFactory.player1Printer;
+        // this.player1Printer = this.gameFactory.player1Printer;
 
         this.player2 = this.gameFactory.player2;
-        this.player2Printer = this.gameFactory.player2Printer;
+        // this.player2Printer = this.gameFactory.player2Printer;
 
         this.collisionLeft = this.gameFactory.collisionLeft;
-        this.collisionLeftPrinter = this.gameFactory.collisionLeftPrinter;
+        // this.collisionLeftPrinter = this.gameFactory.collisionLeftPrinter;
         this.collisionLeftRender = this.gameFactory.collisionLeftRender;
 
         this.collisionRight = this.gameFactory.collisionRight;
-        this.collisionRightPrinter = this.gameFactory.collisionRightPrinter;
+        // this.collisionRightPrinter = this.gameFactory.collisionRightPrinter;
         this.collisionRightRender = this.gameFactory.collisionRightRender;
 
         this.pointCount = this.gameFactory.pointCount;
@@ -64,23 +64,23 @@ export class Game {
         if(this.player2 != null)
             this.player2.draw(this.ctx);
 
-        if(this.player1Printer != null)
-            this.player1Printer.printInfo();
-        if(this.player2Printer != null)
-            this.player2Printer.printInfo();
+        // if(this.player1Printer != null)
+        //     this.player1Printer.printInfo();
+        // if(this.player2Printer != null)
+        //     this.player2Printer.printInfo();
         
-        if(this.ballPrinter != null)
-            this.ballPrinter.printInfo();
-        if(this.wallCollisionPrinter != null)
-            this.wallCollisionPrinter.printInfo();
+        // if(this.ballPrinter != null)
+        //     this.ballPrinter.printInfo();
+        // if(this.wallCollisionPrinter != null)
+        //     this.wallCollisionPrinter.printInfo();
 
-        if(this.collisionLeftPrinter != null)
-            this.collisionLeftPrinter.printInfo(this);
+        // if(this.collisionLeftPrinter != null)
+        //     this.collisionLeftPrinter.printInfo(this);
         if(this.collisionLeftRender != null)
             this.collisionLeftRender.draw();
             
-        if(this.collisionRightPrinter != null)
-            this.collisionRightPrinter.printInfo(this);
+        // if(this.collisionRightPrinter != null)
+        //     this.collisionRightPrinter.printInfo(this);
         if(this.collisionRightRender != null)
             this.collisionRightRender.draw();
         
