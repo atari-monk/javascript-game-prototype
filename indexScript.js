@@ -2,7 +2,7 @@ const pongPage = "Pong/pongPage.html";
 const tests = [];
 tests["wall-collision-test"] = {
     page: pongPage,
-    script: "WallCollisionTest/WallCollisionTest.js",
+    script: "../Test/WallCollisionTest/WallCollisionTest.js",
 };
 tests["player-test"] = {
     page: pongPage,
