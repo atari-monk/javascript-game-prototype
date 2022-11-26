@@ -3,15 +3,12 @@ import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
-import { BallPrinter } from "../../Framework/Ball/BallPrinter.js";
 import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
-import { WallCollisionPrinter } from "../../Framework/WallCollision/WallCollisionPrinter.js";
 
 export class WallCollisionTestFactory {
-    constructor(infoCtx, gameCtx, size) {
-        this.infoCtx = infoCtx;
-        this.gameCtx = gameCtx;
+    constructor(ctx, size) {
+        this.ctx = ctx;
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
@@ -58,8 +55,5 @@ export class WallCollisionTestFactory {
             , new WallCollision()
             , new BallRender2()
         );
-        this.ballPrinter = new BallPrinter(this.infoCtx, this.ball);
-        this.wallCollisionPrinter = new WallCollisionPrinter(this.infoCtx
-            , this.ball);
     }
 }
