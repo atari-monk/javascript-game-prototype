@@ -32,17 +32,17 @@ export class PointCount extends Printer {
     }
 
     draw() {
-        this.print(this.#getInfo1(), 10, 25);
-        this.print(this.#getInfo2(), 10, 55);
+        this.print(this.#getPlayer1Score(), 10, 185, 'green');
+        this.print(this.#getPlayer2Score(), 235, 185, 'blue');
     }
 
-    #getInfo1() {
-        var info = 'player1 points = ' + this.player1Points;
+    #getPlayer1Score() {
+        let info = 'player1 points = ' + this.player1Points;
         return info;
     }
 
-    #getInfo2() {
-        var info = 'player2 points = ' + this.player2Points;
+    #getPlayer2Score() {
+        let info = 'player2 points = ' + this.player2Points;
         return info;
     }
 }

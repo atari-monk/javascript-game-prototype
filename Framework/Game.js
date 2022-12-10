@@ -1,7 +1,9 @@
 export class Game {
-    constructor(ctx, size, gameFactory) {
-        this.ctx = ctx;
-        this.size = size;
+    constructor(infoCtx, infoSize, gameCtx, gameSize, gameFactory) {
+        this.infoCtx = infoCtx;
+        this.infoSize = infoSize;
+        this.gameCtx = gameCtx;
+        this.gameSize = gameSize;
 
         this.gameFactory = gameFactory;
 
@@ -53,16 +55,15 @@ export class Game {
             this.pointCount.update();
     }
     draw() {
-        this.ctx.clearRect(0, 0, 
-            this.size.x, this.size.y);
+        this.#clearCtx();
 
         if(this.ball != null)
-            this.ball.draw(this.ctx);
+            this.ball.draw(this.gameCtx);
 
         if(this.player1 != null)
-            this.player1.draw(this.ctx);
+            this.player1.draw(this.gameCtx);
         if(this.player2 != null)
-            this.player2.draw(this.ctx);
+            this.player2.draw(this.gameCtx);
 
         // if(this.player1Printer != null)
         //     this.player1Printer.printInfo();
@@ -86,5 +87,12 @@ export class Game {
         
         if(this.pointCount != null)
             this.pointCount.draw();
+    }
+
+    #clearCtx() {
+        this.gameCtx.clearRect(0, 0, 
+            this.gameSize.x, this.gameSize.y);
+        this.infoCtx.clearRect(0, 0, 
+            this.infoSize.x, this.infoSize.y);
     }
 }

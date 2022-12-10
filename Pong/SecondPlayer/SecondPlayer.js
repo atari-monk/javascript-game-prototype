@@ -14,7 +14,9 @@ const infoCtx = infoCanvas.getContext('2d');
 
 var gameFactory = new SecondPlayerFactory(infoCtx, gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height));
-var game = new Game(gameCtx
+var game = new Game(infoCtx
+    , new Vector2(infoCanvas.width, infoCanvas.height)
+    , gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height)
     , gameFactory);
 
