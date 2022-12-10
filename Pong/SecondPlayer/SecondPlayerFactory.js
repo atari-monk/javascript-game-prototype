@@ -15,8 +15,9 @@ import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Player2Render } from "../../Framework/Player/Player2Render.js";
 
 export class SecondPlayerFactory {
-    constructor(ctx, size) {
-        this.ctx = ctx;
+    constructor(infoCtx, gameCtx, size) {
+        this.infoCtx = infoCtx;
+        this.gameCtx = gameCtx;
         this.size = size;
         this.timer = new Timer();
         this.input = new InputHandler();
@@ -55,6 +56,6 @@ export class SecondPlayerFactory {
         //     new BallCollisionRender(
         //         this.ctx
         //         , this.collisionRight);
-        this.pointCount = new PointCount(this.ctx, this.size, this.ball);
+        this.pointCount = new PointCount(this.infoCtx, this.size, this.ball);
     }
 }
