@@ -1,16 +1,16 @@
 
 export class GameInfo {
-    constructor(ctx, size, gameFactory, game) {
+    constructor(ctx, size, infoFactory, game) {
         this.ctx = ctx;
         this.size = size;
-        this.gameFactory = gameFactory;
+        this.infoFactory = infoFactory;
         this.game = game;
-        this.ballPrinter = this.gameFactory.ballPrinter;
-        this.wallCollisionPrinter = this.gameFactory.wallCollisionPrinter;
-        this.player1Printer = this.gameFactory.player1Printer;
-        this.player2Printer = this.gameFactory.player2Printer;
-        this.collisionLeftPrinter = this.gameFactory.collisionLeftPrinter;
-        this.collisionRightPrinter = this.gameFactory.collisionRightPrinter;
+        this.ballPrinter = this.infoFactory.ballPrinter;
+        this.wallCollisionPrinter = this.infoFactory.wallCollisionPrinter;
+        this.player1Printer = this.infoFactory.player1Printer;
+        this.player2Printer = this.infoFactory.player2Printer;
+        this.collisionLeftPrinter = this.infoFactory.collisionLeftPrinter;
+        this.collisionRightPrinter = this.infoFactory.collisionRightPrinter;
     }
     draw() {
         this.ctx.clearRect(0, 0,

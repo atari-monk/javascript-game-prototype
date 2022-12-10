@@ -8,9 +8,9 @@ export class BallPrinter extends Printer {
 
     printInfo()
     {
-        this.print(this.#getLabel(), 5, 20);
-        this.print(this.#getPosition(), 40, 20);
-        this.print(this.#getSpeed(), 40, 50);
+        this.print(this.#getLabel(), 5, 20, 'red');
+        this.print(this.#getPosition(), 40, 20, 'green');
+        this.print(this.#getSpeed(), 40, 50, 'yellow');
     }
 
     #getLabel()

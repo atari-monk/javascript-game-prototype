@@ -7,7 +7,7 @@ export class PlayerPrinter extends Printer {
     }
 
     printInfo() {
-        this.print(this.#getInfo(), 10, 50);
+        this.print(this.#getInfo(), 0, 50, 'green');
     }
 
     #getInfo() {

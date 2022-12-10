@@ -10,17 +10,8 @@ export class Printer {
         this.ctx.font = font;
     }
 
-    print(text, x, y) {
-        this.ctx.fillStyle = 'yellow';
-        this.ctx.fillText(text, x, y);
-        this.ctx.fillStyle = 'white';
-        this.ctx.fillText(text, x, y + 2);
-    }
-
-     print(text, x, y, color) {
+    print(text, x, y, color) {
         this.ctx.fillStyle = color;
         this.ctx.fillText(text, x, y);
-        // this.ctx.fillStyle = shadow;
-        // this.ctx.fillText(text, x - 1, y - 2);
     }
 }

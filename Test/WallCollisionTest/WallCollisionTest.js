@@ -15,11 +15,14 @@ const gameCtx = gameCanvas.getContext('2d');
 
 var gameFactory = new WallCollisionTestFactory(gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height));
-var game = new Game(gameCtx
+var game = new Game(infoCtx
+    , new Vector2(infoCanvas.width, infoCanvas.height)
+    , gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height)
     , gameFactory);
+    
 var infoFactory = new WallCollisionTestInfoFactory(infoCtx
-    , new Vector2(gameCanvas.width, gameCanvas.height), game);
+    , new Vector2(infoCanvas.width, infoCanvas.height), game);
 var gameInfo = new GameInfo(infoCtx
     , new Vector2(infoCanvas.width, infoCanvas.height)
     , infoFactory, game);

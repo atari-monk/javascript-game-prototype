@@ -7,7 +7,7 @@ export class WallCollisionPrinter extends Printer {
     }
 
     printInfo() {
-        this.print(this.#getInfo(), 5, 80);
+        this.print(this.#getInfo(), 5, 80, 'red');
     }
 
     #getInfo() {
