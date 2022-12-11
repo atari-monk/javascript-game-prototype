@@ -15,9 +15,7 @@ const gameCtx = gameCanvas.getContext('2d');
 
 var gameFactory = new WallCollisionTestFactory(gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height));
-var game = new Game(infoCtx
-    , new Vector2(infoCanvas.width, infoCanvas.height)
-    , gameCtx
+var game = new Game(gameCtx
     , new Vector2(gameCanvas.width, gameCanvas.height)
     , gameFactory);
     
