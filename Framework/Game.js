@@ -1,8 +1,10 @@
 export class Game {
-  constructor(gameCtx, gameSize, gameFactory) {
-    this.gameCtx = gameCtx;
-    this.gameSize = gameSize;
+  constructor(gameFactory) {
     this.gameFactory = gameFactory;
+    this.gameCtx = gameFactory.gameCtx;
+    this.gameSize = gameFactory.gameSize;
+    this.textCtx = gameFactory.textCtx;
+    this.textSize = gameFactory.textSize;
     this.timer = this.gameFactory.timer;
     this.input = this.gameFactory.input;
     this.ball = this.gameFactory.ball;
@@ -12,6 +14,7 @@ export class Game {
     this.collisionLeftRender = this.gameFactory.collisionLeftRender;
     this.collisionRight = this.gameFactory.collisionRight;
     this.collisionRightRender = this.gameFactory.collisionRightRender;
+    this.printer = this.gameFactory.printer;
   }
   update(timestamp) {
     this.timer.set(timestamp);
@@ -44,5 +47,7 @@ export class Game {
   #clearCtx() {
     this.gameCtx.clearRect(0, 0,
       this.gameSize.x, this.gameSize.y);
+    this.textCtx.clearRect(0, 0,
+      this.textSize.x, this.textSize.y);
   }
 }
