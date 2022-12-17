@@ -16,9 +16,11 @@ export class LeftWallCollisionFactory {
     this.timer = new Timer();
     this.input = new InputHandler();
     this.printer = new Printer(this.textCtx);
-    const position = new Vector2(60, this.gameSize.y - 60);
-    const velocity = new Vector2(0.01, 0.0);
+
     const size = new Vector2(100, 100);
+    const position = new Vector2((size.x + 100)/2, this.gameSize.y/2);
+    const velocity = new Vector2(0.01, 0.0);
+    
     this.ball = new Ball(
       this.gameSize,
       position,

@@ -2,31 +2,34 @@
 export class WallCollision {
 
   constructor() {
-    this.debugCondition = false;
+    this.log = '';
   }
 
   calculateCollision(ball) {
     if (ball.size.x != ball.size.y)
       throw 'This collider works only for rectangles!';
-    var rectSize = ball.size.x;
-    if (ball.position.x <= rectSize / 2) {
-      ball.position.x = rectSize / 2;
-      //this.debugCondition = true;
+
+    const ballSize = ball.size.x / 2;
+    const gameSize = ball.gameSize;
+
+    if (ball.position.x <= ballSize) {
+      ball.position.x = ballSize;
+      this.log = 'left';
       ball.reverseXSpeed();
     }
-    if (ball.position.x >= ball.gameSize.x - rectSize / 2) {
-      ball.position.x = ball.gameSize.x - rectSize / 2;
-      //this.debugCondition = true;
+    if (ball.position.x >= gameSize.x - ballSize) {
+      ball.position.x = gameSize.x - ballSize;
+      this.log = 'right';
       ball.reverseXSpeed();
     }
-    if (ball.position.y <= rectSize / 2) {
-      ball.position.y = rectSize / 2;
-      //this.debugCondition = true;
+    if (ball.position.y <= ballSize) {
+      ball.position.y = ballSize;
+      this.log = 'top';
       ball.reverseYSpeed();
     }
-    if (ball.position.y >= ball.gameSize.y - rectSize / 2) {
-      ball.position.y = ball.gameSize.y - rectSize / 2;
-      //this.debugCondition = true;
+    if (ball.position.y >= gameSize.y - ballSize) {
+      ball.position.y = gameSize.y - ballSize;
+      this.log = 'bottom';
       ball.reverseYSpeed();
     }
   }
