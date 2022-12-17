@@ -1,22 +1,33 @@
 
 export class BallInputHandler2 {
-    constructor(input) {
-        this.input = input;
-    }
+  constructor(input) {
+    this.input = input;
+  }
 
-    handleInput(ball) {
-        var speed = .05;
-        if (this.input.keys.indexOf("ArrowLeft") > -1) {
-            ball.speed.x = speed;
-        }
-        else if (this.input.keys.indexOf("ArrowRight") > -1) {
-            ball.speed.x = -speed;
-        }
-        else if (this.input.keys.indexOf("ArrowUp") > -1) {
-            ball.speed.y = speed;
-        }
-        else if (this.input.keys.indexOf("ArrowDown") > -1) {
-            ball.speed.y = -speed;
-        }
+  handleInput(ball) {
+    if (ball.speed.x < 0 && this.#checkKey("ArrowLeft")) {
+      this.#revSpeedX(ball);
     }
+    else if (ball.speed.x > 0 && this.#checkKey("ArrowRight")) {
+      this.#revSpeedX(ball);
+    }
+    else if (ball.speed.y < 0 && this.#checkKey("ArrowUp")) {
+      this.#revSpeedY(ball);
+    }
+    else if (ball.speed.y > 0 && this.#checkKey("ArrowDown")) {
+      this.#revSpeedY(ball);
+    }
+  }
+
+  #checkKey(keyName) {
+    return this.input.keys.indexOf(keyName) > -1;
+  }
+
+  #revSpeedY(ball) {
+    ball.speed.y = -ball.speed.y;
+  }
+
+  #revSpeedX(ball) {
+    ball.speed.x = -ball.speed.x;
+  }
 }

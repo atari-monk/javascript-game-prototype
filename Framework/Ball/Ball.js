@@ -16,13 +16,13 @@ export class Ball {
   }
 
   update(timer, input) {
-    this.#handleInput(input);
+    this.#handleInput();
     this.#setPosition(timer);
     this.#setConstraints();
   }
 
-  #handleInput(input) {
-    this.inputHandler.handleInput(this);
+  #handleInput() {
+    this.inputHandler?.handleInput(this);
   }
 
   #setPosition(timer) {
