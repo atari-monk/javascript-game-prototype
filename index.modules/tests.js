@@ -1,6 +1,10 @@
 import { pongPage } from "./data.js";
 
 const tests = [];
+tests["left-wall-collision"] = {
+  page: pongPage,
+  script: "../Test/LeftWallCollision/LeftWallCollision.js",
+};
 tests["wall-collision-test"] = {
   page: pongPage,
   script: "../Test/WallCollisionTest/WallCollisionTest.js",
