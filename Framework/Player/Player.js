@@ -1,46 +1,53 @@
 import { Vector2 } from "../Vector2.js";
 
 export class Player {
-  constructor(game, position, size, speed
-    , inputHandler, playerRender) {
-    this.game = game;
+  constructor(
+    gameSize, 
+    position, size, speed, inputHandler, playerRender) {
+    this.gameSize = gameSize;
     this.position = position;
     this.size = size;
     this.speed = speed;
     this.inputHandler = inputHandler;
     this.playerRender = playerRender;
     this.angle = 0;
-    this.direction = new Vector2(
-      this.position.x
-      , this.position.y + 100);
-    this.color = 'green';
+    this.direction = new Vector2(this.position.x, this.position.y + 100);
+    this.color = "green";
   }
-  update(timer, input) {
-    this.#handleInput(input);
+
+  update(timer) {
+    this.#handleInput();
     this.#setPosition(timer);
     this.#setConstraints();
   }
-  #handleInput(input) {
+
+  #handleInput() {
     this.inputHandler.handleInput(this);
   }
+
   #setPosition(timer) {
     this.position.y -= timer.deltaTime * this.speed.y;
   }
+
   #setConstraints() {
     if (this.position.y <= this.size.y / 2) {
       this.position.y = this.size.y / 2;
     }
-    if (this.position.y >= this.game.size.y - this.size.y / 2) {
-      this.position.y = this.game.size.y - this.size.y / 2;
+    if (this.position.y >= this.gameSize.y - this.size.y / 2) {
+      this.position.y = this.gameSize.y - this.size.y / 2;
     }
   }
+
   draw(ctx) {
     this.playerRender.draw(ctx, this);
   }
+
   getInfo() {
-    return ['player:'
-      , `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`
-      , `speed (${this.speed.x.toFixed(1)}, ${this.speed.y.toFixed(1)})`
-      , `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`];
+    return [
+      "player:",
+      `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`,
+      `speed (${this.speed.x.toFixed(1)}, ${this.speed.y.toFixed(1)})`,
+      `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`,
+    ];
   }
 }

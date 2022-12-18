@@ -17,6 +17,7 @@ var gameFactory = new TopWallCollisionFactory(
   , new Vector2(gameCanvas.width, gameCanvas.height)
   , textCtx
   , new Vector2(textCanvas.width, textCanvas.height));
+  
 var game = new Game(gameFactory);
 
 function animate(timestamp) {

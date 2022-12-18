@@ -28,8 +28,9 @@ tests["controlled-wall-collision"] = {
 
 tests["player-test"] = {
   page: pongPage,
-  script: "PlayerTest/PlayerTest.js",
+  script: "../Test/Player/PlayerTest.js",
 };
+
 tests["collision-left-test"] = {
   page: pongPage,
   script: "CollisionLeftTest/CollisionLeftTest.js",
