@@ -4,6 +4,7 @@ import { InputHandler } from "../../Framework/InputHandler.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
+import { Printer } from "../../Framework/Printer.js";
 
 export class PlayerTestFactory {
   constructor(gameCtx, gameSize, textCtx, textSize) {
@@ -13,6 +14,7 @@ export class PlayerTestFactory {
     this.textSize = textSize;
     this.timer = new Timer();
     this.input = new InputHandler();
+    this.printer = new Printer(this.textCtx);
 
     this.player1 = new Player(
       this.gameSize,
@@ -20,7 +22,8 @@ export class PlayerTestFactory {
       new Vector2(40, 200),
       new Vector2(0, 0),
       new PlayerInputHandler(this.input),
-      new PlayerRender()
+      new PlayerRender(),
+      this.printer
     );
   }
 }

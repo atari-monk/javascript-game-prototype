@@ -2,8 +2,14 @@ import { Vector2 } from "../Vector2.js";
 
 export class Player {
   constructor(
-    gameSize, 
-    position, size, speed, inputHandler, playerRender) {
+    gameSize,
+    position,
+    size,
+    speed,
+    inputHandler,
+    playerRender,
+    printer
+  ) {
     this.gameSize = gameSize;
     this.position = position;
     this.size = size;
@@ -13,6 +19,7 @@ export class Player {
     this.angle = 0;
     this.direction = new Vector2(this.position.x, this.position.y + 100);
     this.color = "green";
+    this.printer = printer;
   }
 
   update(timer) {
@@ -40,6 +47,7 @@ export class Player {
 
   draw(ctx) {
     this.playerRender.draw(ctx, this);
+    this.printer.printInfo(this.getInfo(), "green", 30, 10, 30);
   }
 
   getInfo() {

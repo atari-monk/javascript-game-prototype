@@ -19,7 +19,7 @@ export class Ball {
     this.printer = printer;
   }
 
-  update(timer, input) {
+  update(timer) {
     this.#handleInput();
     this.#setPosition(timer);
     this.#setConstraints();
