@@ -52,7 +52,7 @@ export class Ball {
 
   draw(ctx) {
     this.ballRender.draw(ctx, this);
-    this.printer.print('Ball: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
+    this.printer.print('Ball: ' + this.getInfo().join(', '), 10, 40, "yellowgreen");
   }
 
   getInfo() {

@@ -1,10 +1,7 @@
 export class Game {
   constructor(gameFactory) {
     this.gameFactory = gameFactory;
-    this.gameCtx = gameFactory.screen.gameCtx;
-    this.gameSize = gameFactory.screen.gameSize;
-    this.textCtx = gameFactory.screen.textCtx;
-    this.textSize = gameFactory.screen.textSize;
+    this.screen = gameFactory.screen;
     this.timer = this.gameFactory.timer;
     this.input = this.gameFactory.input;
     this.ball = this.gameFactory.ball;
@@ -35,15 +32,23 @@ export class Game {
 
   draw() {
     this.#clearCtx();
-    if (this.ball != null) this.ball.draw(this.gameCtx);
-    if (this.player1 != null) this.player1.draw(this.gameCtx);
-    if (this.player2 != null) this.player2.draw(this.gameCtx);
+    if (this.ball != null) this.ball.draw(this.screen.gameCtx);
+    if (this.player1 != null) this.player1.draw(this.screen.gameCtx);
+    if (this.player2 != null) this.player2.draw(this.screen.gameCtx);
     if (this.collisionLeftRender != null) this.collisionLeftRender.draw();
     if (this.collisionRightRender != null) this.collisionRightRender.draw();
+    this.printer.print('Game: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
   }
   
   #clearCtx() {
-    this.gameCtx.clearRect(0, 0, this.gameSize.x, this.gameSize.y);
-    this.textCtx.clearRect(0, 0, this.textSize.x, this.textSize.y);
+    this.screen.gameCtx.clearRect(0, 0, this.screen.gameSize.x, this.screen.gameSize.y);
+    this.screen.textCtx.clearRect(0, 0, this.screen.textSize.x, this.screen.textSize.y);
+  }
+
+  getInfo() {
+    return [
+      `canvas1 (${this.screen.gameSize.x}, ${this.screen.gameSize.y})`,
+      `canvas2 (${this.screen.textSize.x}, ${this.screen.textSize.y})`,
+    ];
   }
 }
