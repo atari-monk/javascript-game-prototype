@@ -1,7 +1,7 @@
 export class Printer {
   constructor(ctx) {
     this.ctx = ctx;
-    this.setPrint('left', 'bold 18px Arial');
+    this.setPrint('left', 'normal 12px Arial');
   }
 
   setPrint(align, font) {
@@ -14,7 +14,7 @@ export class Printer {
     this.ctx.fillText(text, x, y);
   }
 
-  printInfo(infoArray, color, dy, x0, y0) {
+  printInLines(infoArray, color, dy, x0, y0) {
     let y = y0;
     infoArray.forEach(element => {
       this.print(element, x0, y, color);

@@ -52,16 +52,15 @@ export class Ball {
 
   draw(ctx) {
     this.ballRender.draw(ctx, this);
-    this.printer.printInfo(this.getInfo(), "green", 30, 10, 30);
+    this.printer.print('Ball: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
   }
 
   getInfo() {
     return [
-      "ball:",
       `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`,
       `speed (${this.speed.x.toFixed(2)}, ${this.speed.y.toFixed(2)})`,
       `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`,
-      `wall coll. (${this.wallCollision.log})`,
+      `wall coll (${this.wallCollision.log})`,
     ];
   }
 }
