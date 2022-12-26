@@ -7,18 +7,15 @@ import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
 export class PlayerTestFactory {
-  constructor(gameCtx, gameSize, textCtx, textSize) {
-    this.gameCtx = gameCtx;
-    this.gameSize = gameSize;
-    this.textCtx = textCtx;
-    this.textSize = textSize;
+  constructor(screen) {
+    this.screen = screen;
     this.timer = new Timer();
     this.input = new InputHandler();
-    this.printer = new Printer(this.textCtx);
+    this.printer = new Printer(this.screen.textCtx);
 
     this.player1 = new Player(
-      this.gameSize,
-      new Vector2(this.gameSize.x / 2, this.gameSize.y / 2),
+      this.screen.gameSize,
+      new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
       new Vector2(40, 200),
       new Vector2(0, 0),
       new PlayerInputHandler(this.input),

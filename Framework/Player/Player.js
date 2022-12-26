@@ -47,12 +47,11 @@ export class Player {
 
   draw(ctx) {
     this.playerRender.draw(ctx, this);
-    this.printer.printInfo(this.getInfo(), "green", 30, 10, 30);
+    this.printer.print('Player: ' + this.getInfo().join(', '), 10, 40, "yellowgreen");
   }
 
   getInfo() {
     return [
-      "player:",
       `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`,
       `speed (${this.speed.x.toFixed(1)}, ${this.speed.y.toFixed(1)})`,
       `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`,

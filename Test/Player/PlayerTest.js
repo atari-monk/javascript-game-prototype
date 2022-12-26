@@ -1,24 +1,9 @@
-import { Vector2 } from "../../Framework/Vector2.js";
 import { Game } from "../../Framework/Game.js";
 import { PlayerTestFactory } from "./PlayerTestFactory.js";
+import { ScreenSize } from '../../Framework/ScreenSize.js';
 
-const gameCanvas = document.getElementById("gameCanvas");
-gameCanvas.width = 400;
-gameCanvas.height = 400;
-const gameCtx = gameCanvas.getContext("2d");
-
-const textCanvas = document.getElementById("infoCanvas");
-textCanvas.width = 400;
-textCanvas.height = 200;
-const textCtx = textCanvas.getContext("2d");
-
-var gameFactory = new PlayerTestFactory(
-  gameCtx,
-  new Vector2(gameCanvas.width, gameCanvas.height),
-  textCtx,
-  new Vector2(textCanvas.width, textCanvas.height)
-);
-
+const screen = new ScreenSize(300, 300, 500, 500);
+var gameFactory = new PlayerTestFactory(screen);
 var game = new Game(gameFactory);
 
 function animate(timestamp) {

@@ -6,20 +6,17 @@ import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Printer } from "../../Framework/Printer.js";
 
 export class BottomWallCollisionFactory {
-  constructor(gameCtx, gameSize, textCtx, textSize) {
-    this.gameCtx = gameCtx;
-    this.gameSize = gameSize;
-    this.textCtx = textCtx;
-    this.textSize = textSize;
+  constructor(screen) {
+    this.screen = screen;
     this.timer = new Timer();
-    this.printer = new Printer(this.textCtx);
+    this.printer = new Printer(this.screen.textCtx);
 
     const size = new Vector2(100, 100);
-    const position = new Vector2(this.gameSize.x / 2, this.gameSize.y - (size.x/2 + 20));
+    const position = new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y - (size.x/2 + 20));
     const velocity = new Vector2(0.0, -0.01);
     
     this.ball = new Ball(
-      this.gameSize,
+      this.screen.gameSize,
       position,
       size,
       velocity,
