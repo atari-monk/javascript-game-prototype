@@ -2,7 +2,7 @@ import { Game } from '../../Framework/Game.js';
 import { LeftWallCollisionFactory } from './LeftWallCollisionFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
 
-const screen = new ScreenSize(400, 300, 600, 500);
+const screen = new ScreenSize(300, 300, 500, 500);
 var gameFactory = new LeftWallCollisionFactory(screen);
 var game = new Game(gameFactory);
 
