@@ -1,10 +1,10 @@
 export class Game {
   constructor(gameFactory) {
     this.gameFactory = gameFactory;
-    this.gameCtx = gameFactory.gameCtx;
-    this.gameSize = gameFactory.gameSize;
-    this.textCtx = gameFactory.textCtx;
-    this.textSize = gameFactory.textSize;
+    this.gameCtx = gameFactory.screen.gameCtx;
+    this.gameSize = gameFactory.screen.gameSize;
+    this.textCtx = gameFactory.screen.textCtx;
+    this.textSize = gameFactory.screen.textSize;
     this.timer = this.gameFactory.timer;
     this.input = this.gameFactory.input;
     this.ball = this.gameFactory.ball;

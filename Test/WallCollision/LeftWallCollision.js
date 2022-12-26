@@ -1,22 +1,9 @@
 import { Game } from '../../Framework/Game.js';
-import { Vector2 } from '../../Framework/Vector2.js';
 import { LeftWallCollisionFactory } from './LeftWallCollisionFactory.js';
+import { ScreenSize } from '../../Framework/ScreenSize.js';
 
-const gameCanvas = document.getElementById('gameCanvas');
-gameCanvas.width = 400;
-gameCanvas.height = 400;
-const gameCtx = gameCanvas.getContext('2d');
-
-const textCanvas = document.getElementById('infoCanvas');
-textCanvas.width = 400;
-textCanvas.height = 200;
-const textCtx = textCanvas.getContext('2d');
-
-var gameFactory = new LeftWallCollisionFactory(
-  gameCtx
-  , new Vector2(gameCanvas.width, gameCanvas.height)
-  , textCtx
-  , new Vector2(textCanvas.width, textCanvas.height));
+const screen = new ScreenSize(400, 400, 1430, 700);
+var gameFactory = new LeftWallCollisionFactory(screen);
 var game = new Game(gameFactory);
 
 function animate(timestamp) {

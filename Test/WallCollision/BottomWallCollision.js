@@ -8,8 +8,8 @@ gameCanvas.height = 400;
 const gameCtx = gameCanvas.getContext('2d');
 
 const textCanvas = document.getElementById('infoCanvas');
-textCanvas.width = 400;
-textCanvas.height = 200;
+textCanvas.width = 1430;
+textCanvas.height = 700;
 const textCtx = textCanvas.getContext('2d');
 
 var gameFactory = new BottomWallCollisionFactory(
