@@ -47,7 +47,7 @@ export class Player {
 
   draw(ctx) {
     this.playerRender.draw(ctx, this);
-    this.printer.print('Player: ' + this.getInfo().join(', '), 10, 60, "yellowgreen");
+    this.printer?.print('Player: ' + this.getInfo().join(', '), 10, 60, "yellowgreen");
   }
 
   getInfo() {

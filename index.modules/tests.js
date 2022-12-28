@@ -41,9 +41,9 @@ tests["collision-right"] = {
   script: "../Test/MyBallCollision/CollisionRightTest.js",
 };
 
-tests["rect-collision-test"] = {
+tests["rect-collision"] = {
   page: pongPage,
-  script: "RectCollisionTest/RectCollisionTest.js",
+  script: "../Test/RectCollisionTest.js",
 };
 
 export { tests }

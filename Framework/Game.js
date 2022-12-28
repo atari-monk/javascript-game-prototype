@@ -37,11 +37,11 @@ export class Game {
     if (this.player2 != null) this.player2.draw(this.screen.gameCtx);
     if (this.collisionLeftRender != null) this.collisionLeftRender.draw();
     if (this.collisionRightRender != null) this.collisionRightRender.draw();
-    this.printer.print('Game: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
+    this.printer?.print('Game: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
     this.collisionLeft?.draw();
     this.collisionRight?.draw();
   }
-  
+
   #clearCtx() {
     this.screen.gameCtx.clearRect(0, 0, this.screen.gameSize.x, this.screen.gameSize.y);
     this.screen.textCtx.clearRect(0, 0, this.screen.textSize.x, this.screen.textSize.y);
