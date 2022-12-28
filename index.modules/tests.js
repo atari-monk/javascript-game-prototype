@@ -26,14 +26,14 @@ tests["controlled-wall-collision"] = {
   script: "../Test/WallCollision/ControlledWallCollision.js",
 };
 
-tests["player-test"] = {
+tests["player"] = {
   page: pongPage,
   script: "../Test/Player/PlayerTest.js",
 };
 
-tests["collision-left-test"] = {
+tests["collision-left"] = {
   page: pongPage,
-  script: "CollisionLeftTest/CollisionLeftTest.js",
+  script: "../Test/MyBallCollision/CollisionLeftTest.js",
 };
 tests["collision-right-test"] = {
   page: pongPage,

@@ -13,39 +13,35 @@ import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
 export class CollisionLeftTestFactory {
-  constructor(gameCtx, gameSize, textCtx, textSize) {
-    this.gameCtx = gameCtx;
-    this.gameSize = gameSize;
-    this.textCtx = textCtx;
-    this.textSize = textSize;
+  constructor(screen) {
+    this.screen = screen;
     this.timer = new Timer();
     this.input = new InputHandler();
-    this.printer = new Printer(this.textCtx);
+    this.printer = new Printer(this.screen.textCtx);
 
     this.ball = new Ball(
       this,
-      new Vector2(this.gameSize.x / 2 + 70, this.gameSize.y / 2),
+      new Vector2(this.screen.gameSize.x / 2 + 70, this.screen.gameSize.y / 2),
       new Vector2(40, 40),
       new Vector2(0, 0),
       new BallInputHandler(this.input)
       , new WallCollision()
       , new BallRender2()
-      , this.printer
-    );
+      , this.printer);
 
     this.player1 = new Player(
       this,
-      new Vector2(this.gameSize.x / 2, this.gameSize.y / 2),
+      new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
       new Vector2(40, 200),
       new Vector2(0, 0)
       , new InputHandlerEmpty()
       , new PlayerRender()
-      , this.printer
-    );
-    this.collisionLeft = new BallCollisionLeft();
+      , this.printer);
+
+    this.collisionLeft = new BallCollisionLeft(this.printer);
     this.collisionLeftRender =
       new BallCollisionRender(
-        this.gameCtx
+        this.screen.gameCtx
         , this.collisionLeft);
   }
 }
