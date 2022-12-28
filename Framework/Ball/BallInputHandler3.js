@@ -1,5 +1,5 @@
 
-export class BallInputHandler {
+export class BallInputHandler3 {
   constructor(input) {
     this.input = input;
   }
@@ -17,10 +17,6 @@ export class BallInputHandler {
     }
     else if (this.input.keys.indexOf("ArrowDown") > -1) {
       ball.speed.y = -speed;
-    }
-    else {
-      ball.speed.x = 0;
-      ball.speed.y = 0;
     }
   }
 }

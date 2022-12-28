@@ -3,8 +3,8 @@ import { TopWallCollisionFactory } from './TopWallCollisionFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
-var gameFactory = new TopWallCollisionFactory(screen);
-var game = new Game(gameFactory);
+const gameFactory = new TopWallCollisionFactory(screen);
+const game = new Game(gameFactory);
 
 function animate(timestamp) {
   game.update(timestamp);

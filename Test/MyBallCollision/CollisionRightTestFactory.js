@@ -7,12 +7,12 @@ import { BallInputHandler3 } from "../../Framework/Ball/BallInputHandler3.js";
 import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
-import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
+import { BallCollisionRight } from "../../Framework/BallCollision/BallCollisionRight.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
-export class CollisionLeftTestFactory {
+export class CollisionRightTestFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();
@@ -21,7 +21,7 @@ export class CollisionLeftTestFactory {
 
     this.ball = new Ball(
       this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x / 2 + 70, this.screen.gameSize.y / 2),
+      new Vector2(this.screen.gameSize.x / 2 - 70, this.screen.gameSize.y / 2),
       new Vector2(40, 40),
       new Vector2(0, 0),
       new BallInputHandler3(this.input)
@@ -29,7 +29,7 @@ export class CollisionLeftTestFactory {
       , new BallRender2()
       , this.printer);
 
-    this.player1 = new Player(
+    this.player2 = new Player(
       this,
       new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
       new Vector2(40, 200),
@@ -38,9 +38,9 @@ export class CollisionLeftTestFactory {
       , new PlayerRender()
       , this.printer);
 
-    this.collisionLeft = new BallCollisionLeft(this.printer);
-    this.collisionLeftRender = new BallCollisionRender(
+    this.collisionRight = new BallCollisionRight(this.printer);
+    this.collisionRightRender = new BallCollisionRender(
       this.screen.gameCtx
-      , this.collisionLeft);
+      , this.collisionRight);
   }
 }

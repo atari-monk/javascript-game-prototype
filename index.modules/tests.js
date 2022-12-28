@@ -35,13 +35,15 @@ tests["collision-left"] = {
   page: pongPage,
   script: "../Test/MyBallCollision/CollisionLeftTest.js",
 };
-tests["collision-right-test"] = {
+
+tests["collision-right"] = {
   page: pongPage,
-  script: "CollisionRightTest/CollisionRightTest.js",
+  script: "../Test/MyBallCollision/CollisionRightTest.js",
 };
+
 tests["rect-collision-test"] = {
   page: pongPage,
   script: "RectCollisionTest/RectCollisionTest.js",
 };
 
-export {tests}
+export { tests }

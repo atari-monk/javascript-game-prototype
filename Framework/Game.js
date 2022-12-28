@@ -39,6 +39,7 @@ export class Game {
     if (this.collisionRightRender != null) this.collisionRightRender.draw();
     this.printer.print('Game: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
     this.collisionLeft?.draw();
+    this.collisionRight?.draw();
   }
   
   #clearCtx() {
