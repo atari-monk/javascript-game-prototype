@@ -12,7 +12,7 @@ import { BallCollisionRender } from "../../Framework/BallCollision/BallCollision
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
-export class CollisionLeftTestFactory {
+export class LeftFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();

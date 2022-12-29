@@ -3,47 +3,47 @@ import { pongPage } from "./data.js";
 const tests = [];
 tests["left-wall-collision"] = {
   page: pongPage,
-  script: "../Test/WallCollision/LeftWallCollision.js",
+  script: "../Test/WallCollision/Left.js",
 };
 
 tests["right-wall-collision"] = {
   page: pongPage,
-  script: "../Test/WallCollision/RightWallCollision.js",
+  script: "../Test/WallCollision/Right.js",
 };
 
 tests["top-wall-collision"] = {
   page: pongPage,
-  script: "../Test/WallCollision/TopWallCollision.js",
+  script: "../Test/WallCollision/Top.js",
 };
 
 tests["bottom-wall-collision"] = {
   page: pongPage,
-  script: "../Test/WallCollision/BottomWallCollision.js",
+  script: "../Test/WallCollision/Bottom.js",
 };
 
 tests["controlled-wall-collision"] = {
   page: pongPage,
-  script: "../Test/WallCollision/ControlledWallCollision.js",
+  script: "../Test/WallCollision/Controlled.js",
 };
 
 tests["player"] = {
   page: pongPage,
-  script: "../Test/Player/PlayerTest.js",
+  script: "../Test/Player/Player.js",
 };
 
 tests["collision-left"] = {
   page: pongPage,
-  script: "../Test/MyBallCollision/CollisionLeftTest.js",
+  script: "../Test/MyBallCollision/Left.js",
 };
 
 tests["collision-right"] = {
   page: pongPage,
-  script: "../Test/MyBallCollision/CollisionRightTest.js",
+  script: "../Test/MyBallCollision/Right.js",
 };
 
 tests["rect-collision"] = {
   page: pongPage,
-  script: "../Test/RectCollisionTest.js",
+  script: "../Test/BallCollision/Rect.js",
 };
 
 export { tests }

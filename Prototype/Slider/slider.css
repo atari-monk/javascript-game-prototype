@@ -1,0 +1,27 @@
+body {
+    background: black;
+}
+#infoCanvas {
+    border: 1px solid green;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+}
+#gameCanvas {
+    border: 5px solid green;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
+p {
+    color: white;
+}
+.slider {
+    width: 100%;
+}

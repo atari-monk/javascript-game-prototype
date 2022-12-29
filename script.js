@@ -1,5 +1,5 @@
-import { tests } from "./index.modules/tests.js";
-import { prototypes } from "./index.modules/prototypes.js";
+import { tests } from "./Index/tests.js";
+import { prototypes } from "./Index/prototypes.js";
 
 const encodeGetParams = (p) =>
   Object.entries(p)

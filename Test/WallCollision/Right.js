@@ -1,9 +1,9 @@
-import { Game } from '../Framework/Game.js';
-import { RectCollisionTestFactory } from './RectCollisionTestFactory.js';
+import { Game } from '../../Framework/Game.js';
+import { RightFactory } from './RightFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
-const gameFactory = new RectCollisionTestFactory(screen);
+const gameFactory = new RightFactory(screen);
 const game = new Game(gameFactory);
 
 function animate(timestamp) {

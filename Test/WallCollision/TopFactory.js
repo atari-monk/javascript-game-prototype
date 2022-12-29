@@ -5,7 +5,7 @@ import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Printer } from "../../Framework/Printer.js";
 
-export class TopWallCollisionFactory {
+export class TopFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();

@@ -6,7 +6,7 @@ import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
-export class PlayerTestFactory {
+export class PlayerFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();

@@ -1,9 +1,9 @@
 import { Game } from '../../Framework/Game.js';
-import { ControlledWallCollisionFactory } from './ControlledWallCollisionFactory.js';
+import { LeftFactory } from './LeftFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
-const gameFactory = new ControlledWallCollisionFactory(screen);
+const gameFactory = new LeftFactory(screen);
 const game = new Game(gameFactory);
 
 function animate(timestamp) {
