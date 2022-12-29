@@ -1,12 +1,9 @@
 import { Game } from '../../Framework/Game.js';
 import { Slider } from '../../Framework/Slider.js';
-import { Vector2 } from '../../Framework/Vector2.js';
 import { DirectionFactory } from './DirectionFactory.js';
+import { ScreenSize } from '../../Framework/ScreenSize.js';
 
-const canvas = document.getElementById('canvas1');
-canvas.width = 680;
-canvas.height = 580;
-const ctx = canvas.getContext('2d');
+const screen = new ScreenSize(300, 300, 500, 500);
 
 let value = 15;
 window.addEventListener('load', function () {
@@ -34,11 +31,8 @@ window.addEventListener('load', function () {
     })
 })
 
-var gameFactory = new DirectionFactory(ctx
-    , new Vector2(canvas.width, canvas.height));
-var game = new Game(ctx
-    , new Vector2(canvas.width, canvas.height)
-    , gameFactory);
+const gameFactory = new DirectionFactory(screen);
+const game = new Game(gameFactory);
 
 function animate(timestamp) {
     game.update(timestamp);

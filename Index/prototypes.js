@@ -8,7 +8,7 @@ prototypes["slider"] = {
 };
 
 prototypes["direction"] = {
-  page: "Pong/Direction/direction.html",
+  page: "Prototype/Direction/direction.html",
   script: "Direction.js",
 };
 
