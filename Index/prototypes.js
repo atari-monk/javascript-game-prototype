@@ -14,8 +14,9 @@ prototypes["direction"] = {
 
 prototypes["wall-collision"] = {
   page: pongPage,
-  script: "WallCollision/WallCollision.js",
+  script: "../Prototype/WallCollision/Wall.js",
 };
+
 prototypes["collision"] = {
   page: pongPage,
   script: "Collision/Collision.js",
