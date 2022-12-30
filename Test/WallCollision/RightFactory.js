@@ -24,6 +24,7 @@ export class RightFactory {
       , new WallCollision()
       , new BallRender2()
       , this.printer
+      , new Vector2(5, 30)
     );
   }
 }

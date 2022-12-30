@@ -27,6 +27,7 @@ export class CollisionFactory {
       , new WallCollision()
       , new BallRender()
       , this.printer
+      , new Vector2(5, 30)
     );
     this.player1 = new Player(
       this.screen.gameSize,
@@ -36,6 +37,7 @@ export class CollisionFactory {
       , new PlayerInputHandler(this.input)
       , new PlayerRender()
       , this.printer
+      , new Vector2(5, 45)
     );
     this.collisionLeft = new BallCollisionLeft(this.printer);
     this.collisionLeftRender =

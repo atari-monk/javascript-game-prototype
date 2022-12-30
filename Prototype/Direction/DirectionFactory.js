@@ -20,6 +20,7 @@ export class DirectionFactory {
       , new PlayerRotationInputHandler(this.input)
       , new PlayerDirectionRender()
       , this.printer
+      , new Vector2(5, 30)
     );
   }
 }

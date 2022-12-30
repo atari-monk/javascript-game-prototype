@@ -27,7 +27,8 @@ export class RightFactory {
       new BallInputHandler3(this.input)
       , new WallCollision()
       , new BallRender2()
-      , this.printer);
+      , this.printer
+      , new Vector2(5, 30));
 
     this.player2 = new Player(
       this.screen.gameSize,
@@ -36,7 +37,8 @@ export class RightFactory {
       new Vector2(0, 0)
       , new InputHandlerEmpty()
       , new PlayerRender()
-      , this.printer);
+      , this.printer
+      , new Vector2(5, 45));
 
     this.collisionRight = new BallCollisionRight(this.printer);
     this.collisionRightRender = new BallCollisionRender(

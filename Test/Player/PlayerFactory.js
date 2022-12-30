@@ -20,6 +20,7 @@ export class PlayerFactory {
       new Vector2(0, 0),
       new PlayerInputHandler(this.input),
       new PlayerRender(),
-      this.printer);
+      this.printer
+      , new Vector2(5, 30));
   }
 }

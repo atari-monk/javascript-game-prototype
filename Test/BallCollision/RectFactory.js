@@ -26,6 +26,7 @@ export class RectFactory {
       , new WallCollision()
       , new BallRender2()
       , this.printer
+      , new Vector2(5, 30)
     );
 
     this.player1 = new Player(
@@ -36,6 +37,7 @@ export class RectFactory {
       , new InputHandlerEmpty()
       , new PlayerDebugRender()
       , this.printer
+      , new Vector2(5, 45)
     );
 
     this.collisionLeft = new RectCollision();

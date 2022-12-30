@@ -22,6 +22,7 @@ export class WallFactory {
       , new WallCollision()
       , new BallRender()
       , this.printer
+      , new Vector2(5, 30)
     );
   }
 }
