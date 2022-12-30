@@ -4,21 +4,20 @@ body {
 h1 {
     color: green;
     font-size: xx-large;
-}
-table,
-th,
-td {
-    /* border:1px solid white; */
-    width: 100%;
     text-align: center;
 }
 p {
     color: green;
     margin: 10px;
     font-size: 20px;
+    text-align: center;
 }
 a {
     color: green;
+    font-size: 20px;
+}
+.container-center {
+  text-align: center;
 }
 select {
     margin-top: 10px;
