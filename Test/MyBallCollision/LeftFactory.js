@@ -30,7 +30,7 @@ export class LeftFactory {
       , this.printer);
 
     this.player1 = new Player(
-      this,
+      this.screen.gameSize,
       new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
       new Vector2(40, 200),
       new Vector2(0, 0)

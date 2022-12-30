@@ -19,7 +19,7 @@ prototypes["wall-collision"] = {
 
 prototypes["collision"] = {
   page: pongPage,
-  script: "Collision/Collision.js",
+  script: "../Prototype/Collision/Collision.js",
 };
 
 export { prototypes }

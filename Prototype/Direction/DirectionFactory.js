@@ -13,7 +13,7 @@ export class DirectionFactory {
     this.printer = new Printer(this.screen.textCtx);
     this.input = new InputHandler();
     this.player1 = new Player(
-      this,
+      this.screen.gameSize,
       new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0)
