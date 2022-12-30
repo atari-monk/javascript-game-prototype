@@ -7,7 +7,8 @@ export class Ball {
     inputHandler,
     wallCollision,
     ballRender,
-    printer
+    printer,
+    textPos
   ) {
     this.gameSize = gameSize;
     this.position = position;
@@ -17,6 +18,7 @@ export class Ball {
     this.wallCollision = wallCollision;
     this.ballRender = ballRender;
     this.printer = printer;
+    this.textPos = textPos;
   }
 
   update(timer) {
@@ -52,7 +54,7 @@ export class Ball {
 
   draw(ctx) {
     this.ballRender.draw(ctx, this);
-    this.printer?.print('Ball: ' + this.getInfo().join(', '), 10, 40, "yellowgreen");
+    this.printer?.print('Ball: ' + this.getInfo().join(', '), this.textPos.x, this.textPos.y, "yellowgreen");
   }
 
   getInfo() {

@@ -8,7 +8,8 @@ export class Player {
     speed,
     inputHandler,
     playerRender,
-    printer
+    printer,
+    textPos
   ) {
     this.gameSize = gameSize;
     this.position = position;
@@ -20,6 +21,7 @@ export class Player {
     this.direction = new Vector2(this.position.x, this.position.y + 100);
     this.color = "green";
     this.printer = printer;
+    this.textPos = textPos;
   }
 
   update(timer) {
@@ -47,7 +49,7 @@ export class Player {
 
   draw(ctx) {
     this.playerRender.draw(ctx, this);
-    this.printer?.print('Player: ' + this.getInfo().join(', '), 10, 60, "yellowgreen");
+    this.printer?.print('Player: ' + this.getInfo().join(', '), this.textPos.x, this.textPos.y, "yellowgreen");
   }
 
   getInfo() {

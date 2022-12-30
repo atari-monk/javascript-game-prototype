@@ -12,6 +12,7 @@ export class Game {
     this.collisionRight = this.gameFactory.collisionRight;
     this.collisionRightRender = this.gameFactory.collisionRightRender;
     this.printer = this.gameFactory.printer;
+    this.pointCount = this.gameFactory.pointCount;
   }
 
   update(timestamp) {
@@ -28,6 +29,7 @@ export class Game {
       this.player2 != null
     )
       this.collisionRight.calculateCollision(this.player2, this.ball);
+    this.pointCount?.update();
   }
 
   draw() {
@@ -37,9 +39,10 @@ export class Game {
     if (this.player2 != null) this.player2.draw(this.screen.gameCtx);
     if (this.collisionLeftRender != null) this.collisionLeftRender.draw();
     if (this.collisionRightRender != null) this.collisionRightRender.draw();
-    this.printer?.print('Game: ' + this.getInfo().join(', '), 10, 20, "yellowgreen");
+    this.printer?.print('Game: ' + this.getInfo().join(', '), 5, 15, "yellowgreen");
     this.collisionLeft?.draw();
     this.collisionRight?.draw();
+    this.pointCount?.draw();
   }
 
   #clearCtx() {
