@@ -18,7 +18,10 @@ export class Player {
     this.inputHandler = inputHandler;
     this.playerRender = playerRender;
     this.angle = 0;
-    this.direction = new Vector2(this.position.x, this.position.y + 100);
+    this.angleRad = 0;
+    this.radius = 100;
+    this.direction = new Vector2(0, 0);
+    this.getDirectionPolar();
     this.color = "green";
     this.printer = printer;
     this.textPos = textPos;
@@ -49,14 +52,30 @@ export class Player {
 
   draw(ctx) {
     this.playerRender.draw(ctx, this);
-    this.printer?.print('Player: ' + this.getInfo().join(', '), this.textPos.x, this.textPos.y, "yellowgreen");
+    this.printer?.print('Player: ' + this.getInfo()[0].join(', '), this.textPos.x, this.textPos.y, "yellowgreen");
+    this.printer?.print(this.getInfo()[1].join(', '), this.textPos.x, this.textPos.y + 15, "yellowgreen");
   }
 
   getInfo() {
     return [
-      `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`,
-      `speed (${this.speed.x.toFixed(1)}, ${this.speed.y.toFixed(1)})`,
-      `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`,
+      [
+        `position (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)})`,
+        `speed (${this.speed.x.toFixed(1)}, ${this.speed.y.toFixed(1)})`,
+        `size (${this.size.x.toFixed(1)}, ${this.size.y.toFixed(1)})`,
+        `angle (${this.angle})`
+      ],
+      [
+        `angleRad (${this.angleRad})`
+      ]
     ];
+  }
+
+  setAngleRad() {
+    this.angleRad = this.angle * Math.PI / 180;
+  }
+
+  getDirectionPolar() {
+    this.direction.x = this.position.x + this.radius * Math.cos(this.angleRad);
+    this.direction.y = this.position.y + this.radius * Math.sin(this.angleRad);
   }
 }

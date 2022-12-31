@@ -1,11 +1,10 @@
 import { Game } from '../../Framework/Game.js';
-import { Slider } from '../../Framework/Slider.js';
 import { DirectionFactory } from './DirectionFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
 
-let value = 15;
+let value = 0;
 window.addEventListener('load', function () {
     const slider = document.getElementById('slider1');
     slider.value = value;
@@ -15,19 +14,9 @@ window.addEventListener('load', function () {
         value = e.target.value;
         label.innerHTML = value;
         console.log(value);
-    })
-})
-
-const slider2 = document.getElementById('slider2');
-const label2 = document.getElementById('value2');
-var range2 = new Slider(35, slider2, label2);
-window.addEventListener('load', function () {
-    range2.onLoad();
-    slider2.addEventListener('change', function (e) {
-        range2.value = e.target.value;
-        slider2.value = e.target.value;
-        label2.innerHTML = slider2.value;
-        console.log(range2.value);
+        game.player1.angle = value;
+        game.player1.setAngleRad();
+        game.player1.getDirectionPolar();
     })
 })
 

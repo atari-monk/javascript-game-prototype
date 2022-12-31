@@ -11,15 +11,40 @@
         <canvas id="infoCanvas"></canvas>
         <canvas id="gameCanvas"></canvas>
         <p>Value1: <span id="value1"></span></p>
-        <input type="range" min="0" max="100" value="10" class="slider" id="slider1">
-        <p>Value2: <span id="value2"></span></p>
-        <input type="range" min="0" max="100" value="10" class="slider" id="slider2">
+        <input
+            type="range"
+            min="-360"
+            max="360"
+            value="0"
+            class="slider"
+            id="slider1"
+        />
+        <fieldset>
+            <legend>Select a formula:</legend>
+            <div>
+                <input
+                    type="radio"
+                    id="polar"
+                    name="formula"
+                    value="polar"
+                    checked
+                />
+                <label for="polar">x = rcosg, y =rsing</label>
+            </div>
+            <div>
+                <input type="radio" id="matrix" name="formula" value="matrix" />
+                <label for="matrix"
+                    >x' = xcosb - ysinb, y' = xsinb + ycosb</label
+                >
+            </div>
+        </fieldset>
+        <button id="recreate" class="button" type="button">Recreate</button>
         <script>
             var url = location.search;
-            
+
             const urlParams = new URLSearchParams(url);
-            const scriptParm = urlParams.get('script')
-            const title = urlParams.get('title')
+            const scriptParm = urlParams.get("script");
+            const title = urlParams.get("title");
 
             document.title = title;
 

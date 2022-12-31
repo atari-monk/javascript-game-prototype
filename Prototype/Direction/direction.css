@@ -25,3 +25,17 @@ p {
 .slider {
     width: 100%;
 }
+label {
+    font: 1rem "Fira Sans", sans-serif;
+    color: white;
+}
+input {
+    margin: 0.4rem;
+    color: white;
+}
+legend {
+  color: white;
+}
+.button {
+  margin: 10px;
+}
