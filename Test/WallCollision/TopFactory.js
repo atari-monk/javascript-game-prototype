@@ -21,10 +21,10 @@ export class TopFactory {
       size,
       velocity,
       null
-      , new WallCollision()
       , new BallRender2()
       , this.printer
       , new Vector2(5, 30)
+      , new WallCollision()
     );
   }
 }

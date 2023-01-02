@@ -24,10 +24,10 @@ export class CollisionFactory {
       new Vector2(10, 10),
       new Vector2(.05, .05),
       new InputHandlerEmpty()
-      , new WallCollision()
       , new BallRender()
       , this.printer
       , new Vector2(5, 30)
+      , new WallCollision()
     );
     this.player1 = new Player(
       this.screen.gameSize,

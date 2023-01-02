@@ -16,7 +16,7 @@ export class Entity {
     this.size = size;
     this.speed = speed;
     this.inputHandler = inputHandler;
-    this.render = render;    
+    this.render = render;
     this.printer = printer;
     this.textPos = textPos;
     this.color = "green";
@@ -34,6 +34,14 @@ export class Entity {
     this.#setConstraints();
   }
 
+  reverseXSpeed() {
+    this.speed.x *= -1;
+  }
+
+  reverseYSpeed() {
+    this.speed.y *= -1;
+  }
+
   #setConstraints() {
     if (this.position.y <= this.size.y / 2) {
       this.position.y = this.size.y / 2;
@@ -45,10 +53,10 @@ export class Entity {
 
   draw(ctx) {
     this.render.draw(ctx, this);
-    this.#drawInfo();
+    this.drawInfo();
   }
 
-  #drawInfo() {
+  drawInfo() {
     this.printer?.print(
       `${this.name}: ${this.getInfo()[0].join(', ')}`
       , this.textPos.x, this.textPos.y, this.infoColor);

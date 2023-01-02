@@ -24,10 +24,10 @@ export class ControlledFactory {
       size,
       velocity,
       new BallInputHandler2(this.input)
-      , new WallCollision()
       , new BallRender2()
       , this.printer
       , new Vector2(5, 30)
+      , new WallCollision()
     );
   }
 }

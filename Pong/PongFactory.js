@@ -26,10 +26,10 @@ export class PongFactory {
       new Vector2(10, 10),
       new Vector2(.2, 0),
       new InputHandlerEmpty()
-      , new FloorCollision()
       , new BallRender()
       , this.printer
       , new Vector2(5, 30)
+      , new FloorCollision()
     );
 
     this.player1 = new Player(

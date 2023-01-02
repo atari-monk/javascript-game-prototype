@@ -19,10 +19,10 @@ export class WallFactory {
       new Vector2(10, 10),
       new Vector2(.3, .3),
       new BallInputHandler2(this.input)
-      , new WallCollision()
       , new BallRender()
       , this.printer
       , new Vector2(5, 30)
+      , new WallCollision()
     );
   }
 }

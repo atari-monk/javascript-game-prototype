@@ -25,10 +25,10 @@ export class RightFactory {
       new Vector2(40, 40),
       new Vector2(0, 0),
       new BallInputHandler3(this.input)
-      , new WallCollision()
       , new BallRender2()
       , this.printer
-      , new Vector2(5, 30));
+      , new Vector2(5, 30)
+      , new WallCollision());
 
     this.player2 = new Player(
       this.screen.gameSize,
