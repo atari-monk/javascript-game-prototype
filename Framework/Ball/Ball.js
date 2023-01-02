@@ -31,7 +31,6 @@ export class Ball extends Entity {
   getInfo() {
     let info = super.getInfo();
     info[1].push(`wall coll (${this.wallCollision.log})`);
-    console.log(info);
     return info;
   }
 }

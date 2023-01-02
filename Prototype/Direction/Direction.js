@@ -14,12 +14,12 @@ window.addEventListener('load', function () {
   slider.addEventListener('change', function (e) {
     value = e.target.value;
     label.innerHTML = value;
-    game.player1.angle = value;
-    game.player1.setAngleRad();
+    game.ball.angle = value;
+    game.ball.setAngleRad();
     if(polar) {
-      game.player1.getDirectionPolar();
+      game.ball.getDirectionPolar();
     } else {
-      game.player1.getDirectionMatrix();
+      game.ball.getDirectionMatrix();
     }
   })
   const btn = document.getElementById('recreate');
@@ -33,14 +33,14 @@ window.addEventListener('load', function () {
     polar = !e.target.checked;
   })
   btn.addEventListener('click', function (e) {
-    game.player1.setAngleRad();
+    game.ball.setAngleRad();
     if (polar) {
-      game.player1.logDirection();
-      game.player1.getDirectionPolar();
+      game.ball.logDirection();
+      game.ball.getDirectionPolar();
     }
     else {
-      game.player1.logDirection();
-      game.player1.getDirectionMatrix(); 
+      game.ball.logDirection();
+      game.ball.getDirectionMatrix(); 
     }
   })
 })

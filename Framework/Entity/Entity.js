@@ -86,7 +86,7 @@ export class Entity {
   getDirectionPolar() {
     this.direction.x = this.position.x + this.radius * Math.cos(this.angleRad);
     this.direction.y = this.position.y + this.radius * Math.sin(this.angleRad);
-    this.logDirection();
+    //this.logDirection();
   }
 
   getDirectionMatrix() {
@@ -99,7 +99,7 @@ export class Entity {
     const r = new Vector2(x1 * cos - y1 * sin, x1 * sin + y1 * cos);
     this.direction.x = r.x + this.position.x;
     this.direction.y = r.y + this.position.y;
-    this.logDirection();
+    //this.logDirection();
   }
 
   logDirection() {

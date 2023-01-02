@@ -1,9 +1,10 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
-import { Player } from "../../Framework/Player/Player.js";
-import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
-import { PlayerDirectionRender } from "../../Framework/Player/PlayerDirectionRender.js";
+import { Ball } from "../../Framework/Ball/Ball.js";
+import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
+import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
+import { DirectionRender } from "../../Framework/Entity/DirectionRender.js";
 import { Printer } from "../../Framework/Printer.js";
 
 export class DirectionFactory {
@@ -12,15 +13,16 @@ export class DirectionFactory {
     this.timer = new Timer();
     this.printer = new Printer(this.screen.textCtx);
     this.input = new InputHandler();
-    this.player1 = new Player(
-      this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
-      new Vector2(10, 100),
-      new Vector2(0, 0)
-      , new InputHandlerEmpty()
-      , new PlayerDirectionRender()
+    this.ball = new Ball(
+      this.screen.gameSize
+      , new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2)
+      , new Vector2(5, 5)
+      , new Vector2(0, 0)
+      , new BallInputHandler2(this.input)
+      , new DirectionRender()
       , this.printer
       , new Vector2(5, 30)
+      , new WallCollision()
     );
   }
 }
