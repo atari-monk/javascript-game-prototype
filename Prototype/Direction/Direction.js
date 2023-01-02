@@ -15,16 +15,12 @@ window.addEventListener('load', function () {
     value = e.target.value;
     label.innerHTML = value;
     game.player1.angle = value;
-    // game.player1.deltaAngle = value - prevValue;
-    // console.log(game.player1.deltaAngle); 
-    // prevValue = value;
-    // if(polar) {
-    //   game.player1.setAngleRad();
-    //   game.player1.getDirectionPolar();
-    // } else {
-    //   game.player1.setDeltaAngleRad();
-    //   game.player1.getDirectionMatrix();
-    // }
+    game.player1.setAngleRad();
+    if(polar) {
+      game.player1.getDirectionPolar();
+    } else {
+      game.player1.getDirectionMatrix();
+    }
   })
   const btn = document.getElementById('recreate');
   const polarEl = document.getElementById('polar');
