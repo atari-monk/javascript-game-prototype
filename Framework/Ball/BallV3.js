@@ -7,14 +7,15 @@ export class BallV3 extends EntityV3 {
     size,
     speed,
     inputHandler,
-    render,
+    renderers,
     printer,
     textPos,
     wallCollision
   ) {
-    super(gameSize, position, size, speed, inputHandler, render, printer, textPos, wallCollision);
+    super(gameSize, position, size, speed, inputHandler, renderers['graphics'], printer, textPos, wallCollision);
     this.name = 'Ball';
     this.wallCollision = wallCollision;
+    this.renderers = renderers;
   }
 
   update(timer) {

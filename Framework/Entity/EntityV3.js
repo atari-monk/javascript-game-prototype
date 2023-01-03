@@ -7,14 +7,18 @@ export class EntityV3 extends Entity {
     size,
     speed,
     inputHandler,
-    render,
+    renderers,
     printer,
     textPos
   ) {
-    super(gameSize, position, size, speed, inputHandler, render, printer, textPos);
+    super(gameSize, position, size, speed, inputHandler, renderers['graphics'], printer, textPos);
   }
 
   draw(ctx) {
-    this.render.draw(ctx, this);
+    this.renderers['graphics'].draw(ctx, this);
+  }
+
+  drawText(ctx) {
+    this.renderers['text'].draw(ctx, this);
   }
 }

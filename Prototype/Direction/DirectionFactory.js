@@ -8,6 +8,7 @@ import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { DirectionRender } from "../../Framework/Entity/DirectionRender.js";
 import { Printer } from "../../Framework/Printer.js";
 import { Renderer } from "../../Framework/Entity/Renderer.js";
+import { InfoRender } from "../../Framework/Entity/InfoRender.js";
 
 export class DirectionFactory {
   constructor(screen) {
@@ -16,7 +17,11 @@ export class DirectionFactory {
     this.printer = new Printer(this.screen.textCtx);
     this.input = new InputHandler();
 
-    this.renderer = new Renderer([ new BallRender(), new DirectionRender() ]);
+    this.renderers = {
+      'graphics': new Renderer(
+        [new BallRender(), new DirectionRender()]),
+      'text': new Renderer([new InfoRender()])
+    };
 
     this.ball = new BallV3(
       this.screen.gameSize
@@ -24,7 +29,7 @@ export class DirectionFactory {
       , new Vector2(20, 20)
       , new Vector2(0, 0)
       , new BallInputHandler2(this.input)
-      , this.renderer
+      , this.renderers
       , this.printer
       , new Vector2(5, 30)
       , new WallCollision()

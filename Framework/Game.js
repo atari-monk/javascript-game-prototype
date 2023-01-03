@@ -43,6 +43,8 @@ export class Game {
     this.collisionLeft?.draw();
     this.collisionRight?.draw();
     this.pointCount?.draw();
+
+    this.ball?.drawText(this.screen.textCtx);
   }
 
   #clearCtx() {
