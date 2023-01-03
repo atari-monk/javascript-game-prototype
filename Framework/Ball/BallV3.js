@@ -1,21 +1,20 @@
-import { EntityV2 } from "../Entity/EntityV2.js";
+import { EntityV3 } from "../Entity/EntityV3.js";
 
-export class BallV2 extends EntityV2 {
+export class BallV3 extends EntityV3 {
   constructor(
     gameSize,
     position,
     size,
     speed,
     inputHandler,
-    renders,
+    render,
     printer,
     textPos,
     wallCollision
   ) {
-    super(gameSize, position, size, speed, inputHandler, renders[0], printer, textPos, wallCollision);
+    super(gameSize, position, size, speed, inputHandler, render, printer, textPos, wallCollision);
     this.name = 'Ball';
     this.wallCollision = wallCollision;
-    this.renders = renders;
   }
 
   update(timer) {
