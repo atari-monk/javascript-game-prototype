@@ -1,3 +1,5 @@
+import { BallV3 } from './Ball/BallV3.js';
+
 export class Game {
   constructor(gameFactory) {
     this.gameFactory = gameFactory;
@@ -45,7 +47,7 @@ export class Game {
     this.pointCount?.draw();
 
     this.#drawPoints(this.screen.gameCtx);
-    this.ball?.drawText(this.screen.textCtx);
+    if (this.ball instanceof BallV3) this.ball?.drawText(this.screen.textCtx);
   }
 
   #clearCtx() {
