@@ -19,19 +19,27 @@ export class DirectionFactory {
 
     this.renderers = {
       'graphics': new Renderer(
-        [new BallRender(), new DirectionRender()]),
+        [new BallRender(), new DirectionRender()
+        ]),
       'text': new Renderer([new InfoRender()])
     };
 
+    const size = new Vector2(20, 20);
+    const pos = new Vector2(
+      this.screen.gameSize.x / 2
+      , this.screen.gameSize.y / 2);
+    const speed = new Vector2(0, 0);
+    const textPos = new Vector2(5, 30);
+
     this.ball = new BallV3(
       this.screen.gameSize
-      , new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2)
-      , new Vector2(20, 20)
-      , new Vector2(0, 0)
+      , pos
+      , size
+      , speed
       , new BallInputHandler2(this.input)
       , this.renderers
       , this.printer
-      , new Vector2(5, 30)
+      , textPos
       , new WallCollision()
     );
   }

@@ -1,21 +1,9 @@
-export class BallRender {
+import { Render } from "../Entity/Render.js";
 
-    draw(ctx, ball) {
-        ctx.fillStyle = 'green';
-        ctx.fillRect(
-            ball.position.x - ball.size.x / 2,
-            ball.position.y - ball.size.y / 2,
-            ball.size.x,
-            ball.size.y
-        );
-        // const circle = new Path2D();
-        // circle.arc(
-        //     ball.position.x,
-        //     ball.position.y,
-        //     ball.radius,
-        //     0,
-        //     2 * Math.PI
-        // );
-        // ctx.fill(circle);
-    }
+export class BallRender extends Render {
+
+  draw(ctx, ball) {
+    this.drawRect(ctx, ball.position.x, ball.position.y, ball.size.x, 'green');
+    // this.drawRect(ctx, ball.position.x, ball.position.y, 4, 'red');
+  }
 }

@@ -44,6 +44,7 @@ export class Game {
     this.collisionRight?.draw();
     this.pointCount?.draw();
 
+    this.#drawPoints(this.screen.gameCtx);
     this.ball?.drawText(this.screen.textCtx);
   }
 
@@ -57,5 +58,11 @@ export class Game {
       `canvas1 (${this.screen.gameSize.x}, ${this.screen.gameSize.y})`,
       `canvas2 (${this.screen.textSize.x}, ${this.screen.textSize.y})`,
     ];
+  }
+
+  #drawPoints(ctx, isOn = false) {
+    if(!isOn) return;
+    ctx.fillStyle = 'white';
+    ctx.fillRect(this.screen.gameSize.x / 2 - .5, this.screen.gameSize.y / 2 - .5, 1, 1);
   }
 }

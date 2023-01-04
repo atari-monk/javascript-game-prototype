@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
       game.ball.getDirectionMatrix();
     }
   })
-  const btn = document.getElementById('recreate');
+  const btn = document.getElementById('rotate');
   const polarEl = document.getElementById('polar');
   const matrixEl = document.getElementById('matrix');
   let polar = true;
