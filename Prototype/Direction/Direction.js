@@ -4,7 +4,6 @@ import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
 
-let prevValue = 0;
 let value = 0;
 window.addEventListener('load', function () {
   const slider = document.getElementById('slider1');
@@ -16,12 +15,13 @@ window.addEventListener('load', function () {
     label.innerHTML = value;
     game.ball.angle = value;
     game.ball.setAngleRad();
-    if(polar) {
+    if (polar) {
       game.ball.getDirectionPolar();
     } else {
       game.ball.getDirectionMatrix();
     }
   })
+
   const btn = document.getElementById('rotate');
   const polarEl = document.getElementById('polar');
   const matrixEl = document.getElementById('matrix');
@@ -40,7 +40,31 @@ window.addEventListener('load', function () {
     }
     else {
       game.ball.logDirection();
-      game.ball.getDirectionMatrix(); 
+      game.ball.getDirectionMatrix();
+    }
+  })
+
+  const randomInt = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1) + min);
+
+  const btn2 = document.getElementById('pongDir');
+  btn2.addEventListener('click', function (e) {
+    const angle = randomInt(-30, 30);
+    game.ball.angle = 0;
+    game.ball.setAngleRad();
+    game.ball.getDirectionPolar();
+
+    game.ball.angle = angle;
+    game.ball.setAngleRad();
+    game.ball.getDirectionMatrix();
+    if(angle > 0)
+    {
+      game.ball.speed.x = game.ball.direction.x * -.0005;
+      game.ball.speed.y = game.ball.direction.y * -.0005;
+    } else 
+    {
+      game.ball.speed.x = game.ball.direction.x * -.0005;
+      game.ball.speed.y = game.ball.direction.y * .0005;
     }
   })
 })

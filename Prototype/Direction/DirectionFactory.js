@@ -3,6 +3,7 @@ import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
 import { BallV3 } from "../../Framework/Ball/BallV3.js";
 import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
+import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { DirectionRender } from "../../Framework/Entity/DirectionRender.js";
@@ -40,7 +41,7 @@ export class DirectionFactory {
       , this.renderers
       , this.printer
       , textPos
-      , new WallCollision()
+      , new FloorCollision()//new WallCollision()
     );
   }
 }

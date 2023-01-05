@@ -21,7 +21,7 @@ export class BallV3 extends EntityV3 {
   update(timer) {
     this.inputHandler?.handleInput(this);
     this.#setPosition(timer);
-    this.wallCollision.calculateCollision(this);
+    this.wallCollision?.calculateCollision(this);
   }
 
   #setPosition(timer) {
@@ -31,7 +31,7 @@ export class BallV3 extends EntityV3 {
 
   getInfo() {
     let info = super.getInfo();
-    info[1].push(`wall coll (${this.wallCollision.log})`);
+    info[1].push(`wall coll (${this.wallCollision?.log})`);
     return info;
   }
 }
