@@ -13,7 +13,7 @@ export class RightFactory {
 
     const size = new Vector2(100, 100);
     const position = new Vector2(this.screen.gameSize.x - (size.x / 2 + 20), this.screen.gameSize.y/2);
-    const velocity = new Vector2(-0.01, 0.0);
+    const velocity = new Vector2(0.01, 0.0);
     
     this.ball = new Ball(
       this.screen.gameSize,

@@ -1,15 +1,15 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandler } from "../../Framework/InputHandler.js";
-import { BallV3 } from "../../Framework/Ball/BallV3.js";
+import { BallV4 } from "../../Framework/Ball/BallV4.js";
 import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
 import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
-import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { DirectionRender } from "../../Framework/Entity/DirectionRender.js";
 import { Printer } from "../../Framework/Printer.js";
 import { Renderer } from "../../Framework/Entity/Renderer.js";
 import { InfoRender } from "../../Framework/Entity/InfoRender.js";
+import { Bearing } from "../../Framework/Entity/Bearing.js";
 
 export class DirectionFactory {
   constructor(screen) {
@@ -20,7 +20,7 @@ export class DirectionFactory {
 
     this.renderers = {
       'graphics': new Renderer(
-        [new BallRender(), new DirectionRender()
+        [new BallRender()//, new DirectionRender()
         ]),
       'text': new Renderer([new InfoRender()])
     };
@@ -32,7 +32,9 @@ export class DirectionFactory {
     const speed = new Vector2(0, 0);
     const textPos = new Vector2(5, 30);
 
-    this.ball = new BallV3(
+    this.bearing = new Bearing();
+
+    this.ball = new BallV4(
       this.screen.gameSize
       , pos
       , size
@@ -42,6 +44,7 @@ export class DirectionFactory {
       , this.printer
       , textPos
       , new FloorCollision()//new WallCollision()
+      , this.bearing
     );
   }
 }

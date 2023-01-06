@@ -5,16 +5,16 @@ export class BallInputHandler2 {
   }
 
   handleInput(ball) {
-    if (ball.speed.x < 0 && this.#checkKey("ArrowLeft")) {
+    if (ball.speed.x > 0 && this.#checkKey("ArrowLeft")) {
       this.#revSpeedX(ball);
     }
-    else if (ball.speed.x > 0 && this.#checkKey("ArrowRight")) {
+    else if (ball.speed.x < 0 && this.#checkKey("ArrowRight")) {
       this.#revSpeedX(ball);
     }
-    else if (ball.speed.y < 0 && this.#checkKey("ArrowUp")) {
+    else if (ball.speed.y > 0 && this.#checkKey("ArrowUp")) {
       this.#revSpeedY(ball);
     }
-    else if (ball.speed.y > 0 && this.#checkKey("ArrowDown")) {
+    else if (ball.speed.y < 0 && this.#checkKey("ArrowDown")) {
       this.#revSpeedY(ball);
     }
   }

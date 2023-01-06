@@ -25,8 +25,8 @@ export class BallV2 extends EntityV2 {
   }
 
   #setPosition(timer) {
-    this.position.x -= timer.deltaTime * this.speed.x;
-    this.position.y -= timer.deltaTime * this.speed.y;
+    this.position.x += timer.deltaTime * this.speed.x;
+    this.position.y += timer.deltaTime * this.speed.y;
   }
 
   getInfo() {

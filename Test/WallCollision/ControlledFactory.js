@@ -16,7 +16,7 @@ export class ControlledFactory {
 
     const size = new Vector2(100, 100);
     const position = new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y/2);
-    const velocity = new Vector2(0.3, 0.3);
+    const velocity = new Vector2(0.1, 0.1);
     
     this.ball = new Ball(
       this.screen.gameSize,

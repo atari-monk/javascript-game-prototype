@@ -13,7 +13,7 @@ export class BottomFactory {
 
     const size = new Vector2(100, 100);
     const position = new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y - (size.x/2 + 20));
-    const velocity = new Vector2(0.0, -0.01);
+    const velocity = new Vector2(0.0, 0.01);
     
     this.ball = new Ball(
       this.screen.gameSize,

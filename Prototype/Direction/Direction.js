@@ -13,14 +13,17 @@ window.addEventListener('load', function () {
   slider.addEventListener('change', function (e) {
     value = e.target.value;
     label.innerHTML = value;
-    game.ball.angle = value;
-    game.ball.setAngleRad();
-    if (polar) {
-      game.ball.getDirectionPolar();
-    } else {
-      game.ball.getDirectionMatrix();
-    }
+    //rotate(polar, value);
   })
+
+  const rotate = function (polar, angle) {
+    game.ball.bearing.angle = angle;
+    if (polar) {
+      game.ball.bearing.rotatePolar();
+    } else {
+      game.ball.bearing.rotate();
+    }
+  }
 
   const btn = document.getElementById('rotate');
   const polarEl = document.getElementById('polar');
@@ -33,15 +36,7 @@ window.addEventListener('load', function () {
     polar = !e.target.checked;
   })
   btn.addEventListener('click', function (e) {
-    game.ball.setAngleRad();
-    if (polar) {
-      game.ball.logDirection();
-      game.ball.getDirectionPolar();
-    }
-    else {
-      game.ball.logDirection();
-      game.ball.getDirectionMatrix();
-    }
+    rotate(polar, value);
   })
 
   const randomInt = (min, max) =>
@@ -49,22 +44,22 @@ window.addEventListener('load', function () {
 
   const btn2 = document.getElementById('pongDir');
   btn2.addEventListener('click', function (e) {
-    const angle = randomInt(-30, 30);
-    game.ball.angle = 0;
-    game.ball.setAngleRad();
-    game.ball.getDirectionPolar();
-
-    game.ball.angle = angle;
-    game.ball.setAngleRad();
-    game.ball.getDirectionMatrix();
-    if(angle > 0)
-    {
-      game.ball.speed.x = game.ball.direction.x * -.0005;
-      game.ball.speed.y = game.ball.direction.y * -.0005;
-    } else 
-    {
-      game.ball.speed.x = game.ball.direction.x * -.0005;
-      game.ball.speed.y = game.ball.direction.y * .0005;
+    const side = randomInt(0, 1);
+    if(side === 0) {
+      const angle = randomInt(-30, 30);
+      game.ball.bearing.angle = 0;
+      game.ball.bearing.rotatePolar();
+      game.ball.bearing.angle = angle;
+      game.ball.bearing.rotate();
+      game.ball.setBearingSpeed();
+    }
+    else {
+      const angle = randomInt(-150, -210);
+      game.ball.bearing.angle = 0;
+      game.ball.bearing.rotatePolar();
+      game.ball.bearing.angle = angle;
+      game.ball.bearing.rotate();
+      game.ball.setBearingSpeed();
     }
   })
 })
