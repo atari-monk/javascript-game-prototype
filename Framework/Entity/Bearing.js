@@ -54,7 +54,7 @@ export class Bearing {
   rotate(angle) {
     this.#angle = angle;
     const r0 = new Vector2(this.#direction.x - this.#position.x, this.#direction.y - this.#position.y)
-    const x1 = r0.x; 
+    const x1 = r0.x;
     const y1 = r0.y;
     const cos = Math.cos(this.#rads);
     const sin = Math.sin(this.#rads);
@@ -72,14 +72,20 @@ export class Bearing {
     ctx.stroke();
   }
 
-  getRightBallDir() {
+  #getRightBallDir() {
     this.rotatePolar(0);
     this.rotate(this.#randomInt(-30, 30));
   }
 
-  getLeftBallDir() {
+  #getLeftBallDir() {
     this.rotatePolar(0);
     this.rotate(this.#randomInt(-150, -210));
+  }
+
+  getBallDir() {
+    this.#randomInt(0, 1) === 0 ?
+      this.#getRightBallDir() :
+      this.#getLeftBallDir();
   }
 
   #randomInt(min, max) {

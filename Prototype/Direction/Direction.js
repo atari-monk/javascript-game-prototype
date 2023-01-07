@@ -43,15 +43,8 @@ window.addEventListener('load', function () {
 
   const btn2 = document.getElementById('pongDir');
   btn2.addEventListener('click', function (e) {
-    const side = randomInt(0, 1);
-    if(side === 0) {
-      game.ball.bearing.getRightBallDir();
-      game.ball.setBearingSpeed();
-    }
-    else {
-      game.ball.bearing.getLeftBallDir();
-      game.ball.setBearingSpeed();
-    }
+    game.ball.bearing.getBallDir();
+    game.ball.setBearingSpeed();
   })
 })
 
