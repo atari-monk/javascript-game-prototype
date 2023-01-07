@@ -19,17 +19,16 @@ export class BallV4 extends BallV3 {
     this.#setBearing();
   }
 
+  #setBearing() {
+    this.bearing.position = this.position;
+    this.bearing.radius = 300;
+    this.bearing.rotatePolar(0);
+  }
+
   draw(ctx) {
     super.draw(ctx);
     this.bearing?.draw(ctx);
     this.#drawSpeed(ctx);
-  }
-
-  #setBearing() {
-    this.bearing.position = this.position;
-    this.bearing.angle = 0;
-    this.bearing.radius = 300;
-    this.bearing.rotatePolar();
   }
 
   setBearingSpeed() {

@@ -4,24 +4,23 @@ import { ScreenSize } from '../../Framework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
 
-let value = 0;
+let angle = 0;
 window.addEventListener('load', function () {
   const slider = document.getElementById('slider1');
-  slider.value = value;
+  slider.value = angle;
   const label = document.getElementById('value1');
-  label.innerHTML = value;
+  label.innerHTML = angle;
   slider.addEventListener('change', function (e) {
-    value = e.target.value;
-    label.innerHTML = value;
+    angle = e.target.value;
+    label.innerHTML = angle;
     //rotate(polar, value);
   })
 
   const rotate = function (polar, angle) {
-    game.ball.bearing.angle = angle;
     if (polar) {
-      game.ball.bearing.rotatePolar();
+      game.ball.bearing.rotatePolar(angle);
     } else {
-      game.ball.bearing.rotate();
+      game.ball.bearing.rotate(angle);
     }
   }
 
@@ -36,7 +35,7 @@ window.addEventListener('load', function () {
     polar = !e.target.checked;
   })
   btn.addEventListener('click', function (e) {
-    rotate(polar, value);
+    rotate(polar, angle);
   })
 
   const randomInt = (min, max) =>
@@ -46,19 +45,11 @@ window.addEventListener('load', function () {
   btn2.addEventListener('click', function (e) {
     const side = randomInt(0, 1);
     if(side === 0) {
-      const angle = randomInt(-30, 30);
-      game.ball.bearing.angle = 0;
-      game.ball.bearing.rotatePolar();
-      game.ball.bearing.angle = angle;
-      game.ball.bearing.rotate();
+      game.ball.bearing.getRightBallDir();
       game.ball.setBearingSpeed();
     }
     else {
-      const angle = randomInt(-150, -210);
-      game.ball.bearing.angle = 0;
-      game.ball.bearing.rotatePolar();
-      game.ball.bearing.angle = angle;
-      game.ball.bearing.rotate();
+      game.ball.bearing.getLeftBallDir();
       game.ball.setBearingSpeed();
     }
   })

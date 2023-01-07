@@ -22,9 +22,9 @@ export class Bearing {
   /**
    * @param {number} v
    */
-  set angle(v) {
-    this.#angle = v;
-  }
+  // set angle(v) {
+  //   this.#angle = v;
+  // }
 
   /**
    * @param {number} v
@@ -45,12 +45,14 @@ export class Bearing {
     return this.#position;
   }
 
-  rotatePolar() {
+  rotatePolar(angle) {
+    this.#angle = angle;
     this.#direction.x = this.#position.x + this.#radius * Math.cos(this.#rads);
     this.#direction.y = this.#position.y + this.#radius * Math.sin(this.#rads);
   }
 
-  rotate() {
+  rotate(angle) {
+    this.#angle = angle;
     const r0 = new Vector2(this.#direction.x - this.#position.x, this.#direction.y - this.#position.y)
     const x1 = r0.x; 
     const y1 = r0.y;
@@ -68,5 +70,19 @@ export class Bearing {
     ctx.moveTo(this.#position.x, this.#position.y);
     ctx.lineTo(this.#direction.x, this.#direction.y);
     ctx.stroke();
+  }
+
+  getRightBallDir() {
+    this.rotatePolar(0);
+    this.rotate(this.#randomInt(-30, 30));
+  }
+
+  getLeftBallDir() {
+    this.rotatePolar(0);
+    this.rotate(this.#randomInt(-150, -210));
+  }
+
+  #randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 }

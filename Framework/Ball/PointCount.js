@@ -15,13 +15,11 @@ export class PointCount extends Printer {
         {
             this.inGame = false;
             this.player2Points+=1;
-        }
-        if (this.ball.position.x >= this.size.x && this.inGame)
+        } else if (this.ball.position.x >= this.size.x && this.inGame)
         {
             this.inGame = false;
             this.player1Points+=1;
-        }
-        if (this.inGame === false)
+        } else if (this.inGame === false)
         {
             this.ball.position.x = this.size.x/2;
             this.ball.position.y = this.size.y/2;
