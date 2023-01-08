@@ -2,6 +2,8 @@ import { BallV3 } from "../../Framework/Ball/BallV3.js";
 import { Vector2 } from "../Vector2.js";
 
 export class BallV4 extends BallV3 {
+  #drawVect;
+
   constructor(
     gameSize,
     position,
@@ -12,11 +14,13 @@ export class BallV4 extends BallV3 {
     printer,
     textPos,
     wallCollision,
-    bearing
+    bearing,
+    drawVect = false
   ) {
     super(gameSize, position, size, speed, inputHandler, renderers, printer, textPos, wallCollision);
     this.bearing = bearing;
     this.#setBearing();
+    this.#drawVect = drawVect;
   }
 
   #setBearing() {
@@ -27,12 +31,13 @@ export class BallV4 extends BallV3 {
 
   draw(ctx) {
     super.draw(ctx);
+    if (this.#drawVect === false) return;
     this.bearing?.draw(ctx);
     this.#drawSpeed(ctx);
   }
 
   setBearingSpeed() {
-    const m = .2;
+    const m = .3;
     const dir = new Vector2(this.bearing.direction.x - this.bearing.position.x, this.bearing.direction.y - this.bearing.position.y);
     const ndir = dir.normalize();
     this.speed.x = ndir.x * m;

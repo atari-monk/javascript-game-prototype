@@ -45,6 +45,7 @@ export class DirectionFactory {
       , textPos
       , new FloorCollision()//new WallCollision()
       , this.bearing
+      , true
     );
   }
 }
