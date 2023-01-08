@@ -74,12 +74,16 @@ export class Bearing {
 
   #getRightBallDir() {
     this.rotatePolar(0);
-    this.rotate(this.#randomInt(-30, 30));
+    this.#randomInt(0, 1) === 0 ?
+      this.rotate(this.#randomInt(-30, -5)) :
+      this.rotate(this.#randomInt(5, 30));
   }
 
   #getLeftBallDir() {
     this.rotatePolar(0);
-    this.rotate(this.#randomInt(-150, -210));
+    this.#randomInt(0, 1) === 0 ?
+      this.rotate(this.#randomInt(-150, -175)) :
+      this.rotate(this.#randomInt(-185, -210));
   }
 
   getBallDir() {

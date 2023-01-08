@@ -45,6 +45,13 @@ window.addEventListener('load', function () {
   btn2.addEventListener('click', function (e) {
     game.ball.bearing.getBallDir();
     game.ball.setBearingSpeed();
+    setTimeout(
+      () => {
+        game.ball.reset();
+        game.ball.bearing.rotatePolar(0);
+      },
+      700
+    );
   })
 })
 

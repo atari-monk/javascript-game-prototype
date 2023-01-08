@@ -3,6 +3,7 @@ import { Vector2 } from "../Vector2.js";
 
 export class BallV4 extends BallV3 {
   #drawVect;
+  #initPos;
 
   constructor(
     gameSize,
@@ -21,12 +22,22 @@ export class BallV4 extends BallV3 {
     this.bearing = bearing;
     this.#setBearing();
     this.#drawVect = drawVect;
+    this.#initPos = new Vector2(
+      this.gameSize.x / 2
+      , this.gameSize.y / 2);
   }
 
   #setBearing() {
     this.bearing.position = this.position;
     this.bearing.radius = 300;
     this.bearing.rotatePolar(0);
+  }
+
+  reset() {
+    this.position.x = this.#initPos.x;
+    this.position.y = this.#initPos.y;
+    this.speed.x = 0;
+    this.speed.y = 0;
   }
 
   draw(ctx) {
