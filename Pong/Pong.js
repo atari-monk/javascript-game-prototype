@@ -1,3 +1,5 @@
+'using strict'
+
 import { Game } from '../../Framework/Game.js';
 import { PongFactory } from './PongFactory.js';
 import { ScreenSize } from '../../Framework/ScreenSize.js';
