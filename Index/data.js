@@ -1,3 +1,3 @@
-const pongPage = "Pong/pongPage.html";
+const pongPage = "Pong/pong.html";
 
 export { pongPage }
