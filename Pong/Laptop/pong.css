@@ -1,8 +1,9 @@
 body {
     background: black;
 }
+
 #infoCanvas {
-    border: 1px solid green;
+    border: 0px solid green;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -10,12 +11,43 @@ body {
     width: 1500px;
     height: 700px;
 }
+
 #gameCanvas {
-    border: 5px solid green;
+    border: 1px solid white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
+    transform: translate(-10%, -43%);
+    width: 800px;
     height: 600px;
+}
+
+.box {
+    width: 1500px;
+    height: 700px;
+    border: 0px solid darkblue;
+    background-color: black;
+    color: white;
+    font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#btn1 {
+    position: absolute;
+    top: 95%;
+    left: 3.5%;
+    transform: translate(-50%, -50%);
 }
