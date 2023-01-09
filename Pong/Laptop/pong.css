@@ -1,0 +1,21 @@
+body {
+    background: black;
+}
+#infoCanvas {
+    border: 1px solid green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    height: 700px;
+}
+#gameCanvas {
+    border: 5px solid green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
