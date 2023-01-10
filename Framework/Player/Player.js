@@ -9,9 +9,10 @@ export class Player extends Entity {
     inputHandler,
     render,
     printer,
-    textPos
+    textPos,
+    name = 'Player'
   ) {
     super(gameSize, position, size, speed, inputHandler, render, printer, textPos);
-    this.name = 'Player';
+    this.name = name;
   }
 }

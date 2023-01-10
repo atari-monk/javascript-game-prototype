@@ -15,6 +15,7 @@ export class Game {
     this.collisionRightRender = this.gameFactory.collisionRightRender;
     this.printer = this.gameFactory.printer;
     this.pointCount = this.gameFactory.pointCount;
+    this.name = 'Game';
   }
 
   update(timestamp) {
@@ -41,13 +42,13 @@ export class Game {
     if (this.player2 != null) this.player2.draw(this.screen.gameCtx);
     if (this.collisionLeftRender != null) this.collisionLeftRender.draw();
     if (this.collisionRightRender != null) this.collisionRightRender.draw();
-    this.printer?.print('Game: ' + this.getInfo().join(', '), 5, 15, "yellowgreen");
     this.collisionLeft?.draw();
     this.collisionRight?.draw();
     this.pointCount?.draw();
 
     this.#drawPoints(this.screen.gameCtx);
     if (this.ball instanceof BallV3) this.ball?.drawText(this.screen.textCtx);
+    this.#print();
   }
 
   #clearCtx() {
@@ -55,15 +56,35 @@ export class Game {
     this.screen.textCtx.clearRect(0, 0, this.screen.textSize.x, this.screen.textSize.y);
   }
 
+  #print() {
+    const p = this.printer;
+    p?.setPrint('left', 'bold 20px Arial');
+    const data = this.getInfo();
+    p?.print(`${this.name}:`, 0, 20, 'grey');
+    for (let i = 0; i < data.length; i++) {
+      p?.print(`${data[i].join('     ')}`
+        , 0, 20 + (i + 1) * 40, this.infoColor);
+    }
+    p?.setPrint('left', 'normal 12px Arial');
+  }
+
   getInfo() {
     return [
-      `canvas1 (${this.screen.gameSize.x}, ${this.screen.gameSize.y})`,
-      `canvas2 (${this.screen.textSize.x}, ${this.screen.textSize.y})`,
+      [
+        "   Game            Text    "
+      ],
+      [
+        `(${this.screen.gameSize.x}, ${this.screen.gameSize.y})`,
+        `(${this.screen.textSize.x}, ${this.screen.textSize.y})`
+      ],
+      [
+        "    dim             vel                pos    "
+      ]
     ];
   }
 
   #drawPoints(ctx, isOn = false) {
-    if(!isOn) return;
+    if (!isOn) return;
     ctx.fillStyle = 'white';
     ctx.fillRect(this.screen.gameSize.x / 2 - .5, this.screen.gameSize.y / 2 - .5, 1, 1);
   }

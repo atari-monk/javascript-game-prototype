@@ -17,7 +17,6 @@ if (ver === "Laptop") {
   function updateDisplay(event) {
     pageX.innerText = event.pageX;
     pageY.innerText = event.pageY;
-    console.log(event.pageX, event.pageY);
   }
 
   box.addEventListener("mousemove", updateDisplay, false);

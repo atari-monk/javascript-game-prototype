@@ -39,7 +39,7 @@ export class PongFactory {
       new InputHandlerEmpty()
       , this.renderers
       , this.printer
-      , new Vector2(5, 30)
+      , new Vector2(0, 180)
       , new FloorCollision()
       , this.bearing
     );
@@ -52,7 +52,8 @@ export class PongFactory {
       , new PlayerInputHandler(this.input)
       , new PlayerRender()
       , this.printer
-      , new Vector2(5, 45)
+      , new Vector2(0, 270)
+      , 'Green'
     );
 
     this.player2 = new Player(
@@ -63,7 +64,8 @@ export class PongFactory {
       , new PlayerInputHandler(this.input)
       , new Player2Render()
       , this.printer
-      , new Vector2(5, 60)
+      , new Vector2(0, 360)
+      , 'Blue'
     );
 
     this.collisionLeft = new RectCollision();

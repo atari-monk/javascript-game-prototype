@@ -31,7 +31,7 @@ export class BallV2 extends EntityV2 {
 
   getInfo() {
     let info = super.getInfo();
-    info[1].push(`wall coll (${this.wallCollision.log})`);
+    info[0].push(`wall (${this.wallCollision.log})`);
     return info;
   }
 }
