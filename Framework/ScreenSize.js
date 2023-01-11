@@ -1,6 +1,7 @@
 import { Vector2 } from "./Vector2.js";
 
 export class ScreenSize {
+
   constructor(gameX, gameY, textX, textY) {
     this.gameCanvas = document.getElementById('gameCanvas');
     this.gameCanvas.width = gameX;

@@ -3,23 +3,33 @@ body {
 }
 
 #infoCanvas {
-    border: 0px solid green;
+    border: 1px solid white;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 37%;
+    left: 23%;
     transform: translate(-50%, -50%);
-    width: 1500px;
-    height: 700px;
+    width: 650px;
+    height: 500px;
 }
 
 #gameCanvas {
     border: 1px solid white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -43%);
+    top: 56.7%;
+    left: 71%;
+    transform: translate(-50%, -50%);
     width: 800px;
     height: 600px;
+}
+
+#pointsCanvas {
+    border: 1px solid white;
+    position: absolute;
+    top: 9.2%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    width: 800;
+    height: 90px;
 }
 
 .box {
@@ -48,6 +58,6 @@ body {
 #btn1 {
     position: absolute;
     top: 95%;
-    left: 3.5%;
+    left: 4%;
     transform: translate(-50%, -50%);
 }

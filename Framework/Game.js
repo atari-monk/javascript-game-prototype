@@ -36,7 +36,7 @@ export class Game {
   }
 
   draw() {
-    this.#clearCtx();
+    this._clearCtx();
     if (this.ball != null) this.ball.draw(this.screen.gameCtx);
     if (this.player1 != null) this.player1.draw(this.screen.gameCtx);
     if (this.player2 != null) this.player2.draw(this.screen.gameCtx);
@@ -46,17 +46,17 @@ export class Game {
     this.collisionRight?.draw();
     this.pointCount?.draw();
 
-    this.#drawPoints(this.screen.gameCtx);
+    this._drawPoints(this.screen.gameCtx);
     if (this.ball instanceof BallV3) this.ball?.drawText(this.screen.textCtx);
-    this.#print();
+    this._print();
   }
 
-  #clearCtx() {
+  _clearCtx() {
     this.screen.gameCtx.clearRect(0, 0, this.screen.gameSize.x, this.screen.gameSize.y);
     this.screen.textCtx.clearRect(0, 0, this.screen.textSize.x, this.screen.textSize.y);
   }
 
-  #print() {
+  _print() {
     const p = this.printer;
     p?.setPrint('left', 'bold 20px Arial');
     const data = this.getInfo();
@@ -83,7 +83,7 @@ export class Game {
     ];
   }
 
-  #drawPoints(ctx, isOn = false) {
+  _drawPoints(ctx, isOn = false) {
     if (!isOn) return;
     ctx.fillStyle = 'white';
     ctx.fillRect(this.screen.gameSize.x / 2 - .5, this.screen.gameSize.y / 2 - .5, 1, 1);
