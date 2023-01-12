@@ -1,9 +1,11 @@
-import { pongPage } from "./data.js";
+import { pongPage, pongPageLaptop } from "./data.js";
 
+const ver = 'laptop';
 const tests = [];
 tests["left-wall-collision"] = {
-  page: pongPage,
-  script: "../Test/WallCollision/Left.js",
+  page: pongPageLaptop,
+  script: "../../Test/WallCollision/Left.js",
+  ver: ver
 };
 
 tests["right-wall-collision"] = {

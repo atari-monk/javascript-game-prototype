@@ -7,26 +7,27 @@ const encodeGetParams = (p) =>
     .join("&");
 
 function getOption(selectElId){
-  var select = document.getElementById(selectElId);
+  const select = document.getElementById(selectElId);
   return select.options[select.selectedIndex];
 }
 
 function selectTest() {
-  var option = getOption('select-test');
-  var test = tests[option?.value];
+  const option = getOption('select-test');
+  const test = tests[option?.value];
   if (!option || !test) return;
   const params = {
     none: '',
     script: test.script,
-    title: option.text
+    title: option.text,
+    ver: test.ver
   };
   const url = test.page + '?' + encodeGetParams(params);
   window.open(url, '_blank');
 }
 
 function selectPrototype() {
-  var option = getOption('select-prototype');
-  var prototype = prototypes[option?.value];
+  const option = getOption('select-prototype');
+  const prototype = prototypes[option?.value];
   if (!option || !prototype) return;
   const params = {
     none: '',
