@@ -33,8 +33,8 @@ export class Game2 extends Game {
         "   Game            Text    "
       ],
       [
-        `(${this.gameCanvas.ctx.x}, ${this.gameCanvas.ctx.y})`,
-        `(${this.infoCanvas.ctx.x}, ${this.infoCanvas.ctx.y})`
+        `(${this.gameCanvas.size.x}, ${this.gameCanvas.size.y})`,
+        `(${this.infoCanvas.size.x}, ${this.infoCanvas.size.y})`
       ],
       [
         "    dim             vel                pos    "

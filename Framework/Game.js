@@ -58,14 +58,12 @@ export class Game {
 
   _print() {
     const p = this.printer;
-    p?.setPrint('left', 'bold 20px Arial');
     const data = this.getInfo();
-    p?.print(`${this.name}:`, 0, 20, 'grey');
+    p?.print(`${this.name}:`, 0, 20, 'white');
     for (let i = 0; i < data.length; i++) {
       p?.print(`${data[i].join('     ')}`
         , 0, 20 + (i + 1) * 40, this.infoColor);
     }
-    p?.setPrint('left', 'normal 12px Arial');
   }
 
   getInfo() {

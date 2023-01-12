@@ -19,7 +19,7 @@ export class Entity {
     this.printer = printer;
     this.textPos = textPos;
     this.color = "green";
-    this.infoColor = "grey";
+    this.infoColor = "white";
   }
 
   update(timer) {
@@ -52,14 +52,12 @@ export class Entity {
 
   drawInfo() {
     const p = this.printer;
-    p?.setPrint('left', 'bold 20px Arial');
     const data = this.getInfo();
     p?.print(`${this.name}:`, this.textPos.x, this.textPos.y, this.infoColor);
     for (let i = 0; i < data.length; i++) {
       p?.print(`${data[i].join('   ')}`
         , this.textPos.x, this.textPos.y + (i * 40) + 40, this.infoColor);
     }
-    p?.setPrint('left', 'normal 12px Arial');
   }
 
   getInfo() {
