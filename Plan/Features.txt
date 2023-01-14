@@ -1,0 +1,22 @@
+Pong Features.
+Version MVP (Minimum viable product).
+
+1. Game is initialized when page is loaded.
+2. Player can press Start button to start game playing.
+x. Player paddle update, render.
+x. Player paddle moved with keyborad.
+x. Second Player paddle moved with keyborad with other set of keys.
+x. Game loaded, start, reset state and buttons.
+x. Add state pattern to Game.
+x. Ball update, render.
+x. Ball directed.
+x. Ball collides with floors.
+x. Ball collides with players.
+x. Count and display points.
+x. Display text information.
+x. Ball moved/reset to middle screen.
+x. Ball waits before serve.
+x. Ball serve in random player with angle.
+x. Count Set game points and states.
+x. Count Match game points and states.
+x. Use state pattern on sets and matches.

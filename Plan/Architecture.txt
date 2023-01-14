@@ -1,0 +1,5 @@
+Pong Architecture.
+Version MVP (Minimum viable product).
+
+1. Use OOP (Object Oriented Programming) style. Use classes to model game.
+2. Game, Ball, Player, Wall, tools classes.
