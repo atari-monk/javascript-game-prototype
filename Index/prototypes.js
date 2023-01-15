@@ -22,4 +22,9 @@ prototypes["collision"] = {
   script: "../Prototype/Collision/Collision.js",
 };
 
+prototypes["arkanoid"] = {
+  page: "Prototype/Arkanoid/index.html",
+  script: "../Prototype/Arkanoid/script.js",
+};
+
 export { prototypes }

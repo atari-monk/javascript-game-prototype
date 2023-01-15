@@ -1,3 +1,4 @@
+
 export class InputHandler {
     constructor() {
         this.keys = [];
@@ -47,4 +48,11 @@ export class InputHandler {
             this.keys.splice(this.keys.indexOf("swipe down"), 1);
         });
     }
+}
+
+export class MouseHandler {
+
+  constructor() {
+    
+  }
 }
