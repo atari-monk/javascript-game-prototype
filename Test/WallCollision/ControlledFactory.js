@@ -1,6 +1,6 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
 import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
@@ -11,7 +11,7 @@ export class ControlledFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
     this.printer = new Printer(this.screen.textCtx);
 
     const size = new Vector2(100, 100);

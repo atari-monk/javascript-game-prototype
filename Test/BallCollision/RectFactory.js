@@ -1,7 +1,7 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallInputHandler3 } from "../../Framework/Ball/BallInputHandler3.js";
 import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
@@ -15,7 +15,7 @@ export class RectFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
 
     this.ball = new Ball(
       this.screen.gameSize,

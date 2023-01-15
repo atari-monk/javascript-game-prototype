@@ -1,6 +1,6 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { BallV4 } from "../../Framework/Ball/BallV4.js";
 import { BallInputHandler2 } from "../../Framework/Ball/BallInputHandler2.js";
 import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
@@ -16,7 +16,7 @@ export class DirectionFactory {
     this.screen = screen;
     this.timer = new Timer();
     this.printer = new Printer(this.screen.textCtx);
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
 
     this.renderers = {
       'graphics': new Renderer(

@@ -1,7 +1,7 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
@@ -17,7 +17,7 @@ export class CollisionFactory {
     this.screen = screen;
     this.timer = new Timer();
     this.printer = new Printer(this.screen.textCtx);
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
     this.ball = new Ball(
       this.screen.gameSize,
       new Vector2(this.screen.gameSize.x - 45, this.screen.gameSize.y / 2),

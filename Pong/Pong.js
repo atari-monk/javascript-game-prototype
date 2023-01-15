@@ -39,8 +39,7 @@ const screen = ver === 'laptop' ? new ScreenSize(800, 600, 650, 700) : new Scree
 var gameFactory = new PongFactory(screen);
 var game = new Game(gameFactory);
 
-game.ball.bearing.getBallDir();
-game.ball.setBearingSpeed();
+game.ball.start();
 
 function animate(timestamp) {
   game.update(timestamp);

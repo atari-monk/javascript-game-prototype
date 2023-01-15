@@ -1,7 +1,7 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
 import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { BallV4 } from "../../Framework/Ball/BallV4.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
@@ -23,7 +23,7 @@ export class PongFactory {
     this.timer = new Timer();
     this.printer = new Printer(this.screen.textCtx);
     console.log(this.screen.textCtx);
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
     this.bearing = new Bearing();
 
     this.renderers = {

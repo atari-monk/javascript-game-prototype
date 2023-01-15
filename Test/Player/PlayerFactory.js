@@ -1,6 +1,6 @@
 import { Timer } from "../../Framework/Timer.js";
 import { Vector2 } from "../../Framework/Vector2.js";
-import { InputHandler } from "../../Framework/InputHandler.js";
+import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
 import { Player } from "../../Framework/Player/Player.js";
 import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
@@ -10,7 +10,7 @@ export class PlayerFactory {
   constructor(screen) {
     this.screen = screen;
     this.timer = new Timer();
-    this.input = new InputHandler();
+    this.input = new KeysInputHandler();
     this.printer = new Printer(this.screen.textCtx);
 
     this.player1 = new Player(
