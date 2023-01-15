@@ -1,5 +1,8 @@
+import { Vector2 } from "../Vector2.js";
 
 export class Entity {
+  #initPos;
+
   constructor(
     gameSize,
     position,
@@ -12,6 +15,7 @@ export class Entity {
   ) {
     this.gameSize = gameSize;
     this.position = position;
+    this.#initPos = new Vector2(position.x, position.y);
     this.size = size;
     this.speed = speed;
     this.inputHandler = inputHandler;
@@ -43,6 +47,13 @@ export class Entity {
     if (this.position.y >= this.gameSize.y - this.size.y / 2) {
       this.position.y = this.gameSize.y - this.size.y / 2;
     }
+  }
+
+  reset() {
+    this.position.x = this.#initPos.x;
+    this.position.y = this.#initPos.y;
+    this.speed.x = 0;
+    this.speed.y = 0;
   }
 
   draw(ctx) {

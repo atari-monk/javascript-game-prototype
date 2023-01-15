@@ -6,7 +6,7 @@ import { MultiCanvasData } from '../Framework/MultiCanvasData.js';
 import { CanvasData } from '../Framework/CanvasData.js';
 import { Vector2 } from '../Framework/Vector2.js';
 
-var me = document.querySelector('script[data-name="myDynScript"]');
+const me = document.querySelector('script[data-name="myDynScript"]');
 const ver = me.getAttribute('ver');
 
 if (ver === "laptop") {
@@ -68,9 +68,23 @@ views.get('game').setCanvas();
 views.get('info').setCanvas();
 views.get('points').setCanvas();
 
-var game = new Game2(new PongFactory2(views));
+const game = new Game2(new PongFactory2(views));
 game.ball.bearing.getBallDir();
-game.ball.setBearingSpeed();
+const btnStart = document.querySelector('#btnStart');
+btnStart.addEventListener("click", startGame, false);
+const btnReset = document.querySelector('#btnReset');
+btnReset.addEventListener("click", resetGame, false);
+
+function startGame() {
+  setTimeout(() => {
+    game.ball.setBearingSpeed();
+  }, 2000);
+}
+function resetGame() {
+  game.player1.reset();
+  game.player2.reset();
+  game.ball.reset();
+}
 
 function animate(timestamp) {
   game.update(timestamp);

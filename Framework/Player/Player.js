@@ -1,6 +1,7 @@
 import { Entity } from "../Entity/Entity.js";
 
 export class Player extends Entity {
+
   constructor(
     gameSize,
     position,
