@@ -1,14 +1,16 @@
 Pong Features.
 Version MVP (Minimum viable product).
 
-1. Game is initialized when page loads. 
+1a. Game is initialized when page loads. 
   All elements initial set up.
-2. Player can press Start button to start game.
+1b. Player can press Start button to start game.
   Ball waits a moment, then velocicy is directed at angle toward 
   random player. 
-3. Player can press Reset button to reset game.
+2. Player can press Reset button to reset game.
   Ball, player, points are set to initial conditions.
   Ball doesnt move till start is pressed.
+3. Input from keyboard may be used to control Player.
+4. Input from mouse may be used to control Player.
 
 x. Player paddle update, render.
 x. Player paddle moved with keyborad.

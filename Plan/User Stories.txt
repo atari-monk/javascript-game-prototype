@@ -3,15 +3,16 @@ Version MVP (Minimum viable product).
 
 1. Player can start a game.
 2. Player can reset a game.
+3. Player can move a paddle with keyboard.
+4. Player can move a paddle with mouse.
 
-2. Player can move a paddle.
-3. Ball collides with paddles.
-4. Ball collides with floors but not sides.
-5. Points are counted and displayed.
-6. Additional game/debug information can be rendered with text.
-7. Ball is directed toward players on angle randomly.
-8. Ball is placed in the middle and waits a bit before serve.
-9. Game Set is played till 2 point lead at laest to 6 points.
-10. Game Match consists of minimum 5 sets, match is won by 2 points lead.
-11. Game displays time.
-12. Game can be paused and resumed.
+x. Ball collides with paddles.
+x. Ball collides with floors but not sides.
+x. Points are counted and displayed.
+x. Additional game/debug information can be rendered with text.
+x. Ball is directed toward players on angle randomly.
+x. Ball is placed in the middle and waits a bit before serve.
+x. Game Set is played till 2 point lead at laest to 6 points.
+x. Game Match consists of minimum 5 sets, match is won by 2 points lead.
+x. Game displays time.
+x. Game can be paused and resumed.
