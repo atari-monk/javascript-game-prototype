@@ -2,6 +2,8 @@ Pong User Stories.
 Version MVP (Minimum viable product).
 
 1. Player can start a game.
+2. Player can reset a game.
+
 2. Player can move a paddle.
 3. Ball collides with paddles.
 4. Ball collides with floors but not sides.

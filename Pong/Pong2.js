@@ -69,21 +69,19 @@ views.get('info').setCanvas();
 views.get('points').setCanvas();
 
 const game = new Game2(new PongFactory2(views));
-game.ball.bearing.getBallDir();
 const btnStart = document.querySelector('#btnStart');
 btnStart.addEventListener("click", startGame, false);
 const btnReset = document.querySelector('#btnReset');
 btnReset.addEventListener("click", resetGame, false);
 
 function startGame() {
-  setTimeout(() => {
-    game.ball.setBearingSpeed();
-  }, 2000);
+  game.ball.start();
 }
 function resetGame() {
   game.player1.reset();
   game.player2.reset();
   game.ball.reset();
+  game.pointCount.reset();
 }
 
 function animate(timestamp) {

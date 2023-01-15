@@ -3,7 +3,8 @@ import { Vector2 } from "../Vector2.js";
 
 export class BallV4 extends BallV3 {
   #drawVect;
-  
+  #cancelStart;
+
   constructor(
     gameSize,
     position,
@@ -36,7 +37,7 @@ export class BallV4 extends BallV3 {
     this.#drawSpeed(ctx);
   }
 
-  setBearingSpeed() {
+  #setBearingSpeed() {
     const m = .3;
     const dir = new Vector2(this.bearing.direction.x - this.bearing.position.x, this.bearing.direction.y - this.bearing.position.y);
     const ndir = dir.normalize();
@@ -51,5 +52,21 @@ export class BallV4 extends BallV3 {
     ctx.moveTo(this.position.x, this.position.y);
     ctx.lineTo(this.position.x + this.speed.x * 400, this.position.y + this.speed.y * 400);
     ctx.stroke();
+  }
+
+  start(delay = 2000) {
+    this.bearing?.getBallDir();
+    this.#cancelStart = setTimeout(() => {
+      this.#setBearingSpeed();
+    }, delay);
+  }
+
+  restart(delay = 2000) {
+    this.reset();
+    this.start(delay);
+  }
+
+  clearStart() {
+    clearTimeout(this.#cancelStart);
   }
 }
