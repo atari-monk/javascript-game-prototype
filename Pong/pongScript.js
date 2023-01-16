@@ -11,5 +11,7 @@ script.setAttribute("type", "module");
 script.setAttribute("ver", ver);
 script.setAttribute("data-name", "myDynScript");
 
+//console.log(script, title);
+
 document.title = title;
 document.body.appendChild(script);

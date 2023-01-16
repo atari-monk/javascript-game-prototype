@@ -48,4 +48,10 @@ tests["rect-collision"] = {
   script: "../Test/BallCollision/Rect.js",
 };
 
+tests["mouse"] = {
+  page: pongPageLaptop,
+  script: "../../Test/Mouse/Mouse.js",
+  ver: ver
+};
+
 export { tests }

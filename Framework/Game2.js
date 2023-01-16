@@ -2,9 +2,12 @@ import { Game } from './Game.js';
 import { BallV3 } from './Ball/BallV3.js';
 
 export class Game2 extends Game {
+  
+  #print;
 
-  constructor(gameFactory) {
+  constructor(gameFactory, print = true) {
     super(gameFactory);
+    this.#print = print;
     this.views = gameFactory.views;
     this.infoCanvas = this.views.get('info');
     this.gameCanvas = this.views.get('game');
@@ -24,7 +27,8 @@ export class Game2 extends Game {
 
     this._drawPoints(this.gameCanvas.ctx);
     if (this.ball instanceof BallV3) this.ball?.drawText(this.infoCanvas.ctx);
-    this._print();
+    if (this.input?.draw) this.input?.draw();
+    this.#print ? this._print() : {};
   }
 
   getInfo() {
