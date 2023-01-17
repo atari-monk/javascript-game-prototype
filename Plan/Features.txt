@@ -9,7 +9,8 @@ Version MVP (Minimum viable product).
 2. Player can press Reset button to reset game.
   Ball, player, points are set to initial conditions.
   Ball doesnt move till start is pressed.
-3. Input from keyboard may be used to control Player.
+3a. Input from keyboard may be used to control Player.
+3b. Second key set input from keyboard may be used to control Player.
 4. Input from mouse may be used to control Player.
 
 x. Player paddle update, render.

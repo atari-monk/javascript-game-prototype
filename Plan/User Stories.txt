@@ -3,7 +3,8 @@ Version MVP (Minimum viable product).
 
 1. Player can start a game.
 2. Player can reset a game.
-3. Player can move a paddle with keyboard.
+3a. Player can move a paddle with keyboard.
+3b. Player can move a paddle with second keyboard key set;
 4. Player can move a paddle with mouse.
 
 x. Ball collides with paddles.
