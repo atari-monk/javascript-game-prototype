@@ -15,6 +15,8 @@ import { Printer } from "../../Framework/Printer.js";
 import { Bearing } from "../../Framework/Entity/Bearing.js";
 import { Renderer } from "../../Framework/Entity/Renderer.js";
 import { InfoRender } from "../../Framework/Entity/InfoRender.js";
+import { PlayerMouseInput } from "../../Framework/Player/PlayerMouseInput.js";
+import { MouseInputHandler } from "../../Framework/MouseInputHandler.js";
 
 export class PongFactory2 {
   constructor(views) {
@@ -24,6 +26,7 @@ export class PongFactory2 {
     this.timer = new Timer();
     this.printer = new Printer(this.infoCanvas.ctx);
     this.input = new KeysInputHandler();
+    this.mouseInput = new MouseInputHandler(this.printer);
     this.bearing = new Bearing();
 
     this.renderers = {
@@ -63,7 +66,7 @@ export class PongFactory2 {
       new Vector2(this.gameCanvas.size.x - 10, this.gameCanvas.size.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0)
-      , new PlayerKeysInput(this.input)
+      , new PlayerMouseInput(this.mouseInput)
       , new Player2Render()
       , this.printer
       , new Vector2(0, 360)

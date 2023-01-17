@@ -12,7 +12,7 @@ export class KeysInputHandler {
         this.keys.indexOf(e.key) === -1
       ) {
         this.keys.push(e.key);
-      } else if (e.key === "Enter" && gameOver) restartGame();
+      }
     });
     window.addEventListener("keyup", (e) => {
       if (

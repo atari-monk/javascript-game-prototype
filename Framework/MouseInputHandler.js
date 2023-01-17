@@ -56,7 +56,7 @@ export class MouseInputHandler {
     }
     //console.log(`${this.#coords0.y - this.#coords.y}`);
     this.#coords0.y = this.#coords.y;
-    this.#timer = setTimeout(this.#mouseStill.bind(this), 50)
+    this.#timer = setTimeout(this.#mouseStill.bind(this), 0)
     // console.log(`down ${this.#movingDown}`);
     // console.log(`still ${this.#still}`);
   }
