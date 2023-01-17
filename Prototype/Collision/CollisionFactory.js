@@ -6,7 +6,7 @@ import { Ball } from "../../Framework/Ball/Ball.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
-import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
+import { PlayerKeysInput } from "../../Framework/Player/PlayerKeysInput.js";
 import { BallCollisionLeft } from "../../Framework/BallCollision/BallCollisionLeft.js";
 import { BallCollisionRender } from "../../Framework/BallCollision/BallCollisionRender.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
@@ -34,7 +34,7 @@ export class CollisionFactory {
       new Vector2(this.screen.gameSize.x / 2 - 100, this.screen.gameSize.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0)
-      , new PlayerInputHandler(this.input)
+      , new PlayerKeysInput(this.input)
       , new PlayerRender()
       , this.printer
       , new Vector2(5, 45)

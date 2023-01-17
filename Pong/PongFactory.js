@@ -6,7 +6,7 @@ import { BallV4 } from "../../Framework/Ball/BallV4.js";
 import { BallRender } from "../../Framework/Ball/BallRender.js";
 import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
 import { Player } from "../../Framework/Player/Player.js";
-import { PlayerInputHandler } from "../../Framework/Player/PlayerInputHandler.js";
+import { PlayerKeysInput } from "../../Framework/Player/PlayerKeysInput.js";
 import { RectCollision } from "../../Framework/BallCollision/RectCollision.js";
 import { PointCount } from "../../Framework/Ball/PointCount.js";
 import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
@@ -51,7 +51,7 @@ export class PongFactory {
       new Vector2(10, this.screen.gameSize.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0),
-      new PlayerInputHandler(this.input),
+      new PlayerKeysInput(this.input),
       new PlayerRender(),
       this.printer,
       new Vector2(0, 270),
@@ -63,7 +63,7 @@ export class PongFactory {
       new Vector2(this.screen.gameSize.x - 10, this.screen.gameSize.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0),
-      new PlayerInputHandler(this.input),
+      new PlayerKeysInput(this.input),
       new Player2Render(),
       this.printer,
       new Vector2(0, 360),
