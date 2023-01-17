@@ -61,6 +61,16 @@ body {
     cursor: pointer; /* Add a pointer on hover */
 }
 
+.menu {
+    position: absolute;
+    top: 85.5%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 43%;
+    height: 22.5%;
+    border: 1px solid white;
+}
+
 .button {
     background-color: #4caf50; /* Green */
     border: none;
@@ -75,29 +85,53 @@ body {
     width: 70px;
 }
 
-#btnOverlay {
-    position: absolute;
-    top: 95%;
-    left: 41%;
-    transform: translate(-50%, -50%);
-    background-color: #e7e7e7;
-    color: black;
-}
-
 #btnStart {
-    position: absolute;
-    top: 76%;
-    left: 41%;
-    transform: translate(-50%, -50%);
-    background-color: #008CBA;
+    background-color: #008cba;
+    margin-left: 88%;
 }
 
 #btnReset {
-    position: absolute;
-    top: 82%;
-    left: 41%;
-    transform: translate(-50%, -50%);
     background-color: #f44336;
+    margin-left: 88%;
+}
+
+label {
+    color: green;
+}
+
+select {
+    font-size: 20px;
+    color: green;
+    background: black;
+    display: block;
+}
+
+.select-controls {
+    font-size: 20px;
+}
+
+.select-controls-game {
+    position: absolute;
+    top: 77%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+}
+
+.select-controls-player {
+    position: absolute;
+    top: 77%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+}
+
+#btnOverlay {
+    background-color: #e7e7e7;
+    color: black;
+    margin-left: 88%;
+}
+
+.noDisplay {
+    display: none;
 }
 
 #stack {
