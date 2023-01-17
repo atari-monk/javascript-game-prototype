@@ -13,7 +13,7 @@ if (ver === "laptop") {
   const box = document.querySelector(".box");
   const pageX = document.getElementById("x");
   const pageY = document.getElementById("y");
-  const btn1 = document.getElementById("btn1");
+  const btnOverlay = document.getElementById("btnOverlay");
   const overlay = document.getElementById("overlay");
 
   function updateDisplay(event) {
@@ -24,7 +24,7 @@ if (ver === "laptop") {
   box.addEventListener("mousemove", updateDisplay, false);
   box.addEventListener("mouseenter", updateDisplay, false);
   box.addEventListener("mouseleave", updateDisplay, false);
-  btn1.addEventListener("click", on, false);
+  btnOverlay.addEventListener("click", on, false);
   overlay.addEventListener("click", off, false);
 
   function on() {

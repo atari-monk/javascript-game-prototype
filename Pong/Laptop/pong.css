@@ -61,27 +61,49 @@ body {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#btn1 {
+.button {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 70px;
+}
+
+#btnOverlay {
     position: absolute;
     top: 95%;
-    left: 4%;
+    left: 41%;
     transform: translate(-50%, -50%);
+    background-color: #e7e7e7;
+    color: black;
 }
+
 #btnStart {
     position: absolute;
-    top: 78%;
-    left: 42%;
+    top: 76%;
+    left: 41%;
     transform: translate(-50%, -50%);
+    background-color: #008CBA;
 }
+
 #btnReset {
     position: absolute;
     top: 82%;
-    left: 42%;
+    left: 41%;
     transform: translate(-50%, -50%);
+    background-color: #f44336;
 }
+
 #stack {
     position: relative;
 }
+
 #stack > canvas {
     position: absolute;
     left: 0;
