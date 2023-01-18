@@ -1,7 +1,7 @@
-import { Game } from '../../Framework/Game.js';
-import { Slider } from '../../Framework/Slider.js';
+import { Game } from '../../MyFramework/Game.js';
+import { Slider } from '../../MyFramework/Slider.js';
 import { SliderFactory } from './SliderFactory.js';
-import { ScreenSize } from '../../Framework/ScreenSize.js';
+import { ScreenSize } from '../../MyFramework/ScreenSize.js';
 
 const screen = new ScreenSize(300, 300, 500, 500);
 

@@ -1,8 +1,8 @@
 'using strict'
 
-import { Game2 } from '../../Framework/Game2.js';
+import { Game2 } from '../../MyFramework/Game2.js';
 import { PongFactory2 } from './PongFactory2.js';
-import { MultiCanvasData } from '../Framework/MultiCanvasData.js';
+import { MultiCanvasData } from '../MyFramework/MultiCanvasData.js';
 import { Menu } from './Laptop/Menu.js';
 
 const me = document.querySelector('script[data-name="myDynScript"]');

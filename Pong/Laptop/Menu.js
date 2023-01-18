@@ -46,6 +46,13 @@ export class Menu {
     this.#selectConstrols.classList.add(noDisplay);
   }
 
+  hide() {
+    this.#btnStart.classList.add(noDisplay);
+    this.#btnReset.classList.add(noDisplay);
+    this.#btnOverlay.classList.add(noDisplay);
+    this.#selectConstrols.classList.add(noDisplay);
+  }
+
   #setSelectConstorls() {
     this.#selectConstrols.addEventListener('change', (e) => {
       this.#callback(e.target.value);

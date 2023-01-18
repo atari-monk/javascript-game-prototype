@@ -1,8 +1,8 @@
 'using strict'
 
-import { Game } from '../../Framework/Game.js';
+import { Game } from '../../MyFramework/Game.js';
 import { PongFactory } from './PongFactory.js';
-import { ScreenSize } from '../../Framework/ScreenSize.js';
+import { ScreenSize } from '../../MyFramework/ScreenSize.js';
 
 var me = document.querySelector('script[data-name="myDynScript"]');
 const ver = me.getAttribute('ver');

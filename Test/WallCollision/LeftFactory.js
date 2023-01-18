@@ -1,9 +1,9 @@
-import { Timer } from "../../Framework/Timer.js";
-import { Vector2 } from "../../Framework/Vector2.js";
-import { Ball } from "../../Framework/Ball/Ball.js";
-import { BallRender2 } from "../../Framework/Ball/BallRender2.js";
-import { WallCollision } from "../../Framework/WallCollision/WallCollision.js";
-import { Printer } from "../../Framework/Printer.js";
+import { Timer } from "../../MyFramework/Timer.js";
+import { Vector2 } from "../../MyFramework/Vector2.js";
+import { Ball } from "../../MyFramework/Ball/Ball.js";
+import { BallRender2 } from "../../MyFramework/Ball/BallRender2.js";
+import { WallCollision } from "../../MyFramework/WallCollision/WallCollision.js";
+import { Printer } from "../../MyFramework/Printer.js";
 
 export class LeftFactory {
   constructor(views) {

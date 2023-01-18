@@ -1,4 +1,4 @@
-import { Timer } from "../../Framework/Timer.js";
+import { Timer } from "../../MyFramework/Timer.js";
 
 export class SliderFactory {
   constructor(screen) {

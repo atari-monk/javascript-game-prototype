@@ -1,20 +1,20 @@
-import { Timer } from "../../Framework/Timer.js";
-import { Vector2 } from "../../Framework/Vector2.js";
-import { InputHandlerEmpty } from "../../Framework/InputHandlerEmpty.js";
-import { KeysInputHandler } from "../../Framework/KeysInputHandler.js";
-import { BallV4 } from "../../Framework/Ball/BallV4.js";
-import { BallRender } from "../../Framework/Ball/BallRender.js";
-import { FloorCollision } from "../../Framework/WallCollision/FloorCollision.js";
-import { Player } from "../../Framework/Player/Player.js";
-import { PlayerKeysInput } from "../../Framework/Player/PlayerKeysInput.js";
-import { RectCollision } from "../../Framework/BallCollision/RectCollision.js";
-import { PointCount } from "../../Framework/Ball/PointCount.js";
-import { PlayerRender } from "../../Framework/Player/PlayerRender.js";
-import { Player2Render } from "../../Framework/Player/Player2Render.js";
-import { Printer } from "../../Framework/Printer.js";
-import { Bearing } from "../../Framework/Entity/Bearing.js";
-import { Renderer } from "../../Framework/Entity/Renderer.js";
-import { InfoRender } from "../../Framework/Entity/InfoRender.js";
+import { Timer } from "../../MyFramework/Timer.js";
+import { Vector2 } from "../../MyFramework/Vector2.js";
+import { InputHandlerEmpty } from "../../MyFramework/InputHandlerEmpty.js";
+import { KeysInputHandler } from "../../MyFramework/KeysInputHandler.js";
+import { BallV4 } from "../../MyFramework/Ball/BallV4.js";
+import { BallRender } from "../../MyFramework/Ball/BallRender.js";
+import { FloorCollision } from "../../MyFramework/WallCollision/FloorCollision.js";
+import { Player } from "../../MyFramework/Player/Player.js";
+import { PlayerKeysInput } from "../../MyFramework/Player/PlayerKeysInput.js";
+import { RectCollision } from "../../MyFramework/BallCollision/RectCollision.js";
+import { PointCount } from "../../MyFramework/Ball/PointCount.js";
+import { PlayerRender } from "../../MyFramework/Player/PlayerRender.js";
+import { Player2Render } from "../../MyFramework/Player/Player2Render.js";
+import { Printer } from "../../MyFramework/Printer.js";
+import { Bearing } from "../../MyFramework/Entity/Bearing.js";
+import { Renderer } from "../../MyFramework/Entity/Renderer.js";
+import { InfoRender } from "../../MyFramework/Entity/InfoRender.js";
 
 
 export class PongFactory {
