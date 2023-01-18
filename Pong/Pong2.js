@@ -3,6 +3,7 @@
 import { Game2 } from '../../Framework/Game2.js';
 import { PongFactory2 } from './PongFactory2.js';
 import { MultiCanvasData } from '../Framework/MultiCanvasData.js';
+import { Menu } from './Laptop/Menu.js';
 
 const me = document.querySelector('script[data-name="myDynScript"]');
 const ver = me.getAttribute('ver');
@@ -34,6 +35,8 @@ if (ver === "laptop") {
   }
 }
 
+const menu = new Menu();
+menu.setGameView();
 const game = new Game2(new PongFactory2(new MultiCanvasData()));
 const btnStart = document.querySelector('#btnStart');
 btnStart.addEventListener("click", startGame, false);

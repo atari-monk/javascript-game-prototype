@@ -113,14 +113,14 @@ select {
 .select-controls-game {
     position: absolute;
     top: 77%;
-    left: 33%;
+    left: 32%;
     transform: translate(-50%, -50%);
 }
 
 .select-controls-player {
     position: absolute;
     top: 77%;
-    left: 39%;
+    left: 38%;
     transform: translate(-50%, -50%);
 }
 

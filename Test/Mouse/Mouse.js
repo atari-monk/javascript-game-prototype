@@ -1,16 +1,33 @@
 'using strict'
 
 import { Game2 } from '../../Framework/Game2.js';
-import { MouseFactory } from './MouseFactory.js';
 import { MultiCanvasData } from '../../Framework/MultiCanvasData.js';
-import { Menu } from './Menu.js';
+import { Menu } from '../../Pong/Laptop/Menu.js';
+import { ArrowsFactory } from './ArrowsFactory.js';
+import { MouseFactory } from './MouseFactory.js';
 
-const menu = new Menu();
-menu.setPlayerMenu();
-const game = new Game2(
-  new MouseFactory(
-    new MultiCanvasData())
-  , false);
+let factory;
+let game;
+const canvasData = new MultiCanvasData();
+const menu = new Menu(onControlsChange);
+menu.setPlayerView();
+
+function onControlsChange(value) {
+  switch (value) {
+    case 'kyeboard-set1':
+      factory = new ArrowsFactory(canvasData);
+      break;
+    case 'kyeboard-set2':
+      factory = new ArrowsFactory(canvasData);
+      break;
+    case 'mouse':
+      factory = new MouseFactory(canvasData);
+      break;
+    default:
+      break;
+  }
+  game = new Game2(factory, false);
+}
 
 function animate(timestamp) {
   game.update(timestamp);
