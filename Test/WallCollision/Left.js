@@ -3,15 +3,9 @@ import { Game2 } from '../../MyFramework/Game2.js';
 import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
 import { Menu } from '../../Pong/Laptop/Menu.js';
 
-var me = document.querySelector('script[data-name="myDynScript"]');
-const ver = me.getAttribute('ver');
-
-const menu = new Menu();
-menu.hide();
-
+new Menu().hide();
 const views = new MultiCanvasData();
-await views.init();
-console.log(views, 'dsfdsfsdf');
+await views.init(true);
 const game = new Game2(new LeftFactory(views), false);
 
 function animate(timestamp) {

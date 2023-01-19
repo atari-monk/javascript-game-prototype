@@ -1,8 +1,12 @@
-const localPath = '../../MyFramework/CanvasData.js';
-const gitHubPath = `https://atari-monk.github.io/javascript-pong/${localPath}`;
+const localCanvasData = '../../MyFramework/CanvasData.js';
+const localVector2 = '../../MyFramework/Vector2.js';
+const remote = 'https://atari-monk.github.io/javascript-pong/';
+const remoteCanvasData = `${remote}${localCanvasData}`;
+const remoteVector2 = `${remote}${localVector2}`;
+
 
 //import { CanvasData } from '../../MyFramework/CanvasData.js';
-import { Vector2 } from '../../MyFramework/Vector2.js';
+//import { Vector2 } from '../../MyFramework/Vector2.js';
 
 export class MultiCanvasData {
   #key;
@@ -14,37 +18,52 @@ export class MultiCanvasData {
     this.#data = new Map();
   }
 
-  async init() {
-    let m = await import(localPath);
-    this.#add('laptop-game'
-      , new m.CanvasData(
-        'gameCanvas'
-        , new Vector2(800, 600)));
+  async init(remote = false) {
+    remote ? await this.#initRemote() : await this.#initLocal();
+  }
 
-    this.#add('laptop-info'
-      , new m.CanvasData(
-        'infoCanvas'
-        , new Vector2(650, 500)));
+  async #initRemote() {
+    let m1 = await import(remoteCanvasData);
+    let m2 = await import(remoteVector2);
+    this.#init(m1, m2);
+  }
 
-    this.#add('laptop-points'
-      , new m.CanvasData(
-        'pointsCanvas'
-        , new Vector2(800, 90)));
+  async #initLocal() {
+    let m1 = await import(localCanvasData);
+    let m2 = await import(localVector2);
+    this.#init(m1, m2);
+  }
 
-    this.#add('phone-game'
-      , new m.CanvasData(
-        'gameCanvas'
-        , new Vector2(300, 300)));
+  #init(m1, m2) {
+    this.#add('laptop-game',
+      new m1.CanvasData(
+        'gameCanvas',
+        new m2.Vector2(800, 600)));
 
-    this.#add('phone-info'
-      , new m.CanvasData(
-        'infoCanvas'
-        , new Vector2(500, 500)));
+    this.#add('laptop-info',
+      new m1.CanvasData(
+        'infoCanvas',
+        new m2.Vector2(650, 500)));
 
-    this.#add('phone-points'
-      , new m.CanvasData(
-        'pointsCanvas'
-        , new Vector2(300, 90)));
+    this.#add('laptop-points',
+      new m1.CanvasData(
+        'pointsCanvas',
+        new m2.Vector2(800, 90)));
+
+    this.#add('phone-game',
+      new m1.CanvasData(
+        'gameCanvas',
+        new m2.Vector2(300, 300)));
+
+    this.#add('phone-info',
+      new m1.CanvasData(
+        'infoCanvas',
+        new m2.Vector2(500, 500)));
+
+    this.#add('phone-points',
+      new m1.CanvasData(
+        'pointsCanvas',
+        new m2.Vector2(300, 90)));
 
     this.get('game').setCanvas();
     this.get('info').setCanvas();
