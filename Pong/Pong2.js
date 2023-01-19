@@ -12,7 +12,7 @@ if (ver === "laptop") {
   const box = document.querySelector(".box");
   const pageX = document.getElementById("x");
   const pageY = document.getElementById("y");
-  const btnOverlay = document.getElementById("btnOverlay");
+  const btnOverlay = document.getElementById("btn-overlay");
   const overlay = document.getElementById("overlay");
 
   function updateDisplay(event) {
@@ -37,10 +37,13 @@ if (ver === "laptop") {
 
 const menu = new Menu();
 menu.setGameView();
-const game = new Game2(new PongFactory2(new MultiCanvasData()));
-const btnStart = document.querySelector('#btnStart');
+const views = new MultiCanvasData();
+await views.init();
+const game = new Game2(new PongFactory2(views));
+const btnStart = document.getElementById('btn-start');
+console.log(btnStart);
 btnStart.addEventListener("click", startGame, false);
-const btnReset = document.querySelector('#btnReset');
+const btnReset = document.getElementById('btn-reset');
 btnReset.addEventListener("click", resetGame, false);
 
 function startGame() {

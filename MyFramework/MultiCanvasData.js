@@ -36,32 +36,32 @@ export class MultiCanvasData {
   #init(m1, m2) {
     this.#add('laptop-game',
       new m1.CanvasData(
-        'gameCanvas',
+        'game-canvas',
         new m2.Vector2(800, 600)));
 
     this.#add('laptop-info',
       new m1.CanvasData(
-        'infoCanvas',
+        'info-canvas',
         new m2.Vector2(650, 500)));
 
     this.#add('laptop-points',
       new m1.CanvasData(
-        'pointsCanvas',
+        'points-canvas',
         new m2.Vector2(800, 90)));
 
     this.#add('phone-game',
       new m1.CanvasData(
-        'gameCanvas',
+        'game-canvas',
         new m2.Vector2(300, 300)));
 
     this.#add('phone-info',
       new m1.CanvasData(
-        'infoCanvas',
+        'info-canvas',
         new m2.Vector2(500, 500)));
 
     this.#add('phone-points',
       new m1.CanvasData(
-        'pointsCanvas',
+        'points-canvas',
         new m2.Vector2(300, 90)));
 
     this.get('game').setCanvas();

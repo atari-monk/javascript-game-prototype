@@ -1,25 +1,38 @@
 'using strict';
 
-const noDisplay = 'noDisplay';
+const hide = 'hide';
 const selectGame = 'select-controls-game';
 const selectPlayer = 'select-controls-player';
+const menuContainer = 'menu-container';
+const menuButtons = 'menu-btns';
+const btnStart = 'btn-start';
+const btnReset = 'btn-reset';
+const btnOverlay = 'btn-overlay';
 
 export class Menu {
+  #menuContainer;
+  #menuBtns;
   #btnStart;
   #btnReset;
   #btnOverlay;
   #selectConstrols;
   #callback;
 
-  static get noDisplay() { return noDisplay;}
+  static get hide() { return hide;}
   static get selectGame() { return selectGame;}
   static get selectPlayer() { return selectPlayer;}
+  static get menuContainer() { return menuContainer; }
+  static get btnStart() { return btnStart; }
+  static get btnReset() { return btnReset; }
+  static get btnOverlay() { return btnOverlay; }
 
   constructor(onControlsChange) {
     this.#callback = onControlsChange;
-    this.#btnStart = document.getElementById('btnStart');
-    this.#btnReset = document.getElementById('btnReset');
-    this.#btnOverlay = document.getElementById('btnOverlay');
+    this.#menuContainer = document.getElementById(menuContainer);
+    this.#menuBtns = document.getElementById(menuButtons);
+    this.#btnStart = document.getElementById(btnStart);
+    this.#btnReset = document.getElementById(btnReset);
+    this.#btnOverlay = document.getElementById(btnOverlay);
     this.#setSelectGetters();
     this.#selectConstrols = document.getElementById('select-controls-container');
   }
@@ -35,22 +48,27 @@ export class Menu {
 
   setPlayerView(onControlsChange) {
     this.#callback(this.#selectConstrols.childNodes[3].val);
-    this.#btnStart.classList.add(noDisplay);
-    this.#btnReset.classList.add(noDisplay);
-    this.#btnOverlay.classList.add(noDisplay);
+    this.#btnStart.classList.add(hide);
+    this.#btnReset.classList.add(hide);
+    this.#btnOverlay.classList.add(hide);
     this.#selectConstrols.classList.add(selectPlayer);
     this.#setSelectConstorls(onControlsChange);
   }
 
   setGameView() {
-    this.#selectConstrols.classList.add(noDisplay);
+    this.#menuContainer.classList.remove(hide);
+    this.#menuBtns.classList.remove(hide);
+    this.#btnStart.classList.remove(hide);
+    this.#btnReset.classList.remove(hide);
+    this.#btnOverlay.classList.remove(hide);
+    //this.#selectConstrols.classList.add(noDisplay);
   }
 
   hide() {
-    this.#btnStart.classList.add(noDisplay);
-    this.#btnReset.classList.add(noDisplay);
-    this.#btnOverlay.classList.add(noDisplay);
-    this.#selectConstrols.classList.add(noDisplay);
+    this.#btnStart.classList.add(hide);
+    this.#btnReset.classList.add(hide);
+    this.#btnOverlay.classList.add(hide);
+    this.#selectConstrols.classList.add(hide);
   }
 
   #setSelectConstorls() {
