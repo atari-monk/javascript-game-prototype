@@ -1,4 +1,12 @@
-import { CanvasData } from '../../MyFramework/CanvasData.js';
+const localPath = '../../MyFramework/CanvasData.js';
+const gitHubPath = `https://atari-monk.github.io/javascript-pong/${localPath}`;
+import(gitHubPath)
+  .then((module) => {
+    console.log(module.version);
+  })
+  .catch((error) => console.log(`Import Error! ${error}`));
+
+//import { CanvasData } from '../../MyFramework/CanvasData.js';
 import { Vector2 } from '../../MyFramework/Vector2.js';
 
 export class MultiCanvasData {
