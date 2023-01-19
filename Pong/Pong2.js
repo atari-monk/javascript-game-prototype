@@ -38,7 +38,7 @@ if (ver === "laptop") {
 const menu = new Menu();
 menu.setGameView();
 const views = new MultiCanvasData();
-await views.init();
+await views.init(true);
 const game = new Game2(new PongFactory2(views));
 const btnStart = document.getElementById('btn-start');
 btnStart.addEventListener("click", startGame, false);
