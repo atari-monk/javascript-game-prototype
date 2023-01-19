@@ -10,6 +10,8 @@ const menu = new Menu();
 menu.hide();
 
 const views = new MultiCanvasData();
+await views.init();
+console.log(views, 'dsfdsfsdf');
 const game = new Game2(new LeftFactory(views), false);
 
 function animate(timestamp) {

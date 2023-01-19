@@ -9,6 +9,8 @@ export class LeftFactory {
   constructor(views) {
     this.views = views;
     this.infoCanvas = views.get('info');
+    console.log('dsfdsfsd');
+    console.log(this.infoCanvas);
     this.gameCanvas = views.get('game');
     this.timer = new Timer();
     this.printer = new Printer(this.infoCanvas.ctx);

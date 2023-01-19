@@ -31,6 +31,6 @@ export class CanvasData {
     this.#canvas.width = this.#size.x;
     this.#canvas.height = this.#size.y;
     this.#ctx = this.#canvas.getContext('2d');
-    //console.log(this.#canvasId, this.#canvas.width, this.#canvas.height);
+    //console.log(this.#ctx);
   }
 }
