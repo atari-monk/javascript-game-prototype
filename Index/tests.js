@@ -9,8 +9,9 @@ tests["left-wall-collision"] = {
 };
 
 tests["right-wall-collision"] = {
-  page: pongPage,
-  script: "../Test/WallCollision/Right.js",
+  page: pongPageLaptop,
+  script: "../../Test/WallCollision/Right.js",
+  ver: ver
 };
 
 tests["top-wall-collision"] = {

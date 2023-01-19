@@ -1,10 +1,12 @@
-import { Game } from '../../MyFramework/Game.js';
 import { RightFactory } from './RightFactory.js';
-import { ScreenSize } from '../../MyFramework/ScreenSize.js';
+import { Game2 } from '../../MyFramework/Game2.js';
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
+import { Menu } from '../../Pong/Laptop/Menu.js';
 
-const screen = new ScreenSize(300, 300, 500, 500);
-const gameFactory = new RightFactory(screen);
-const game = new Game(gameFactory);
+new Menu().hide(); 
+const views = new MultiCanvasData();
+await views.init();
+const game = new Game2(new RightFactory(views));
 
 function animate(timestamp) {
   game.update(timestamp);
