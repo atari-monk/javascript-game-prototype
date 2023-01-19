@@ -25,7 +25,7 @@ export class LeftFactory {
       null
       , new BallRender2()
       , this.printer
-      , new Vector2(0, 180)
+      , new Vector2(5, 5)
       , new WallCollision()
     );
   }

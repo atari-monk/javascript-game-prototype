@@ -6,7 +6,7 @@ import { Menu } from '../../Pong/Laptop/Menu.js';
 new Menu().hide();
 const views = new MultiCanvasData();
 await views.init();
-const game = new Game2(new LeftFactory(views), false);
+const game = new Game2(new LeftFactory(views));
 
 function animate(timestamp) {
   game.update(timestamp);

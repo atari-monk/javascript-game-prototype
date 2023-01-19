@@ -24,6 +24,7 @@ export class Entity {
     this.textPos = textPos;
     this.color = "green";
     this.infoColor = "white";
+    this.name = 'entity';
   }
 
   update(timer) {
@@ -64,7 +65,6 @@ export class Entity {
   drawInfo() {
     const p = this.printer;
     const data = this.getInfo();
-    p?.print(`${this.name}:`, this.textPos.x, this.textPos.y, this.infoColor);
     for (let i = 0; i < data.length; i++) {
       p?.print(`${data[i].join('   ')}`
         , this.textPos.x, this.textPos.y + (i * 40) + 40, this.infoColor);
@@ -74,9 +74,7 @@ export class Entity {
   getInfo() {
     return [
       [
-        `(${this.size.x.toFixed(0)}, ${this.size.y.toFixed(0)})`,
-        ` (${this.speed.x.toFixed(2)}, ${this.speed.y.toFixed(2)}) `,
-        `(${this.position.x.toFixed(0)}, ${this.position.y.toFixed(0)})`
+        `${this.name} - size (${this.size.x.toFixed(0)}, ${this.size.y.toFixed(0)}), vel (${this.speed.x.toFixed(2)}, ${this.speed.y.toFixed(2)}), pos (${this.position.x.toFixed(0)}, ${this.position.y.toFixed(0)})`
       ]
     ];
   }

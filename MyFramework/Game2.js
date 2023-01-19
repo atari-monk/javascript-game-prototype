@@ -34,14 +34,7 @@ export class Game2 extends Game {
   getInfo() {
     return [
       [
-        "   Game            Text    "
-      ],
-      [
-        `(${this.gameCanvas.size.x}, ${this.gameCanvas.size.y})`,
-        `(${this.infoCanvas.size.x}, ${this.infoCanvas.size.y})`
-      ],
-      [
-        "    dim             vel                pos    "
+        `${this.name} - game-canvas (${this.gameCanvas.size.x}, ${this.gameCanvas.size.y}), info-canvas (${this.infoCanvas.size.x}, ${this.infoCanvas.size.y}), points-canvas (${this.pointsCanvas.size.x}, ${this.pointsCanvas.size.y})`
       ]
     ];
   }

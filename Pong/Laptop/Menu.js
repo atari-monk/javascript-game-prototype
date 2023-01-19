@@ -61,7 +61,6 @@ export class Menu {
     this.#btnStart.classList.remove(hide);
     this.#btnReset.classList.remove(hide);
     this.#btnOverlay.classList.remove(hide);
-    //this.#selectConstrols.classList.add(noDisplay);
   }
 
   hide() {

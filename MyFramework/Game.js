@@ -59,24 +59,16 @@ export class Game {
   _print() {
     const p = this.printer;
     const data = this.getInfo();
-    p?.print(`${this.name}:`, 0, 20, 'white');
     for (let i = 0; i < data.length; i++) {
       p?.print(`${data[i].join('     ')}`
-        , 0, 20 + (i + 1) * 40, this.infoColor);
+        , 5, 20 + i * 40, this.infoColor);
     }
   }
 
   getInfo() {
     return [
       [
-        "   Game            Text    "
-      ],
-      [
-        `(${this.screen.gameSize.x}, ${this.screen.gameSize.y})`,
-        `(${this.screen.textSize.x}, ${this.screen.textSize.y})`
-      ],
-      [
-        "    dim             vel                pos    "
+        'test'
       ]
     ];
   }

@@ -41,7 +41,6 @@ const views = new MultiCanvasData();
 await views.init();
 const game = new Game2(new PongFactory2(views));
 const btnStart = document.getElementById('btn-start');
-console.log(btnStart);
 btnStart.addEventListener("click", startGame, false);
 const btnReset = document.getElementById('btn-reset');
 btnReset.addEventListener("click", resetGame, false);

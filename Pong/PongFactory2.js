@@ -44,7 +44,7 @@ export class PongFactory2 {
       new InputHandlerEmpty()
       , this.renderers
       , this.printer
-      , new Vector2(0, 180)
+      , new Vector2(5, 5)
       , new FloorCollision()
       , this.bearing
     );
@@ -57,7 +57,7 @@ export class PongFactory2 {
       , new PlayerKeysInput(this.input)
       , new PlayerRender()
       , this.printer
-      , new Vector2(0, 270)
+      , new Vector2(5, 30)
       , 'Green'
     );
 
@@ -69,7 +69,7 @@ export class PongFactory2 {
       , new PlayerMouseInput(this.mouseInput)
       , new Player2Render()
       , this.printer
-      , new Vector2(0, 360)
+      , new Vector2(5, 55)
       , 'Blue'
     );
 

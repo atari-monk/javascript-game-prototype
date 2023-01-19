@@ -30,8 +30,8 @@ export class BallV2 extends EntityV2 {
   }
 
   getInfo() {
-    let info = super.getInfo();
-    info[0].push(`wall (${this.wallCollision.log})`);
+    const info = super.getInfo();
+    info[0][0] = info[0][0].concat(`, wall (${this.wallCollision.log})`);
     return info;
   }
 }
