@@ -1,9 +1,8 @@
 const localCanvasData = '../../MyFramework/CanvasData.js';
 const localVector2 = '../../MyFramework/Vector2.js';
 const remote = 'https://atari-monk.github.io/javascript-pong/';
-const remoteCanvasData = `${remote}${localCanvasData}`;
-const remoteVector2 = `${remote}${localVector2}`;
-
+const remoteCanvasData = `${remote}MyFramework/CanvasData.js`;
+const remoteVector2 = `${remote}MyFramework/Vector2.js`;
 
 //import { CanvasData } from '../../MyFramework/CanvasData.js';
 //import { Vector2 } from '../../MyFramework/Vector2.js';
