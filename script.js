@@ -4,16 +4,23 @@ import { prototypes } from "./prototypes.js";
 class MainPage {
 
   #testWalls;
+  #testBall;
 
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
+    this.#testBall = document.getElementById('test-ball');
     this.#setLinks();
   }
 
   #setLinks() {
-    const walls = tests['walls'];
-    this.#testWalls.href = `${walls.host}${walls.page}`;
+    this.#setTest('walls', this.#testWalls);
+    this.#setTest('ball', this.#testBall);
+  }
+
+  #setTest(key, element) {
+    const page = tests[key];
+    element.href = `${page.host}${page.page}`;
   }
 }
 
-const main = new MainPage();
+new MainPage();

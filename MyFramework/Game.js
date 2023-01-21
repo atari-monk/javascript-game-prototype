@@ -20,7 +20,7 @@ export class Game {
 
   update(timestamp) {
     this.timer.set(timestamp);
-    if (true) this.timer.log();
+    if (false) this.timer.log();
     if (this.ball != null) this.ball.update(this.timer);
     if (this.player1 != null) this.player1.update(this.timer);
     if (this.player2 != null) this.player2.update(this.timer);
