@@ -29,7 +29,6 @@ Promise.prototype.delay = function (fn, t) {
 //////////////////////////////////////////////////////////
 new Menu().hide();
 const views = new MultiCanvasData();
-await views.init(true);
 let game = new Game2(new LeftFactory(views));
 let stop;
 

@@ -1,10 +1,8 @@
 import { tests } from "./Index/tests.js";
 import { prototypes } from "./Index/prototypes.js";
 
-const encodeGetParams = (p) =>
-  Object.entries(p)
-    .map((kv) => kv.map(encodeURIComponent).join("="))
-    .join("&");
+const local = "http://127.0.0.1:5501/";
+const page1 = "Test/WallCollision/pong.html";
 
 function getOption(selectElId){
   const select = document.getElementById(selectElId);
@@ -21,7 +19,8 @@ function selectTest() {
     title: option.text,
     ver: test.ver
   };
-  const url = test.page + '?' + encodeGetParams(params);
+  console.log(params);
+  const url = local + page1;
   window.open(url, '_blank');
 }
 
