@@ -1,32 +1,51 @@
 body {
     background: black;
 }
+
 h1 {
     color: green;
-    font-size: xx-large;
+    /* font-size: xx-large; */
     text-align: center;
 }
+
 p {
     color: green;
     margin: 10px;
     font-size: 20px;
     text-align: center;
 }
+
 a {
     color: green;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
+
 .container-center {
   text-align: center;
 }
+
 select {
     margin-top: 10px;
     font-size: 20px;
     color: green;
     background: black;
 }
-.markOption {
+
+.mark-option {
     color: darkgoldenrod;
     font-size: 24px;
     font-weight: bold;
+}
+
+section.container {
+  text-align: center;
+  color: green;
+  /* font-size: 20px; */
+  border: 0px solid white;
+}
+
+ol.my-ol {
+  margin-top: .1%;
+  display: inline-block;
+  text-align: left;
 }
