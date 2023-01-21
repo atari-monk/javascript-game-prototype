@@ -7,12 +7,14 @@ class MainPage {
   #testBall;
   #testPlayer;
   #testMyCollision;
+  #testCollision;
 
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
     this.#testBall = document.getElementById('test-ball');
     this.#testPlayer = document.getElementById('test-player');
     this.#testMyCollision = document.getElementById('test-my-collision');
+    this.#testCollision = document.getElementById('test-collision');
     this.#setLinks();
   }
 
@@ -21,6 +23,7 @@ class MainPage {
     this.#setTest('ball', this.#testBall);
     this.#setTest('player', this.#testPlayer);
     this.#setTest('my-collision', this.#testMyCollision);
+    this.#setTest('collision', this.#testCollision);
   }
 
   #setTest(key, element) {
