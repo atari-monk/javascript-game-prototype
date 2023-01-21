@@ -1,10 +1,10 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { MouseInputHandler } from "../../MyFramework/MouseInputHandler.js";
-import { Printer } from "../../MyFramework/Printer.js";
-import { Player } from "../../MyFramework/Player/Player.js";
-import { PlayerMouseInput } from "../../MyFramework/Player/PlayerMouseInput.js";
-import { PlayerRender } from "../../MyFramework/Player/PlayerRender.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { MouseInputHandler } from "../../../MyFramework/MouseInputHandler.js";
+import { Printer } from "../../../MyFramework/Printer.js";
+import { Player } from "../../../MyFramework/Player/Player.js";
+import { PlayerMouseInput } from "../../../MyFramework/Player/PlayerMouseInput.js";
+import { PlayerRender } from "../../../MyFramework/Player/PlayerRender.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
 
 export class MouseFactory {
 

@@ -1,15 +1,15 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
-import { InputHandlerEmpty } from "../../MyFramework/InputHandlerEmpty.js";
-import { KeysInputHandler } from "../../MyFramework/KeysInputHandler.js";
-import { Ball } from "../../MyFramework/Ball/Ball.js";
-import { BallInputHandler3 } from "../../MyFramework/Ball/BallInputHandler3.js";
-import { BallRender2 } from "../../MyFramework/Ball/BallRender2.js";
-import { WallCollision } from "../../MyFramework/WallCollision/WallCollision.js";
-import { Player } from "../../MyFramework/Player/Player.js";
-import { RectCollision } from "../../MyFramework/BallCollision/RectCollision.js";
-import { PlayerDebugRender } from "../../MyFramework/Player/PlayerDebugRender.js";
-import { RectCollisionRender } from "../../MyFramework/BallCollision/RectCollisionRender.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { InputHandlerEmpty } from "../../../MyFramework/InputHandlerEmpty.js";
+import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
+import { Ball } from "../../../MyFramework/Ball/Ball.js";
+import { BallInputHandler3 } from "../../../MyFramework/Ball/BallInputHandler3.js";
+import { BallRender2 } from "../../../MyFramework/Ball/BallRender2.js";
+import { WallCollision } from "../../../MyFramework/WallCollision/WallCollision.js";
+import { Player } from "../../../MyFramework/Player/Player.js";
+import { RectCollision } from "../../../MyFramework/BallCollision/RectCollision.js";
+import { PlayerDebugRender } from "../../../MyFramework/Player/PlayerDebugRender.js";
+import { RectCollisionRender } from "../../../MyFramework/BallCollision/RectCollisionRender.js";
 
 export class RectFactory {
   constructor(screen) {

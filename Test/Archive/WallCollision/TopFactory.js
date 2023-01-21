@@ -1,9 +1,9 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
-import { Ball } from "../../MyFramework/Ball/Ball.js";
-import { BallRender2 } from "../../MyFramework/Ball/BallRender2.js";
-import { WallCollision } from "../../MyFramework/WallCollision/WallCollision.js";
-import { Printer } from "../../MyFramework/Printer.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { Ball } from "../../../MyFramework/Ball/Ball.js";
+import { BallRender2 } from "../../../MyFramework/Ball/BallRender2.js";
+import { WallCollision } from "../../../MyFramework/WallCollision/WallCollision.js";
+import { Printer } from "../../../MyFramework/Printer.js";
 
 export class TopFactory {
   constructor(screen) {
