@@ -1,7 +1,7 @@
 import { Game2 } from '../../MyFramework/Game2.js';
 import { ControlledFactory } from './ControlledFactory.js';
 import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
-import { Menu } from '../../Pong/Laptop/Menu.js';
+import { Menu } from './Menu.js';
 
 new Menu().hide();
 const views = new MultiCanvasData();

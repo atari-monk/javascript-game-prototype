@@ -2,7 +2,7 @@ import { LeftFactory } from './LeftFactory.js';
 import { RightFactory } from './RightFactory.js';
 import { Game2 } from '../../MyFramework/Game2.js';
 import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
-import { Menu } from '../../Pong/Laptop/Menu.js';
+import { Menu } from './Menu.js';
 
 // utility function for returning a promise that resolves after a delay
 function delay(t) {

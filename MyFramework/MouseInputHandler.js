@@ -10,6 +10,7 @@ export class MouseInputHandler {
   #printer;
   #print;
   #timer;
+  #pos;
 
   get coords() {
     return this.#coords;
@@ -27,7 +28,7 @@ export class MouseInputHandler {
     return this.#still;
   }
 
-  constructor(printer, print = false) {
+  constructor(printer, print = false, pos = null) {
     this.#print = print;
     this.#printer = printer;
     document.addEventListener("mousemove", this.#mouseMoveHandler.bind(this), false);
@@ -36,6 +37,7 @@ export class MouseInputHandler {
     this.#movingUp = false;
     this.#movingDown = false;
     this.#still = true;
+    this.#pos = pos;
   }
 
   #mouseMoveHandler(e) {
@@ -69,22 +71,17 @@ export class MouseInputHandler {
 
   draw() {
     if (this.#print === false) return;
-    this.#setFont();
-    this.#printCoords();
-    this.#printState();
-    this.#resetFont();
+    //this.#setFont();
+    this.#printMouse();
+    //this.#resetFont();
   }
 
   #setFont() {
     this.#printer.setPrint('left', 'bold 26px Arial');
   }
 
-  #printCoords() {
-    this.#printer.print(`Mouse (${this.#coords.x}, ${this.#coords.y})`, 15, 35, 'green');
-  }
-
-  #printState() {
-    this.#printer.print(`(up, down, still) - (${this.#movingUp}, ${this.#movingDown}, ${this.#still})`, 15, 75, 'green');
+  #printMouse() {
+    this.#printer.print(`Mouse: (${this.#coords.x}, ${this.#coords.y}), (up, down, still) - (${this.#movingUp}, ${this.#movingDown}, ${this.#still})`, this.#pos.x, this.#pos.y, 'white');
   }
 
   #resetFont() {

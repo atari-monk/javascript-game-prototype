@@ -8,9 +8,16 @@ tests["walls"] = {
   page: "Test/Walls/index.html",
   ver: ver
 };
+
 tests["ball"] = {
   host: local,
   page: "Test/Ball/index.html",
+  ver: ver
+};
+
+tests["player"] = {
+  host: local,
+  page: "Test/Player/index.html",
   ver: ver
 };
 
