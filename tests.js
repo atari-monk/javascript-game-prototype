@@ -21,4 +21,10 @@ tests["player"] = {
   ver: ver
 };
 
+tests["my-collision"] = {
+  host: local,
+  page: "Test/MyCollision/index.html",
+  ver: ver
+};
+
 export { tests }
