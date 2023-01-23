@@ -1,11 +1,9 @@
-import { Game } from '../../MyFramework/Game.js';
-import { WallFactory } from './WallFactory.js';
-import { ScreenSize } from '../../MyFramework/ScreenSize.js';
+import { Game2 } from '../../MyFramework/Game2.js';
+import { WallFactory } from './wallFactory.js';
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
 
-const screen = new ScreenSize(300, 300, 500, 500);
-
-var gameFactory = new WallFactory(screen);
-var game = new Game(gameFactory);
+const views = new MultiCanvasData();
+var game = new Game2(new WallFactory(views));
 
 function animate(timestamp) {
   game.update(timestamp);
