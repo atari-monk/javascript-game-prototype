@@ -12,10 +12,12 @@ import { InfoRender } from "../../MyFramework/Entity/InfoRender.js";
 import { Bearing } from "../../MyFramework/Entity/Bearing.js";
 
 export class DirectionFactory {
-  constructor(screen) {
-    this.screen = screen;
+  constructor(views) {
+    this.views = views;
+    this.infoCanvas = views.get('info');
+    this.gameCanvas = views.get('game');
     this.timer = new Timer();
-    this.printer = new Printer(this.screen.textCtx);
+    this.printer = new Printer(this.infoCanvas.ctx);
     this.input = new KeysInputHandler();
 
     this.renderers = {
@@ -27,15 +29,15 @@ export class DirectionFactory {
 
     const size = new Vector2(20, 20);
     const pos = new Vector2(
-      this.screen.gameSize.x / 2
-      , this.screen.gameSize.y / 2);
+      this.gameCanvas.size.x / 2
+      , this.gameCanvas.size.y / 2);
     const speed = new Vector2(0, 0);
-    const textPos = new Vector2(5, 30);
+    const textPos = new Vector2(5, 5);
 
     this.bearing = new Bearing();
 
     this.ball = new BallV4(
-      this.screen.gameSize
+      this.gameCanvas.size
       , pos
       , size
       , speed

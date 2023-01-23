@@ -9,4 +9,10 @@ prototypes["slider"] = {
   ver: ver
 };
 
+prototypes["direction"] = {
+  host: local,
+  page: "Prototype/Direction/index.html",
+  ver: ver
+};
+
 export { prototypes }

@@ -1,0 +1,112 @@
+body {
+    background: black;
+}
+
+#info-canvas {
+    border: 1px solid white;
+    position: absolute;
+    top: 38%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    /* width: 650px;
+    height: 500px; */
+    width: 43%;
+    height: 70%;
+}
+
+#game-canvas {
+    border: 1px solid white;
+    position: absolute;
+    top: 56.7%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    width: 52%;
+    height: 80%;
+    /* width: 800;
+    height: 600; */
+}
+
+#points-canvas {
+    border: 1px solid white;
+    position: absolute;
+    top: 9.2%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    /* width: 800px;
+    height: 90px; */
+    width: 52%;
+    height: 12%;
+}
+
+p {
+    color: white;
+}
+
+.slider {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    margin: 20px;
+}
+
+label {
+    font: 1rem "Fira Sans", sans-serif;
+    color: white;
+}
+
+input {
+    margin: 0.4rem;
+    color: white;
+}
+
+legend {
+  color: white;
+}
+
+.menu-container {
+    position: absolute;
+    top: 85.6%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 43%;
+    height: 22%;
+    border: 1px solid white;
+}
+
+.button {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 90px;
+    font-weight: 900;
+    margin-left: 85%;
+}
+
+#btn-rotate {
+    background-color: #d3641b;
+}
+
+#btn-start {
+    background-color: #f44336;
+}
+
+#slider-container-1 {
+    position: absolute;
+    top: 24%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 40%;
+    border: 0px solid white;
+}

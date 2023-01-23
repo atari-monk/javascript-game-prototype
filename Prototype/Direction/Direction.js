@@ -1,8 +1,8 @@
-import { Game } from '../../MyFramework/Game.js';
-import { DirectionFactory } from './DirectionFactory.js';
-import { ScreenSize } from '../../MyFramework/ScreenSize.js';
+import { Game2 } from '../../MyFramework/Game2.js';
+import { DirectionFactory } from './directionFactory.js';
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
 
-const screen = new ScreenSize(300, 300, 500, 500);
+const views = new MultiCanvasData();
 
 let angle = 0;
 window.addEventListener('load', function () {
@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     }
   }
 
-  const btn = document.getElementById('rotate');
+  const btn = document.getElementById('btn-rotate');
   const polarEl = document.getElementById('polar');
   const matrixEl = document.getElementById('matrix');
   let polar = true;
@@ -38,25 +38,20 @@ window.addEventListener('load', function () {
     rotate(polar, angle);
   })
 
-  const randomInt = (min, max) =>
-    Math.floor(Math.random() * (max - min + 1) + min);
-
-  const btn2 = document.getElementById('pongDir');
+  const btn2 = document.getElementById('btn-start');
   btn2.addEventListener('click', function (e) {
-    game.ball.bearing.getBallDir();
-    game.ball.setBearingSpeed();
+    game.ball.start(0);
     setTimeout(
       () => {
         game.ball.reset();
         game.ball.bearing.rotatePolar(0);
       },
-      700
+      2000
     );
   })
 })
 
-const gameFactory = new DirectionFactory(screen);
-const game = new Game(gameFactory);
+const game = new Game2(new DirectionFactory(views));
 
 function animate(timestamp) {
   game.update(timestamp);
