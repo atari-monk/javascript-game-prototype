@@ -12,37 +12,39 @@ import { BallCollisionRender } from "../../MyFramework/BallCollision/BallCollisi
 import { PlayerRender } from "../../MyFramework/Player/PlayerRender.js";
 import { Printer } from "../../MyFramework/Printer.js";
 
-export class CollisionFactory {
-  constructor(screen) {
-    this.screen = screen;
+export class MyCollisionFactory {
+  constructor(views) {
+    this.views = views;
+    this.infoCanvas = views.get('info');
+    this.gameCanvas = views.get('game');
     this.timer = new Timer();
-    this.printer = new Printer(this.screen.textCtx);
+    this.printer = new Printer(this.infoCanvas.ctx);
     this.input = new KeysInputHandler();
     this.ball = new Ball(
-      this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x - 45, this.screen.gameSize.y / 2),
+      this.gameCanvas.size,
+      new Vector2(this.gameCanvas.size.x - 45, this.gameCanvas.size.y / 2),
       new Vector2(10, 10),
-      new Vector2(.05, .05),
+      new Vector2(.3, .3),
       new InputHandlerEmpty()
       , new BallRender()
       , this.printer
-      , new Vector2(5, 30)
+      , new Vector2(5, 5)
       , new WallCollision()
     );
     this.player1 = new Player(
-      this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x / 2 - 100, this.screen.gameSize.y / 2),
+      this.gameCanvas.size,
+      new Vector2(this.gameCanvas.size.x / 2 - 100, this.gameCanvas.size.y / 2),
       new Vector2(10, 100),
       new Vector2(0, 0)
       , new PlayerKeysInput(this.input)
       , new PlayerRender()
       , this.printer
-      , new Vector2(5, 45)
+      , new Vector2(5, 30)
     );
     this.collisionLeft = new BallCollisionLeft(this.printer);
     this.collisionLeftRender =
       new BallCollisionRender(
-        this.screen.gameCtx
+        this.gameCanvas.ctx
         , this.collisionLeft);
   }
 }

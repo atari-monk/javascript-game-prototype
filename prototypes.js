@@ -21,4 +21,10 @@ prototypes["wall-collision"] = {
   ver: ver
 };
 
+prototypes["my-collision"] = {
+  host: local,
+  page: "Prototype/MyCollision/index.html",
+  ver: ver
+};
+
 export { prototypes }

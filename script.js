@@ -12,6 +12,7 @@ class MainPage {
   #protoSlider;
   #protoDirection;
   #protoWallCollision;
+  #protoMyCollision;
 
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
@@ -23,6 +24,7 @@ class MainPage {
     this.#protoSlider = document.getElementById('proto-slider');
     this.#protoDirection = document.getElementById('proto-direction');
     this.#protoWallCollision = document.getElementById('proto-wall-collision');
+    this.#protoMyCollision = document.getElementById('proto-my-collision');
 
     this.#setLinks();
   }
@@ -37,6 +39,7 @@ class MainPage {
     this.#setProto('slider', this.#protoSlider);
     this.#setProto('direction', this.#protoDirection);
     this.#setProto('wall-collision', this.#protoWallCollision);
+    this.#setProto('my-collision', this.#protoMyCollision);
   }
 
   #setTest(key, element) {
