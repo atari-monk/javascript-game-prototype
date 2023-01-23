@@ -2,8 +2,20 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background: black;
+}
+
 canvas {
-    background: #eee;
+    background: black;
     display: block;
     margin: 0 auto;
+    border: 1px solid #0095DD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
 }

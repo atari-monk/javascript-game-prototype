@@ -13,6 +13,7 @@ class MainPage {
   #protoDirection;
   #protoWallCollision;
   #protoMyCollision;
+  #protoArkanoid;
 
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
@@ -25,6 +26,7 @@ class MainPage {
     this.#protoDirection = document.getElementById('proto-direction');
     this.#protoWallCollision = document.getElementById('proto-wall-collision');
     this.#protoMyCollision = document.getElementById('proto-my-collision');
+    this.#protoArkanoid = document.getElementById('proto-arkanoid');
 
     this.#setLinks();
   }
@@ -40,6 +42,7 @@ class MainPage {
     this.#setProto('direction', this.#protoDirection);
     this.#setProto('wall-collision', this.#protoWallCollision);
     this.#setProto('my-collision', this.#protoMyCollision);
+    this.#setProto('arkanoid', this.#protoArkanoid);
   }
 
   #setTest(key, element) {

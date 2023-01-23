@@ -42,6 +42,7 @@ function keyDownHandler(e) {
     leftPressed = true;
   }
 }
+
 function keyUpHandler(e) {
   if (e.code == 'ArrowRight') {
     rightPressed = false;
@@ -50,12 +51,14 @@ function keyUpHandler(e) {
     leftPressed = false;
   }
 }
+
 function mouseMoveHandler(e) {
   const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX - paddleWidth / 2;
   }
 }
+
 function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
@@ -82,6 +85,7 @@ function drawBall() {
   ctx.fill();
   ctx.closePath();
 }
+
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -89,6 +93,7 @@ function drawPaddle() {
   ctx.fill();
   ctx.closePath();
 }
+
 function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
@@ -106,11 +111,13 @@ function drawBricks() {
     }
   }
 }
+
 function drawScore() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";
   ctx.fillText("Score: " + score, 8, 20);
 }
+
 function drawLives() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";

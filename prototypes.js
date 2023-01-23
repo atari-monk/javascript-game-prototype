@@ -27,4 +27,10 @@ prototypes["my-collision"] = {
   ver: ver
 };
 
+prototypes["arkanoid"] = {
+  host: local,
+  page: "Prototype/Arkanoid/index.html",
+  ver: ver
+};
+
 export { prototypes }
