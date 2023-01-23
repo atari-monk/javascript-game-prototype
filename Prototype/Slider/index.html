@@ -10,10 +10,29 @@
     </head>
     <body>
         <canvas id="info-canvas"></canvas>
+        <canvas id="points-canvas"></canvas>
         <canvas id="game-canvas"></canvas>
-        <p>Value1: <span id="value1"></span></p>
-        <input type="range" min="0" max="100" value="10" class="slider" id="slider1">
-        <p>Value2: <span id="value2"></span></p>
-        <input type="range" min="0" max="100" value="10" class="slider" id="slider2">
+        <div id="slider-container-1">
+            <p>Value1: <span id="value1"></span></p>
+            <input
+                id="slider1"
+                class="slider"
+                type="range"
+                min="0"
+                max="100"
+                value="10"
+            />
+        </div>
+        <div id="slider-container-2">
+            <p>Value2: <span id="value2"></span></p>
+            <input
+                id="slider2"
+                class="slider"
+                type="range"
+                min="0"
+                max="100"
+                value="10"
+            />
+        </div>
     </body>
 </html>

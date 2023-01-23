@@ -1,8 +1,10 @@
 import { Timer } from "../../MyFramework/Timer.js";
 
 export class SliderFactory {
-  constructor(screen) {
-    this.screen = screen;
+  constructor(views) {
+    this.views = views;
+    this.infoCanvas = views.get('info');
+    this.gameCanvas = views.get('game');
     this.timer = new Timer();
   }
 }

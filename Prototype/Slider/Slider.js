@@ -1,9 +1,7 @@
-import { Game } from '../../MyFramework/Game.js';
+import { Game2 } from '../../MyFramework/Game2.js';
 import { Slider } from '../../MyFramework/Slider.js';
 import { SliderFactory } from './sliderFactory.js';
-import { ScreenSize } from '../../MyFramework/ScreenSize.js';
-
-const screen = new ScreenSize(300, 300, 500, 500);
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
 
 let value = 15;
 window.addEventListener('load', function () {
@@ -16,7 +14,7 @@ window.addEventListener('load', function () {
     label.innerHTML = value;
     console.log(value);
   })
-})
+});
 
 const slider2 = document.getElementById('slider2');
 const label2 = document.getElementById('value2');
@@ -29,10 +27,10 @@ window.addEventListener('load', function () {
     label2.innerHTML = slider2.value;
     console.log(range2.value);
   })
-})
+});
 
-const gameFactory = new SliderFactory(screen);
-const game = new Game(gameFactory);
+const views = new MultiCanvasData();
+const game = new Game2(new SliderFactory(views));
 
 function animate(timestamp) {
   game.update(timestamp);
