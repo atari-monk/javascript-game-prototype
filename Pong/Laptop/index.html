@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pong</title>
         <author>atari-monk</author>
-        <link rel="stylesheet" href="pong.css" />
-        <script defer src="../pongScript.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" defer src="pong2.js"></script>
     </head>
     <body>
         <div id="layout">
@@ -24,10 +24,10 @@
                     id="select-controls-container"
                     class="select-controls hide"
                 >
-                    <label for="select-controls" class="select-controls"
+                    <label for="select-controls" class="select-controls hide"
                         >Choose controls:</label
                     >
-                    <select id="select-controls">
+                    <select id="select-controls" class="hide">
                         <option value="kyeboard-set1" selected>
                             Keyboard Arrows
                         </option>

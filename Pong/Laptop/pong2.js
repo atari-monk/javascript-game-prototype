@@ -1,12 +1,11 @@
-'using strict'
+'use strict';
 
 import { Game2 } from '../../MyFramework/Game2.js';
-import { PongFactory2 } from './PongFactory2.js';
-import { MultiCanvasData } from '../MyFramework/MultiCanvasData.js';
-import { Menu } from './Laptop/Menu.js';
+import { PongFactory2 } from './pongFactory2.js';
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
+import { Menu } from './menu.js';
 
-const me = document.querySelector('script[data-name="myDynScript"]');
-const ver = me.getAttribute('ver');
+const ver = "laptop";
 
 if (ver === "laptop") {
   const box = document.querySelector(".box");
@@ -37,9 +36,8 @@ if (ver === "laptop") {
 
 const menu = new Menu();
 menu.setGameView();
-const views = new MultiCanvasData();
-await views.init(true);
-const game = new Game2(new PongFactory2(views));
+const game = new Game2(new PongFactory2(new MultiCanvasData()));
+
 const btnStart = document.getElementById('btn-start');
 btnStart.addEventListener("click", startGame, false);
 const btnReset = document.getElementById('btn-reset');

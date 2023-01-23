@@ -16,7 +16,6 @@ import { Bearing } from "../../MyFramework/Entity/Bearing.js";
 import { Renderer } from "../../MyFramework/Entity/Renderer.js";
 import { InfoRender } from "../../MyFramework/Entity/InfoRender.js";
 
-
 export class PongFactory {
   constructor(screen) {
     this.screen = screen;

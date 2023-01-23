@@ -1,4 +1,4 @@
-'using strict';
+'use strict';
 
 const hide = 'hide';
 const selectGame = 'select-controls-game';

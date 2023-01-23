@@ -1,5 +1,6 @@
 import { tests } from "./tests.js";
 import { prototypes } from "./prototypes.js";
+import { games } from "./games.js";
 
 class MainPage {
 
@@ -15,6 +16,8 @@ class MainPage {
   #protoMyCollision;
   #protoArkanoid;
 
+  #pongLaptop;
+
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
     this.#testBall = document.getElementById('test-ball');
@@ -28,6 +31,7 @@ class MainPage {
     this.#protoMyCollision = document.getElementById('proto-my-collision');
     this.#protoArkanoid = document.getElementById('proto-arkanoid');
 
+    this.#pongLaptop = document.getElementById('pong-laptop');
     this.#setLinks();
   }
 
@@ -43,6 +47,8 @@ class MainPage {
     this.#setProto('wall-collision', this.#protoWallCollision);
     this.#setProto('my-collision', this.#protoMyCollision);
     this.#setProto('arkanoid', this.#protoArkanoid);
+
+    this.#setGame('pong-laptop', this.#pongLaptop);
   }
 
   #setTest(key, element) {
@@ -52,6 +58,11 @@ class MainPage {
 
   #setProto(key, element) {
     const page = prototypes[key];
+    element.href = `${page.host}${page.page}`;
+  }
+
+  #setGame(key, element) {
+    const page = games[key];
     element.href = `${page.host}${page.page}`;
   }
 }

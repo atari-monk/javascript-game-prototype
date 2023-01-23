@@ -1,7 +1,7 @@
-'using strict'
+'use strict';
 
 import { Game } from '../../MyFramework/Game.js';
-import { PongFactory } from './PongFactory.js';
+import { PongFactory } from './pongFactory.js';
 import { ScreenSize } from '../../MyFramework/ScreenSize.js';
 
 var me = document.querySelector('script[data-name="myDynScript"]');
