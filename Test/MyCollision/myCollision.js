@@ -1,11 +1,29 @@
-import { Game2 } from '../../MyFramework/Game2.js';
-import { LeftFactory } from './LeftFactory.js';
-import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
-import { Menu } from './Menu.js';
+'use stric';
 
-new Menu().hide();
+import { Game2 } from '../../MyFramework/Game2.js';
+import { LeftFactory } from './leftFactory.js';
+import { RightFactory } from './rightFactory.js';
+import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
+import { Menu } from './menu.js';
+
+let game, factory;
 const views = new MultiCanvasData();
-const game = new Game2(new LeftFactory(views));
+const menu = new Menu(onControlsChange);
+menu.setMyCollisionView();
+
+function onControlsChange(value) {
+  switch (value) {
+    case 'left':
+      factory = new LeftFactory(views);
+      break;
+    case 'right':
+      factory = new RightFactory(views);
+      break;
+    default:
+      break;
+  }
+  game = new Game2(factory);
+}
 
 function animate(timestamp) {
   game.update(timestamp);

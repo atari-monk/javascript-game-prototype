@@ -59,9 +59,9 @@ export class BallCollisionLeft {
   }
 
   draw() {
-    this.printer.print('BallColl - ' + this.getInfo()[0].join(', '), 5, 95, "white");
-    this.printer.print('BallColl - ' + this.getInfo()[1].join(', '), 5, 120, "white");
-    this.printer.print('BallColl - ' + this.getInfo()[2].join(', '), 5, 145, "white");
+    this.printer.print(`BallColl - ${this.getInfo()[0].join(', ')}`, 5, 95, "white");
+    this.printer.print(`BallColl - ${this.getInfo()[1].join(', ')}`, 5, 120, "white");
+    this.printer.print(`BallColl - ${this.getInfo()[2].join(', ')}`, 5, 145, "white");
   }
 
   getInfo() {

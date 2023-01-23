@@ -59,23 +59,24 @@ export class BallCollisionRight {
   }
 
   draw() {
-    this.printer.print('BallColl: ' + this.getInfo()[0].join(', '), 10, 80, "yellowgreen");
-    this.printer.print('BallColl: ' + this.getInfo()[1].join(', '), 10, 430, "yellowgreen");
+    this.printer.print(`BallColl - ${this.getInfo()[0].join(', ')}`, 5, 95, "white");
+    this.printer.print(`BallColl - ${this.getInfo()[1].join(', ')}`, 5, 120, "white");
+    this.printer.print(`BallColl - ${this.getInfo()[2].join(', ')}`, 5, 145, "white");
   }
 
   getInfo() {
     return [
       [
-        `ball (${this.ballX.toFixed(1)}, ${this.ballY1.toFixed(1)})`,
-        `ball (${this.ballX.toFixed(1)}, ${this.ballY2.toFixed(1)})`,
-        `player (${this.playerX.toFixed(1)}, ${this.playerY1.toFixed(1)})`,
-        `player (${this.playerX.toFixed(1)}, ${this.playerY2.toFixed(1)})`
+        `ball x ${this.ballX.toFixed(0)}, y1 ${this.ballY1.toFixed(0)}, y2 ${this.ballY2.toFixed(0)}`,
       ],
       [
-        `coll (${this.xCollision}, ${this.yCollision})`,
-        `xyColl (${this.xyCollision})`,
-        `region (${this.regionX}, ${this.regionY})`,
-        `region (${this.region})`
+        `player x ${this.playerX.toFixed(0)}, y1 ${this.playerY1.toFixed(0)}, y2 ${this.playerY2.toFixed(0)}`
+      ],
+      [
+        `regionXY (${this.regionX}, ${this.regionY})`,
+        `collXY (${this.xCollision}, ${this.yCollision})`,
+        `region (${this.region})`,
+        `coll (${this.xyCollision})`
       ]
     ];
   }

@@ -55,6 +55,14 @@ export class Menu {
     this.#setSelectConstorls(onControlsChange);
   }
 
+  setMyCollisionView(onControlsChange) {
+    this.#callback(this.#selectConstrols.childNodes[3].val);;
+    this.#selectConstrols.classList.add(selectPlayer);
+    this.#selectConstrols.classList.remove(hide);
+    this.#menuContainer.classList.remove(hide);
+    this.#setSelectConstorls(onControlsChange);
+  }
+  
   setGameView() {
     this.#menuContainer.classList.remove(hide);
     this.#menuBtns.classList.remove(hide);
