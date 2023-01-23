@@ -9,12 +9,17 @@ class MainPage {
   #testMyCollision;
   #testCollision;
 
+  #protoSlider;
+
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
     this.#testBall = document.getElementById('test-ball');
     this.#testPlayer = document.getElementById('test-player');
     this.#testMyCollision = document.getElementById('test-my-collision');
     this.#testCollision = document.getElementById('test-collision');
+
+    this.#protoSlider = document.getElementById('proto-slider');
+    
     this.#setLinks();
   }
 
@@ -24,10 +29,17 @@ class MainPage {
     this.#setTest('player', this.#testPlayer);
     this.#setTest('my-collision', this.#testMyCollision);
     this.#setTest('collision', this.#testCollision);
+
+    this.#setProto('slider', this.#protoSlider);
   }
 
   #setTest(key, element) {
     const page = tests[key];
+    element.href = `${page.host}${page.page}`;
+  }
+
+  #setProto(key, element) {
+    const page = prototypes[key];
     element.href = `${page.host}${page.page}`;
   }
 }
