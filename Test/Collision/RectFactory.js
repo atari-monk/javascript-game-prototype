@@ -12,14 +12,16 @@ import { PlayerDebugRender } from "../../../MyFramework/Player/PlayerDebugRender
 import { RectCollisionRender } from "../../../MyFramework/BallCollision/RectCollisionRender.js";
 
 export class RectFactory {
-  constructor(screen) {
-    this.screen = screen;
+  constructor(views) {
+    this.views = views;
+    this.infoCanvas = views.get('info');
+    this.gameCanvas = views.get('game');
     this.timer = new Timer();
     this.input = new KeysInputHandler();
 
     this.ball = new Ball(
-      this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x / 2 + 70, this.screen.gameSize.y / 2),
+      this.gameCanvas.size,
+      new Vector2(this.gameCanvas.size.x / 2 + 70, this.gameCanvas.size.y / 2),
       new Vector2(40, 40),
       new Vector2(0, 0),
       new BallInputHandler3(this.input)
@@ -30,8 +32,8 @@ export class RectFactory {
     );
 
     this.player1 = new Player(
-      this.screen.gameSize,
-      new Vector2(this.screen.gameSize.x / 2, this.screen.gameSize.y / 2),
+      this.gameCanvas.size,
+      new Vector2(this.gameCanvas.size.x / 2, this.gameCanvas.size.y / 2),
       new Vector2(40, 40),
       new Vector2(0, 0)
       , new InputHandlerEmpty()
@@ -42,7 +44,7 @@ export class RectFactory {
 
     this.collisionLeft = new RectCollision();
     this.collisionLeftRender = new RectCollisionRender(
-      this.screen.gameCtx
+      this.gameCanvas.ctx
       , this.collisionLeft);
   }
 }
