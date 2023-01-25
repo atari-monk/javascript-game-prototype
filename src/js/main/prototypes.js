@@ -14,12 +14,12 @@ prototypes["direction"] = {
 
 prototypes["wall-collision"] = {
   host: local,
-  page: "wallCollision.html",
+  page: "wall-collision.html",
 };
 
 prototypes["my-collision"] = {
   host: local,
-  page: "myCollisionProto.html",
+  page: "my-collision-proto.html",
 };
 
 prototypes["arkanoid"] = {
