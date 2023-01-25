@@ -1,4 +1,4 @@
-import { Entity } from "./Entity.js";
+import { Entity } from "./entity.js";
 
 export class EntityV3 extends Entity {
   constructor(

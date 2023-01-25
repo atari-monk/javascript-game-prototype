@@ -2,8 +2,8 @@ import { LeftFactory } from './left-factory.js';
 import { RightFactory } from './right-factory.js';
 import { BottomFactory } from './bottom-factory.js';
 import { TopFactory } from './top-factory.js';
-import { Game2 } from '../../../MyFramework/Game2.js';
-import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
+import { Game2 } from '../engine/game-v2.js';
+import { MultiCanvasData } from '../engine/multi-canvas-data.js';
 import './delay.js'
 
 const views = new MultiCanvasData();

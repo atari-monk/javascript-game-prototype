@@ -1,4 +1,4 @@
-import { Printer } from "../Printer.js";
+import { Printer } from "../printer.js";
 
 export class PointCount extends Printer {
   constructor(screen, ball) {

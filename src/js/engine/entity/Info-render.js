@@ -1,4 +1,4 @@
-import { PrinterV2 } from '../PrinterV2.js'
+import { PrinterV2 } from '../printer-v2.js'
 
 export class InfoRender extends PrinterV2 {
 

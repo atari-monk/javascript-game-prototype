@@ -1,4 +1,4 @@
-import { Entity } from "../Entity/Entity.js";
+import { Entity } from "../entity/entity.js";
 
 export class Ball extends Entity {
   constructor(

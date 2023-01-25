@@ -1,5 +1,5 @@
 import { Game } from './game.js';
-import { BallV3 } from '../../../MyFramework/Ball/ball-v3.js';
+import { BallV3 } from './ball/ball-v3.js';
 
 export class Game2 extends Game {
 

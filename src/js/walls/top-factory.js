@@ -1,9 +1,9 @@
-import { Timer } from "../../../MyFramework/Timer.js";
-import { Vector2 } from "../../../MyFramework/vector-2.js";
-import { Ball } from "../../../MyFramework/Ball/Ball.js";
-import { BallRender2 } from "../../../MyFramework/Ball/BallRender2.js";
-import { WallCollision } from "../../../MyFramework/WallCollision/WallCollision.js";
-import { Printer } from "../../../MyFramework/Printer.js";
+import { Timer } from "../engine/timer.js";
+import { Vector2 } from "../engine/vector-2.js";
+import { Ball } from "../engine/ball/ball.js";
+import { BallRender2 } from "../engine/ball/ball-render-v2.js";
+import { WallCollision } from "../engine/wall-collision/wall-collision.js";
+import { Printer } from "../engine/printer.js";
 
 export class TopFactory {
   constructor(views) {

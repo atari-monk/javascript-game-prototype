@@ -1,4 +1,4 @@
-import { EntityV3 } from "../Entity/EntityV3.js";
+import { EntityV3 } from "../entity/entity-v3.js";
 
 export class BallV3 extends EntityV3 {
   constructor(

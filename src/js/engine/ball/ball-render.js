@@ -1,4 +1,4 @@
-import { Render } from "../Entity/Render.js";
+import { Render } from "../entity/render.js";
 
 export class BallRender extends Render {
 
