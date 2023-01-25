@@ -1,22 +1,22 @@
-import { Timer } from "../../../MyFramework/Timer.js";
-import { Vector2 } from "../../../MyFramework/vector-2.js";
-import { InputHandlerEmpty } from "../../../MyFramework/InputHandlerEmpty.js";
-import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
-import { BallV4 } from "../../../MyFramework/Ball/BallV4.js";
-import { BallRender } from "../../../MyFramework/Ball/BallRender.js";
-import { FloorCollision } from "../../../MyFramework/WallCollision/FloorCollision.js";
-import { Player } from "../../../MyFramework/Player/Player.js";
-import { PlayerKeysInput } from "../../../MyFramework/Player/PlayerKeysInput.js";
-import { RectCollision } from "../../../MyFramework/BallCollision/RectCollision.js";
-import { PointCount2 } from "../../../MyFramework/Ball/PointCount2.js";
-import { PlayerRender } from "../../../MyFramework/Player/PlayerRender.js";
-import { Player2Render } from "../../../MyFramework/Player/Player2Render.js";
-import { Printer } from "../../../MyFramework/Printer.js";
-import { Bearing } from "../../../MyFramework/Entity/Bearing.js";
-import { Renderer } from "../../../MyFramework/Entity/Renderer.js";
-import { InfoRender } from "../../../MyFramework/Entity/InfoRender.js";
-import { PlayerMouseInput } from "../../../MyFramework/Player/PlayerMouseInput.js";
-import { MouseInputHandler } from "../../../MyFramework/MouseInputHandler.js";
+import { Timer } from "../engine/timer.js";
+import { Vector2 } from "../engine/vector-2.js";
+import { InputHandlerEmpty } from "../engine/input-handler-empty.js";
+import { KeysInputHandler } from "../engine/keys-input-handler.js";
+import { BallV4 } from "../engine/ball/ball-v4.js";
+import { BallRender } from "../engine/ball/ball-render.js";
+import { FloorCollision } from "../engine/wall-collision/floor-collision.js";
+import { Player } from "../engine/player/player.js";
+import { PlayerKeysInput } from "../engine/player/player-keys-input.js";
+import { RectCollision } from "../engine/ball-collision/rect-collision.js";
+import { PointCount2 } from "../engine/ball/point-count-v2.js";
+import { PlayerRender } from "../engine/player/player-render.js";
+import { Player2Render } from "../engine/player/player-render-v2.js";
+import { Printer } from "../engine/printer.js";
+import { Bearing } from "../engine/entity/bearing.js";
+import { Renderer } from "../engine/entity/renderer.js";
+import { InfoRender } from "../engine/entity/info-render.js";
+import { PlayerMouseInput } from "../engine/player/player-mouse-input.js";
+import { MouseInputHandler } from "../engine/mouse-input-handler.js";
 
 export class PongFactory {
   constructor(views) {

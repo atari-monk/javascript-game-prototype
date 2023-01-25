@@ -1,8 +1,8 @@
 'use strict';
 
-import { Game2 } from '../../../MyFramework/Game2.js';
+import { Game2 } from '../engine/game-v2.js';
 import { PongFactory } from './pong-factory.js';
-import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
+import { MultiCanvasData } from '../engine/multi-canvas-data.js';
 import { Menu } from './menu.js';
 
 const box = document.querySelector(".box");

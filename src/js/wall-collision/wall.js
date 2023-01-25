@@ -1,6 +1,6 @@
-import { Game2 } from '../../../MyFramework/Game2.js';
+import { Game2 } from '../engine/game-v2.js';
 import { WallFactory } from './wall-factory.js';
-import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
+import { MultiCanvasData } from '../engine/multi-canvas-data.js';
 
 const views = new MultiCanvasData();
 var game = new Game2(new WallFactory(views));
