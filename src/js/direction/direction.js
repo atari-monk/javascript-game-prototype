@@ -1,6 +1,6 @@
-import { Game2 } from '../../MyFramework/Game2.js';
+import { Game2 } from '../../../MyFramework/Game2.js';
 import { DirectionFactory } from './directionFactory.js';
-import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
+import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 
 const views = new MultiCanvasData();
 

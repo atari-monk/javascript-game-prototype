@@ -1,15 +1,15 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
-import { KeysInputHandler } from "../../MyFramework/KeysInputHandler.js";
-import { BallV4 } from "../../MyFramework/Ball/BallV4.js";
-import { BallInputHandler2 } from "../../MyFramework/Ball/BallInputHandler2.js";
-import { FloorCollision } from "../../MyFramework/WallCollision/FloorCollision.js";
-import { BallRender } from "../../MyFramework/Ball/BallRender.js";
-import { DirectionRender } from "../../MyFramework/Entity/DirectionRender.js";
-import { Printer } from "../../MyFramework/Printer.js";
-import { Renderer } from "../../MyFramework/Entity/Renderer.js";
-import { InfoRender } from "../../MyFramework/Entity/InfoRender.js";
-import { Bearing } from "../../MyFramework/Entity/Bearing.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
+import { BallV4 } from "../../../MyFramework/Ball/BallV4.js";
+import { BallInputHandler2 } from "../../../MyFramework/Ball/BallInputHandler2.js";
+import { FloorCollision } from "../../../MyFramework/WallCollision/FloorCollision.js";
+import { BallRender } from "../../../MyFramework/Ball/BallRender.js";
+import { DirectionRender } from "../../../MyFramework/Entity/DirectionRender.js";
+import { Printer } from "../../../MyFramework/Printer.js";
+import { Renderer } from "../../../MyFramework/Entity/Renderer.js";
+import { InfoRender } from "../../../MyFramework/Entity/InfoRender.js";
+import { Bearing } from "../../../MyFramework/Entity/Bearing.js";
 
 export class DirectionFactory {
   constructor(views) {
