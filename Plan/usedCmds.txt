@@ -1,0 +1,8 @@
+npm init
+npm i parcel --save-dev
+"scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';

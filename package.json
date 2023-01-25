@@ -1,0 +1,23 @@
+{
+    "name": "js-pong",
+    "version": "1.0.0",
+    "description": "pong tests, prototypes and game",
+    "source": ["src/a.html", "src/b.html"],
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/atari-monk/javascript-pong.git"
+    },
+    "author": "atari-monk",
+    "license": "AGPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/atari-monk/javascript-pong/issues"
+    },
+    "homepage": "https://github.com/atari-monk/javascript-pong#readme",
+    "devDependencies": {
+        "parcel": "^2.8.3"
+    }
+}

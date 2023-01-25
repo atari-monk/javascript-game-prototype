@@ -4,7 +4,7 @@ const tests = [];
 
 tests["walls"] = {
   host: local,
-  page: "Test/Walls/index.html",
+  page: "walls.html",
 };
 
 tests["ball"] = {
