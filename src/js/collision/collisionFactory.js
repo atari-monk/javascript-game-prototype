@@ -11,7 +11,7 @@ import { RectCollision } from "../../../MyFramework/BallCollision/RectCollision.
 import { PlayerDebugRender } from "../../../MyFramework/Player/PlayerDebugRender.js";
 import { RectCollisionRender } from "../../../MyFramework/BallCollision/RectCollisionRender.js";
 
-export class RectFactory {
+export class CollisionFactory {
   constructor(views) {
     this.views = views;
     this.infoCanvas = views.get('info');
