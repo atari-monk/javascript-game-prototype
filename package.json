@@ -1,23 +1,43 @@
 {
-    "name": "js-pong",
-    "version": "1.0.0",
-    "description": "pong tests, prototypes and game",
-    "source": ["src/a.html", "src/b.html"],
-    "scripts": {
-        "start": "parcel index.html",
-        "build": "parcel build index.html"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/atari-monk/javascript-pong.git"
-    },
-    "author": "atari-monk",
-    "license": "AGPL-3.0-or-later",
-    "bugs": {
-        "url": "https://github.com/atari-monk/javascript-pong/issues"
-    },
-    "homepage": "https://github.com/atari-monk/javascript-pong#readme",
-    "devDependencies": {
-        "parcel": "^2.8.3"
-    }
+  "name": "js-pong",
+  "version": "1.0.0",
+  "description": "pong tests, prototypes and game",
+  "source": [
+    "index.html",
+    "walls.html",
+    "ball.html",
+    "player.html",
+    "my-collision.html",
+    "collision.html",
+    "slider.html",
+    "direction.html",
+    "wall-collision.html",
+    "my-collision-proto.html",
+    "arkanoid.html",
+    "pong.html"
+  ],
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atari-monk/javascript-pong.git"
+  },
+  "author": "atari-monk",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/atari-monk/javascript-pong/issues"
+  },
+  "homepage": "https://github.com/atari-monk/javascript-pong#readme",
+  "devDependencies": {
+    "@types/core-js": "^2.5.5",
+    "@types/regenerator-runtime": "^0.13.1",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "core-js": "^3.27.2",
+    "regenerator-runtime": "^0.13.11"
+  }
 }

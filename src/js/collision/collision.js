@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { Game2 } from '../engine/game-v2.js';
 import { CollisionFactory } from './collision-factory.js';
 import { MultiCanvasData } from '../engine/multi-canvas-data.js';

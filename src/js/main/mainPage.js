@@ -1,6 +1,9 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { tests } from "./tests.js";
 import { prototypes } from "./prototypes.js";
 import { games } from "./games.js";
+import { host } from './data.js';
 
 class MainPage {
 
@@ -53,17 +56,17 @@ class MainPage {
 
   #setTest(key, element) {
     const page = tests[key];
-    element.href = `${page.host}${page.page}`;
+    element.href = `${host}${page.page}`;
   }
 
   #setProto(key, element) {
     const page = prototypes[key];
-    element.href = `${page.host}${page.page}`;
+    element.href = `${host}${page.page}`;
   }
 
   #setGame(key, element) {
     const page = games[key];
-    element.href = `${page.host}${page.page}`;
+    element.href = `${host}${page.page}`;
   }
 }
 

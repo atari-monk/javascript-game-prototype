@@ -1,5 +1,7 @@
-'use stric';
+'use strict';
 
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { Game2 } from '../engine/game-v2.js';
 import { LeftFactory } from './left-factory.js';
 import { RightFactory } from './right-factory.js';

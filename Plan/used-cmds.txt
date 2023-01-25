@@ -1,8 +1,29 @@
 npm init
 npm i parcel --save-dev
+
+/////package.json edits
+"source": [
+    "index.html",
+    "walls.html",
+    "ball.html",
+    "player.html",
+    "my-collision.html",
+    "collision.html",
+    "slider.html",
+    "direction.html",
+    "wall-collision.html",
+    "my-collision-proto.html",
+    "arkanoid.html",
+    "pong.html"
+  ],
 "scripts": {
-        "start": "parcel index.html",
-        "build": "parcel build index.html"
-    },
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
+  },
+/////package.json edits
+
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+npm run start
+npm run build
+npm i --save core-js regenerator-runtime

@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { Game2 } from '../engine/game-v2.js';
 import { Slider } from '../engine/slider.js';
 import { SliderFactory } from './slider-factory.js';

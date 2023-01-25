@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { LeftFactory } from './left-factory.js';
 import { RightFactory } from './right-factory.js';
 import { BottomFactory } from './bottom-factory.js';
