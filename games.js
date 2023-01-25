@@ -1,12 +1,10 @@
 import { local } from "./data.js";
 
 const games = [];
-const ver = 'laptop';
 
-games["pong-laptop"] = {
+games["pong"] = {
   host: local,
-  page: "Pong/Laptop/index.html",
-  ver: ver
+  page: "Pong/index.html",
 };
 
 export { games }

@@ -16,7 +16,7 @@ class MainPage {
   #protoMyCollision;
   #protoArkanoid;
 
-  #pongLaptop;
+  #pong;
 
   constructor() {
     this.#testWalls = document.getElementById('test-walls');
@@ -31,7 +31,7 @@ class MainPage {
     this.#protoMyCollision = document.getElementById('proto-my-collision');
     this.#protoArkanoid = document.getElementById('proto-arkanoid');
 
-    this.#pongLaptop = document.getElementById('pong-laptop');
+    this.#pong = document.getElementById('pong');
     this.#setLinks();
   }
 
@@ -48,7 +48,7 @@ class MainPage {
     this.#setProto('my-collision', this.#protoMyCollision);
     this.#setProto('arkanoid', this.#protoArkanoid);
 
-    this.#setGame('pong-laptop', this.#pongLaptop);
+    this.#setGame('pong', this.#pong);
   }
 
   #setTest(key, element) {
