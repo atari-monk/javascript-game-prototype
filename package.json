@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --dist-dir public --public-url='./'"
+    "build": "parcel build --dist-dir public --public-url=./"
   },
   "repository": {
     "type": "git",
