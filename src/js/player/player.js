@@ -1,7 +1,7 @@
 'use strict';
 
-import { Game2 } from '../../../MyFramework/Game2.js';
-import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
+import { Game2 } from '../engine/game-v2.js';
+import { MultiCanvasData } from '../engine/multi-canvas-data.js';
 import { Menu } from './menu.js';
 import { ArrowsFactory } from './arrows-factory.js';
 import { MouseFactory } from './mouse-factory.js';
