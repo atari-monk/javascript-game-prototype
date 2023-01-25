@@ -1,4 +1,4 @@
-import { Render } from "./Render.js";
+import { Render } from "./render.js";
 
 export class DirectionRender extends Render {
 

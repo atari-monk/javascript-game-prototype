@@ -1,5 +1,5 @@
-import { CanvasData } from './CanvasData.js';
-import { Vector2 } from './Vector2.js';
+import { CanvasData } from './canvas-data.js';
+import { Vector2 } from './vector-2.js';
 
 export class MultiCanvasData {
   #key;

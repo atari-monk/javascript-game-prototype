@@ -1,8 +1,8 @@
-import { Game } from './Game.js';
-import { BallV3 } from './Ball/BallV3.js';
+import { Game } from './game.js';
+import { BallV3 } from '../../../MyFramework/Ball/ball-v3.js';
 
 export class Game2 extends Game {
-  
+
   #print;
 
   constructor(gameFactory, print = true) {

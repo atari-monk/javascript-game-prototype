@@ -1,5 +1,5 @@
 import { BallV3 } from "../../MyFramework/Ball/BallV3.js";
-import { Vector2 } from "../Vector2.js";
+import { Vector2 } from "../vector-2.js";
 
 export class BallV4 extends BallV3 {
   #drawVect;

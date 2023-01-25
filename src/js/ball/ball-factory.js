@@ -1,5 +1,5 @@
 import { Timer } from "../../../MyFramework/Timer.js";
-import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { Vector2 } from "../engine/vector-2.js";
 import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
 import { Ball } from "../../../MyFramework/Ball/Ball.js";
 import { BallRender2 } from "../../../MyFramework/Ball/BallRender2.js";
