@@ -14,7 +14,7 @@ tests["ball"] = {
 
 tests["player"] = {
   host: local,
-  page: "Test/Player/index.html",
+  page: "player.html",
 };
 
 tests["my-collision"] = {

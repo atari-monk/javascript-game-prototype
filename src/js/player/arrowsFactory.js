@@ -1,10 +1,10 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
-import { KeysInputHandler } from "../../MyFramework/KeysInputHandler.js";
-import { Player } from "../../MyFramework/Player/Player.js";
-import { PlayerKeysInput } from "../../MyFramework/Player/PlayerKeysInput.js";
-import { PlayerRender } from "../../MyFramework/Player/PlayerRender.js";
-import { Printer } from "../../MyFramework/Printer.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
+import { Player } from "../../../MyFramework/Player/Player.js";
+import { PlayerKeysInput } from "../../../MyFramework/Player/PlayerKeysInput.js";
+import { PlayerRender } from "../../../MyFramework/Player/PlayerRender.js";
+import { Printer } from "../../../MyFramework/Printer.js";
 
 export class ArrowsFactory {
   constructor(views) {

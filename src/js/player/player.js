@@ -1,10 +1,10 @@
 'use strict';
 
-import { Game2 } from '../../MyFramework/Game2.js';
-import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
-import { Menu } from './Menu.js';
-import { ArrowsFactory } from './ArrowsFactory.js';
-import { MouseFactory } from './MouseFactory.js';
+import { Game2 } from '../../../MyFramework/Game2.js';
+import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
+import { Menu } from './menu.js';
+import { ArrowsFactory } from './arrowsFactory.js';
+import { MouseFactory } from './mouseFactory.js';
 
 let game, factory;
 const views = new MultiCanvasData();
