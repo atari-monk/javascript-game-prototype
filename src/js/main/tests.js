@@ -9,7 +9,7 @@ tests["walls"] = {
 
 tests["ball"] = {
   host: local,
-  page: "Test/Ball/index.html",
+  page: "ball.html",
 };
 
 tests["player"] = {
