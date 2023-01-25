@@ -3,8 +3,8 @@
 import { Game2 } from '../../../MyFramework/Game2.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 import { Menu } from './menu.js';
-import { ArrowsFactory } from './arrowsFactory.js';
-import { MouseFactory } from './mouseFactory.js';
+import { ArrowsFactory } from './arrows-factory.js';
+import { MouseFactory } from './mouse-factory.js';
 
 let game, factory;
 const views = new MultiCanvasData();

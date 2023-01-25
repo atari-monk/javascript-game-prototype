@@ -1,5 +1,5 @@
 import { Game2 } from '../../../MyFramework/Game2.js';
-import { WallFactory } from './wallFactory.js';
+import { WallFactory } from './wall-factory.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 
 const views = new MultiCanvasData();

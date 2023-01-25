@@ -1,5 +1,5 @@
 import { Game2 } from '../../../MyFramework/Game2.js';
-import { CollisionFactory } from './collisionFactory.js';
+import { CollisionFactory } from './collision-factory.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 
 const views = new MultiCanvasData();

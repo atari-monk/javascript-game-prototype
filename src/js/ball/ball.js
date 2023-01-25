@@ -1,5 +1,5 @@
 import { Game2 } from '../../../MyFramework/Game2.js';
-import { BallFactory } from './ballFactory.js';
+import { BallFactory } from './ball-factory.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 import { Menu } from './Menu.js';
 

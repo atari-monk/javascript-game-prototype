@@ -1,7 +1,7 @@
 'use strict';
 
 import { Game2 } from '../../../MyFramework/Game2.js';
-import { PongFactory } from './pongFactory.js';
+import { PongFactory } from './pong-factory.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 import { Menu } from './menu.js';
 

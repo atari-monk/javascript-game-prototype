@@ -1,8 +1,8 @@
 'use stric';
 
 import { Game2 } from '../../../MyFramework/Game2.js';
-import { LeftFactory } from './leftFactory.js';
-import { RightFactory } from './rightFactory.js';
+import { LeftFactory } from './left-factory.js';
+import { RightFactory } from './right-factory.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 import { Menu } from './menu.js';
 
