@@ -1,7 +1,7 @@
-import { LeftFactory } from './leftFactory.js';
-import { RightFactory } from './rightFactory.js';
-import { BottomFactory } from './bottomFactory.js';
-import { TopFactory } from './topFactory.js';
+import { LeftFactory } from './left-factory.js';
+import { RightFactory } from './right-factory.js';
+import { BottomFactory } from './bottom-factory.js';
+import { TopFactory } from './top-factory.js';
 import { Game2 } from '../../../MyFramework/Game2.js';
 import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 import './delay.js'
