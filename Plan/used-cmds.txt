@@ -27,3 +27,6 @@ import 'regenerator-runtime/runtime';
 npm run start
 npm run build
 npm i --save core-js regenerator-runtime
+//const liveServer = "http://127.0.0.1:5501/";
+//const parcel = "http://localhost:1234/";
+//const gitHubPages = "https://atari-monk.github.io/js-pong/";
