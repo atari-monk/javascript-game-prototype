@@ -4,7 +4,7 @@ const games = [];
 
 games["pong"] = {
   host: local,
-  page: "Pong/index.html",
+  page: "pong.html",
 };
 
 export { games }

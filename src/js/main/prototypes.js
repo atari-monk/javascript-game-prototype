@@ -4,27 +4,27 @@ const prototypes = [];
 
 prototypes["slider"] = {
   host: local,
-  page: "Prototype/Slider/index.html",
+  page: "slider.html",
 };
 
 prototypes["direction"] = {
   host: local,
-  page: "Prototype/Direction/index.html",
+  page: "direction.html",
 };
 
 prototypes["wall-collision"] = {
   host: local,
-  page: "Prototype/WallCollision/index.html",
+  page: "wallCollision.html",
 };
 
 prototypes["my-collision"] = {
   host: local,
-  page: "Prototype/MyCollision/index.html",
+  page: "myCollisionProto.html",
 };
 
 prototypes["arkanoid"] = {
   host: local,
-  page: "Prototype/Arkanoid/index.html",
+  page: "arkanoid.html",
 };
 
 export { prototypes }

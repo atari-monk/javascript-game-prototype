@@ -1,11 +1,11 @@
-import { Timer } from "../../MyFramework/Timer.js";
-import { Vector2 } from "../../MyFramework/Vector2.js";
-import { KeysInputHandler } from "../../MyFramework/KeysInputHandler.js";
-import { Ball } from "../../MyFramework/Ball/Ball.js";
-import { BallInputHandler2 } from "../../MyFramework/Ball/BallInputHandler2.js";
-import { BallRender } from "../../MyFramework/Ball/BallRender.js";
-import { WallCollision } from "../../MyFramework/WallCollision/WallCollision.js";
-import { Printer } from "../../MyFramework/Printer.js";
+import { Timer } from "../../../MyFramework/Timer.js";
+import { Vector2 } from "../../../MyFramework/Vector2.js";
+import { KeysInputHandler } from "../../../MyFramework/KeysInputHandler.js";
+import { Ball } from "../../../MyFramework/Ball/Ball.js";
+import { BallInputHandler2 } from "../../../MyFramework/Ball/BallInputHandler2.js";
+import { BallRender } from "../../../MyFramework/Ball/BallRender.js";
+import { WallCollision } from "../../../MyFramework/WallCollision/WallCollision.js";
+import { Printer } from "../../../MyFramework/Printer.js";
 
 export class WallFactory {
   constructor(views) {

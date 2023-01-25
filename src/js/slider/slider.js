@@ -1,7 +1,7 @@
-import { Game2 } from '../../MyFramework/Game2.js';
-import { Slider } from '../../MyFramework/Slider.js';
+import { Game2 } from '../../../MyFramework/Game2.js';
+import { Slider } from '../../../MyFramework/Slider.js';
 import { SliderFactory } from './sliderFactory.js';
-import { MultiCanvasData } from '../../MyFramework/MultiCanvasData.js';
+import { MultiCanvasData } from '../../../MyFramework/MultiCanvasData.js';
 
 let value = 15;
 window.addEventListener('load', function () {
