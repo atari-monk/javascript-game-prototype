@@ -19,12 +19,12 @@ tests["player"] = {
 
 tests["my-collision"] = {
   host: local,
-  page: "Test/MyCollision/index.html",
+  page: "myCollision.html",
 };
 
 tests["collision"] = {
   host: local,
-  page: "Test/Collision/index.html",
+  page: "collision.html",
 };
 
 export { tests }
